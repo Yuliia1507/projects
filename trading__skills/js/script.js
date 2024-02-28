@@ -1,0 +1,77 @@
+"use strict"
+
+document.addEventListener("DOMContentLoaded", function () {
+	const headerText = document.querySelector(".header__text");
+	if (headerText) {
+		headerText.classList.add("show");
+	} else {
+		console.error("Element with class 'header__text' not found.");
+	}
+});
+
+//===============================================
+
+document.addEventListener('DOMContentLoaded', function () {
+	const items = document.querySelectorAll('.item-info');
+
+	function fadeInElements() {
+		items.forEach(function (item) {
+			if (isPartiallyInViewport(item)) {
+				item.classList.add('active');
+			} else {
+				item.classList.remove('active');
+			}
+		});
+	}
+
+	function isPartiallyInViewport(el) {
+		let rect = el.getBoundingClientRect();
+		let windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+		return (
+			rect.top < windowHeight &&
+			rect.bottom >= 0
+		);
+	}
+
+	fadeInElements();
+
+	window.addEventListener('scroll', fadeInElements);
+});
+
+//===================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+	let observer = new IntersectionObserver(function (entries) {
+		entries.forEach(function (entry) {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('show');
+			} else {
+				entry.target.classList.remove('show');
+			}
+		});
+	}, { threshold: 0 });
+
+	const infoItems = document.querySelectorAll('.info-contact__item');
+	infoItems.forEach(function (item) {
+		observer.observe(item);
+	});
+});
+
+//===========================
+
+document.addEventListener("DOMContentLoaded", function () {
+	const closeButton = document.querySelector(".terms__button");
+
+	// Перевірка чи всі елементи існують
+	if (closeButton) {
+		// Додаємо обробник подій для кліку на кнопку
+		closeButton.addEventListener("click", function () {
+			// Закриваємо поточне вікно
+			window.close();
+
+			// Переходимо на головну сторінку з параметром #footer
+			window.location.href = "index.html#footer";
+		});
+	}
+});
+

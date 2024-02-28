@@ -1,0 +1,132 @@
+@use "sass:math";
+
+// Функції
+@import "_functions.scss";
+// Шрифти
+@import "_fonts.scss";
+// Обнулення
+@import "_reset.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 340;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1840;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+body {
+	font-family: "Onest";
+	font-size: 30px;
+	background: #12161c;
+	color: rgb(255, 255, 255);
+}
+.wrapper {
+	position: relative;
+	@include adaptiveValue("padding-top", 40, 10);
+	@include adaptiveValue("padding-bottom", 40, 10);
+
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	main {
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"] {
+	margin: 0 auto;
+	max-width: 1870px;
+	padding: 0 15px;
+	@media (max-width: 480px) {
+		padding: 0 10px;
+	}
+}
+
+.terms {
+	// .terms__container
+
+	&__container {
+		position: relative;
+	}
+
+	// .terms__content
+
+	&__content {
+		position: relative;
+		overflow: hidden;
+		background: linear-gradient(80deg, rgba(18, 22, 28, 1) 9%, rgb(30, 96, 143) 80%);
+		@include adaptiveValue("padding-top", 55, 15);
+		@include adaptiveValue("padding-right", 60, 20);
+		@include adaptiveValue("padding-left", 60, 20);
+		@include adaptiveValue("padding-bottom", 60, 20);
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 300px;
+			height: 300px;
+			background: #12161c;
+			clip-path: polygon(100% 30%, 30% 100%, 100% 100%);
+			@media (max-width: 767.98px) {
+				clip-path: polygon(100% 100%, 0 0, 100% 0);
+				top: 0;
+				width: 70px;
+				height: 70px;
+			}
+		}
+	}
+
+	// .terms__title
+
+	&__title {
+		@include adaptiveValue("font-size", 79, 30);
+		line-height: 110%;
+		color: rgb(55, 125, 229);
+		@include adaptiveValue("margin-bottom", 20, 10);
+	}
+
+	// .terms__text
+	&__text {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__text > * {
+		@include adaptiveValue("font-size", 30, 20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+	&__button {
+		z-index: 3;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		color: rgb(55, 125, 229);
+		@include adaptiveValue("width", 157, 112);
+		@include adaptiveValue("height", 87, 53);
+		border-radius: 100px;
+		background: linear-gradient(80deg, rgba(18, 22, 28, 1) 9%, rgb(15, 101, 161) 80%);
+		@include adaptiveValue("font-size", 30, 20);
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: white;
+				transform: scale(1.1);
+			}
+		}
+		@media (max-width: 767.98px) {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
