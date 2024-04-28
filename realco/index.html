@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/globe.ico" type="image/x-icon">
+	<title>Realco</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="announcement">
+			<p>Get your dream house in a week.</p>
+			<button type="button" class="announcement__btn _icon-close"></button>
+		</div>
+		<div class="loader-wrapper">
+			<div class="loader"></div>
+		</div>
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo logo">
+					<div class="logo__item"></div>
+					<div class="logo__text"><img src="img/logo-text.svg" alt=""></div>
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link" href="#">Home</a>
+							</li>
+							<li class="menu__item menu__item--position"><a class="menu__link _icon-arrow-down"
+									href="#">Properties</a>
+								<div class="sub-menu">
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Property#1
+											</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Property#2
+											</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Property#3
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="#">About</a>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__actions action-header">
+					<form action="#" class="action-header__search  _icon-search">
+						<input type="search" placeholder="Search">
+					</form>
+					<a href="#" class="action-header__cart _icon-shopping-bag" data-da=".menu__list,6,800">Cart</a>
+					<button class="action-header__button button" data-da=".menu__list,7,800">Find a property</button>
+				</div>
+				<button class="icon-menu">
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__body">
+						<div class="hero__label label">Find your dream place</div>
+						<h1 class="hero__title">Find house for your family in minutes</h1>
+						<div class="hero__text">
+							<p>Aenean sodales mauris quis tellus facilisis, vel mattis magna. Interdum curabitur eget
+								aliquam
+								elit in mauris purus.</p>
+						</div>
+						<form action="#" class="hero__search search">
+							<div class="search__input _icon-search">
+								<input type="search" placeholder="Search">
+							</div>
+							<button type="submit" class="hero__button">Find property</button>
+						</form>
+						<img class="hero__decor-bottom" src="img/decor-bottom.png" alt="decor">
+					</div>
+					<img class="hero__image" src="img/hero-bg.jpeg" alt="hero-image">
+				</div>
+
+				<img class="hero__decor-top" src="img/hero-decor.svg" alt="decor">
+			</section>
+			<div class="logoipsum">
+				<div class="logoipsum__container">
+					<div class="logoipsum__text">As seen on the world's best magazines and media</div>
+					<div class="logoipsum__logo-wrap">
+						<img src="img/logo-1.svg" alt="logo">
+						<img src="img/logo-2.svg" alt="logo">
+						<img src="img/logo-3.svg" alt="logo">
+						<img src="img/logo-4.svg" alt="logo">
+						<img src="img/logo-5.svg" alt="logo">
+					</div>
+				</div>
+			</div>
+			<section class="info-work">
+				<div class="info-work__container">
+					<h2 class="info-work__title title">How it works</h2>
+					<div class="info-work__text text">
+						<p>Nunc laoreet consequat nunc at consequat. Praesent aliquam mi id efficitur pellentesque. <br>
+							Maecenas
+							varius felis felis.</p>
+					</div>
+					<div class="info-work__wrap">
+						<div class="info-work__item item-info">
+							<div class="item-info__icon _icon-house"></div>
+							<div class="item-info__title">Find property</div>
+							<div class="item-info__text text">
+								<p>Odales mauris quis tellus facilisis, vel mattis magna interdum. Curabitur eget aliquam elit.
+									In mauris purus, auctor a
+									eleifend non.</p>
+							</div>
+						</div>
+						<div class="info-work__item item-info">
+							<div class="item-info__icon _icon-receipt"></div>
+							<div class="item-info__title">Make a deal</div>
+							<div class="item-info__text text">
+								<p>Pellentesque suscipit mauris. Nam dictum, erat a volutpat varius, urna nisi sollicitudin
+									orci, sagittis facilisis odio
+									tortor ac mi.</p>
+							</div>
+						</div>
+						<div class="info-work__item item-info">
+							<div class="item-info__icon item-info__icon--size _icon-key"></div>
+							<div class="item-info__title">Get your keys</div>
+							<div class="item-info__text text">
+								<p>Nulla vel bibendum purus. Etiam tempus quam vel pulvinar rutrum. Duis semper, metus vitae
+									fermentum consequat.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="comfort">
+				<div class="comfort__container">
+					<div class="comfort__wrap">
+						<div class="comfort__content">
+							<div class="comfort__label label">Comfort first</div>
+							<h2 class="comfort__title title">The best houses for family comfort</h2>
+							<div class="comfort__text text">
+								<p>Ectus ipsum faucibus justo, et semper quam nisl in nibh. Proin sollicitudin, lorem non
+									posuere blandit.</p>
+							</div>
+							<div class="comfort__links links">
+								<a class="links__item links__item--border" href="#">Explore properties</a>
+								<a class="links__item links__item--arrow _icon-arrow-down" href="#">Contact agent</a>
+							</div>
+						</div>
+						<div class="comfort__image">
+							<img src="img/comfort-img.jpg" alt="image">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="comfort">
+				<div class="comfort__container">
+					<div class="comfort__wrap comfort__wrap--reverse">
+						<div class="comfort__content comfort__content--padding">
+							<div class="comfort__label label">Quick and easy</div>
+							<h2 class="comfort__title title">Fast forward process</h2>
+							<div class="comfort__text text">
+								<p>Ut vitae nisi eu nisi maximus condimentum ac id purus. Duis sit amet mi arcu praesent nec
+									felis nisl.</p>
+							</div>
+							<div class="comfort__items-wrap">
+								<div class="comfort__item item-comfort">
+									<div class="item-comfort__icon _icon-payments"></div>
+									<div class="item-comfort__title">Find property</div>
+									<div class="item-comfort__text text">
+										<p>Odales mauris quis tellus facilisis, vel mattis magna interdum. Curabitur eget aliquam
+											elit.
+											In mauris purus, auctor a
+											eleifend non.</p>
+									</div>
+								</div>
+								<div class="comfort__item item-comfort">
+									<div class="item-comfort__icon _icon-description"></div>
+									<div class="item-comfort__title">Find property</div>
+									<div class="item-comfort__text text">
+										<p>Odales mauris quis tellus facilisis, vel mattis magna interdum. Curabitur eget aliquam
+											elit.
+											In mauris purus, auctor a
+											eleifend non.</p>
+									</div>
+								</div>
+							</div>
+							<div class="comfort__links links">
+								<a class="links__item links__item--border" href="#">Explore properties</a>
+								<a class="links__item links__item--arrow _icon-arrow-down" href="#">Contact agent</a>
+							</div>
+						</div>
+						<div class="comfort__image">
+							<img src="img/comfort-2.jpg" alt="image">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="properties">
+				<div class="properties__container">
+					<div class="properties__label label">Properties</div>
+					<h2 class="properties__title title">Houses in your favorite area</h2>
+					<div class="properties__area area">
+						<a href="#" class="area__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-1.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<h3 class="item-area__title">Cozy studio in Los Angeles</h3>
+								<div class="item-area__price">$ 1,200.00 USD</div>
+								<div class="item-area__place _icon-place">2263 Southlea, Los Angeles</div>
+								<div class="item-area__flex-wrap">
+									<div class="item-area__info _icon-bathtub">2</div>
+									<div class="item-area__info _icon-bed">2</div>
+									<div class="item-area__info _icon-square_foot">840 aqft</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="area__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-2.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<h3 class="item-area__title">Cozy studio in Los Angeles</h3>
+								<div class="item-area__price">$ 1,200.00 USD</div>
+								<div class="item-area__place _icon-place">2263 Southlea, Los Angeles</div>
+								<div class="item-area__flex-wrap">
+									<div class="item-area__info _icon-bathtub">2</div>
+									<div class="item-area__info _icon-bed">2</div>
+									<div class="item-area__info _icon-square_foot">840 aqft</div>
+								</div>
+							</div>
+						</a><a href="#" class="area__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-3.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<h3 class="item-area__title">Cozy studio in Los Angeles</h3>
+								<div class="item-area__price">$ 1,200.00 USD</div>
+								<div class="item-area__place _icon-place">2263 Southlea, Los Angeles</div>
+								<div class="item-area__flex-wrap">
+									<div class="item-area__info _icon-bathtub">2</div>
+									<div class="item-area__info _icon-bed">2</div>
+									<div class="item-area__info _icon-square_foot">840 aqft</div>
+								</div>
+							</div>
+						</a><a href="#" class="area__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-4.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<h3 class="item-area__title">Cozy studio in Los Angeles</h3>
+								<div class="item-area__price">$ 1,200.00 USD</div>
+								<div class="item-area__place _icon-place">2263 Southlea, Los Angeles</div>
+								<div class="item-area__flex-wrap">
+									<div class="item-area__info _icon-bathtub">2</div>
+									<div class="item-area__info _icon-bed">2</div>
+									<div class="item-area__info _icon-square_foot">840 aqft</div>
+								</div>
+							</div>
+						</a><a href="#" class="area__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-5.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<h3 class="item-area__title">Cozy studio in Los Angeles</h3>
+								<div class="item-area__price">$ 1,200.00 USD</div>
+								<div class="item-area__place _icon-place">2263 Southlea, Los Angeles</div>
+								<div class="item-area__flex-wrap">
+									<div class="item-area__info _icon-bathtub">2</div>
+									<div class="item-area__info _icon-bed">2</div>
+									<div class="item-area__info _icon-square_foot">840 aqft</div>
+								</div>
+							</div>
+						</a><a href="#" class="area__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-6.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<h3 class="item-area__title">Cozy studio in Los Angeles</h3>
+								<div class="item-area__price">$ 1,200.00 USD</div>
+								<div class="item-area__place _icon-place">2263 Southlea, Los Angeles</div>
+								<div class="item-area__flex-wrap">
+									<div class="item-area__info _icon-bathtub">2</div>
+									<div class="item-area__info _icon-bed">2</div>
+									<div class="item-area__info _icon-square_foot">840 aqft</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<button type="button" class="properties__button show-more">Show More</button>
+					<div class="properties__links links">
+						<a class="links__item links__item--border" href="#">Explore properties</a>
+						<a class="links__item links__item--arrow _icon-arrow-down" href="#">Contact agent</a>
+					</div>
+				</div>
+			</section>
+			<section class="location">
+				<div class="location__container">
+					<h2 class="location__title title">Locations</h2>
+					<div class="location__text text">
+						<p>Nunc mi ante, fringilla eget iaculis et, maximus vel purus integer lacus urna, aliquet non nisl sit
+							amet.</p>
+					</div>
+					<div class="location__flex-wrap">
+						<div class="location__item item-location">
+							<h3 class="item-location__title">San Francisco, CA</h3>
+							<a class="item-location__link _icon-arrow-down" href="#">View Properties</a>
+						</div>
+						<div class="location__item item-location">
+							<h3 class="item-location__title">Los Angeles, CA</h3>
+							<a class="item-location__link _icon-arrow-down" href="#">View Properties</a>
+						</div>
+						<div class="location__item item-location">
+							<h3 class="item-location__title">San Diego, CA</h3>
+							<a class="item-location__link _icon-arrow-down" href="#">View Properties</a>
+						</div>
+						<div class="location__item item-location">
+							<h3 class="item-location__title">New York, NY</h3>
+							<a class="item-location__link _icon-arrow-down" href="#">View Properties</a>
+						</div>
+						<div class="location__item item-location">
+							<h3 class="item-location__title">Las Vegas, NV</h3>
+							<a class="item-location__link _icon-arrow-down" href="#">View Properties</a>
+						</div>
+						<div class="location__item item-location">
+							<h3 class="item-location__title">Miami, FL</h3>
+							<a class="item-location__link _icon-arrow-down" href="#">View
+								Properties</a>
+						</div>
+					</div>
+					<button type="button" class="more">More</button>
+					<div class="location__links links">
+						<a class="links__item links__item--border" href="#">Explore properties</a>
+						<a class="links__item links__item--arrow _icon-arrow-down" href="#">Contact agent</a>
+					</div>
+				</div>
+			</section>
+			<section class="priority">
+				<div class="priority__container">
+					<div class="priority__content">
+						<div class="priority__icon">
+							<img src="img/family.svg" alt="icon">
+						</div>
+						<h2 class="priority__title title">Families are our priority</h2>
+						<div class="priority__text text">
+							<p>Curabitur eget aliquam elit. In mauris purus, auctor a eleifend non, placerat vel arcu. In non
+								consectetur lorem. Morbi
+								non varius sapien suscipit mauri.</p>
+						</div>
+						<a class="priority__button" href="#">Get started</a>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<div class="feedback__container">
+					<h2 class="feedback__title title">What customers say</h2>
+					<div class="feedback__text text">
+						<p>Faucibus orci luctus et ultrices posuere cubilia curae.</p>
+					</div>
+					<div class="feedback__swiper swiper">
+						<div
+							class="feedback__wrapper swiper-wrapper swiper-initialized swiper-horizontal swiper-backface-hidden">
+							<div class="feedback__slide slide-feedback swiper-slide">
+								<div data-rating="4.5" class="slide-feedback__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="slide-feedback__text">
+									<p>"Aliquam erat volutpat. Nulla pretium nec urna et convallis. Ut varius mi lacus, nec
+										molestie libero ultricies nec.
+										Aenean lacinia dui elit, ut gravida quam."</p>
+								</div>
+								<div class="slide-feedback__customer customer">
+									<div class="customer__image">
+										<img src="img/customer-1.png" alt="customer">
+									</div>
+									<div class="customer__name">
+										<h6>Michael Webb</h6>
+										<span>Customer</span>
+									</div>
+								</div>
+							</div>
+							<div class="feedback__slide slide-feedback swiper-slide">
+								<div data-rating="4.5" class="slide-feedback__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="slide-feedback__text">
+									<p>"Aliquam erat volutpat. Nulla pretium nec urna et convallis. Ut varius mi lacus, nec
+										molestie libero ultricies nec.
+										Aenean lacinia dui elit, ut gravida quam."</p>
+								</div>
+								<div class="slide-feedback__customer customer">
+									<div class="customer__image">
+										<img src="img/customer-3.png" alt="customer">
+									</div>
+									<div class="customer__name">
+										<h6>Sarah Tarleton</h6>
+										<span>Customer</span>
+									</div>
+								</div>
+							</div>
+							<div class="feedback__slide slide-feedback swiper-slide">
+								<div data-rating="5" class="slide-feedback__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="slide-feedback__text">
+									<p>"Aliquam erat volutpat. Nulla pretium nec urna et convallis. Ut varius mi lacus, nec
+										molestie libero ultricies nec.
+										Aenean lacinia dui elit, ut gravida quam."</p>
+								</div>
+								<div class="slide-feedback__customer customer">
+									<div class="customer__image">
+										<img src="img/customer-2.png" alt="customer">
+									</div>
+									<div class="customer__name">
+										<h6>Amber Keene</h6>
+										<span>Customer</span>
+									</div>
+								</div>
+							</div>
+							<div class="feedback__slide slide-feedback swiper-slide">
+								<div data-rating="4.5" class="slide-feedback__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="slide-feedback__text">
+									<p>"Aliquam erat volutpat. Nulla pretium nec urna et convallis. Ut varius mi lacus, nec
+										molestie libero ultricies nec.
+										Aenean lacinia dui elit, ut gravida quam."</p>
+								</div>
+								<div class="slide-feedback__customer customer">
+									<div class="customer__image">
+										<img src="img/customer-3.png" alt="customer">
+									</div>
+									<div class="customer__name">
+										<h6>Sarah Tarleton</h6>
+										<span>Customer</span>
+									</div>
+								</div>
+							</div>
+							<div class="feedback__slide slide-feedback swiper-slide">
+								<div data-rating="3" class="slide-feedback__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="slide-feedback__text">
+									<p>"Aliquam erat volutpat. Nulla pretium nec urna et convallis. Ut varius mi lacus, nec
+										molestie libero ultricies nec.
+										Aenean lacinia dui elit, ut gravida quam."</p>
+								</div>
+								<div class="slide-feedback__customer customer">
+									<div class="customer__image">
+										<img src="img/customer-2.png" alt="customer">
+									</div>
+									<div class="customer__name">
+										<h6>Amber Keene</h6>
+										<span>Customer</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="blog">
+				<div class="blog__container">
+					<div class="blog__label label">Blog</div>
+					<h2 class="blog__title title">
+						Latest posts
+					</h2>
+					<div class="blog__wrap">
+						<div class="blog__text text">
+							<p>
+								Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Praesent
+								efficitur nibh massa
+								morbi sagittis ornare dui in ornare.
+							</p>
+						</div>
+						<a class="blog__link" href="#">View all</a>
+					</div>
+					<div class="blog__grid-wrapper">
+						<article class="blog__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-1.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<div class="item-area__flex-wrap">
+									<div class="item-area__category">Trends</div>
+									<span>May 10, 2022</span>
+								</div>
+								<h3 class="item-area__title">The 9 best homes in New York</h3>
+								<div class="item-area__text">Integer tincidunt rutrum faucibus. Proin sit amet varius arcu.
+									Aliquam vel leo augue donec.</div>
+								<a class="item-area__link _icon-arrow-down" href="#">Read more</a>
+							</div>
+						</article>
+						<article class="blog__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-2.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<div class="item-area__flex-wrap">
+									<div class="item-area__category">DIY</div>
+									<span>May 10, 2022</span>
+								</div>
+								<h3 class="item-area__title">How to easily buy a house with Realco</h3>
+								<div class="item-area__text">Praesent nec felis nisl. Phasellus eget lacus a metus fringilla
+									fermentum sit amet.</div>
+								<a class="item-area__link _icon-arrow-down" href="#">Read more</a>
+							</div>
+						</article>
+						<article class="blog__item item-area">
+							<div class="item-area__image">
+								<img src="img/area-3.jpg" alt="flat">
+							</div>
+							<div class="item-area__content">
+								<div class="item-area__flex-wrap">
+									<div class="item-area__category">DIY</div>
+									<span>May 10, 2022</span>
+								</div>
+								<h3 class="item-area__title">Renting houses - complete guide</h3>
+								<div class="item-area__text">Nunc in bibendum leo, gravida scelerisque quam nulla interdum
+									tellus a turpis.</div>
+								<a class="item-area__link _icon-arrow-down" href="#">Read more</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__wrap">
+					<div class="footer__logo logo">
+						<div class="logo__item"></div>
+						<div class="logo__text"><img src="img/logo-text.svg" alt=""></div>
+					</div>
+					<div class="footer__navigation navigation">
+						<div class="navigation__item">
+							<h6 class="navigation__title _icon-arrow-down">
+								Pages
+							</h6>
+							<ul class="navigation__list list-nav">
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Home</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">About</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Blog</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Agents</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Contact</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">FAQs</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Properties</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navigation__item">
+							<h6 class="navigation__title _icon-arrow-down">
+								CMS Pages
+							</h6>
+							<ul class="navigation__list list-nav">
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Property</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Property Single</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Blog Categories</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Blog Single</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Agent Single</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navigation__item">
+							<h6 class="navigation__title _icon-arrow-down">
+								Utility Pages </h6>
+							<ul class="navigation__list list-nav">
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Style Guide</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Changelog</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Licenses</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">404</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Password</a>
+								</li>
+								<li class="list-nav__item">
+									<a class="list-nav__link" href="#">Search</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<form class="footer__form form-footer" action="#">
+						<h6 class="form-footer__title">Subscribe</h6>
+						<div class="form-footer__text">
+							Join our newsletter to stay up to date on features and releases.
+						</div>
+						<div class="form-footer__wrap">
+							<input class="form-footer__input" type="email" placeholder="Enter your email">
+							<button type="submit" class="form-footer__button">Subscribe</button>
+						</div>
+						<span>By subscribing you agree to with our <a href="#">Privacy Policy</a></span>
+					</form>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<span>© Realco by <a href="#">Minimal Square</a></span>
+					<div class="bottom-footer__social social">
+						<a class="social__link _icon-facebook" href="#"></a>
+						<a class="social__link _icon-instagram" href="#"></a>
+						<a class="social__link _icon-twitter" href="#"></a>
+						<a class="social__link _icon-linkedin" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
