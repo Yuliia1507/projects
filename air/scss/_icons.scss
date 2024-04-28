@@ -1,0 +1,25 @@
+[class*="_icon-"]::before {
+	display: inline-block;
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+._icon-calendar:before {
+	content: "\e901";
+}
+._icon-checkmark:before {
+	content: "\ea10";
+}
+._icon-arrow-right2:before {
+	content: "\ea3c";
+}
+._icon-arrow-down:before {
+	content: "\e900";
+}

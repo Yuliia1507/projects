@@ -1,0 +1,254 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 55;
+	background-color: transparent;
+	padding: toRem(35) 0;
+	transition: background-color 0.3s ease;
+	@media (max-width: toEm(960)) {
+		padding: toRem(10) 0;
+	}
+	// .header__container
+
+	&__container {
+		gap: toRem(15);
+		display: flex;
+		color: $darkColor;
+		font-size: toRem(14);
+		font-weight: 500;
+		align-items: center;
+		@media (max-width: toEm(1199.98)) {
+			gap: toRem(15);
+		}
+	}
+
+	// .header__logo
+
+	&__logo {
+		z-index: 17;
+		flex-grow: 1;
+		height: toRem(36);
+		@media (max-width: toEm(480)) {
+			max-width: toRem(100);
+		}
+		img {
+			max-width: toRem(140);
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	// .header__menu
+
+	&__menu {
+		flex-grow: 1;
+	}
+
+	// .header__actions
+
+	&__actions {
+	}
+	&.scrolled {
+		background-color: rgb(229, 244, 246);
+	}
+}
+
+.menu {
+	// .menu__body
+
+	&__body {
+		@media (max-width: toEm(960)) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			top: 0;
+			left: -100%;
+			transition: left 0.3s;
+			padding: toRem(80) toRem(15) toRem(30) toRem(15);
+			background-color: #d3d3ce;
+			z-index: 15;
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: toRem(55);
+				top: 0;
+				left: -100%;
+				z-index: 16;
+				transition: left 0.3s;
+				background-color: rgb(229, 244, 246);
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: toRem(17);
+		row-gap: toRem(5);
+		@media (max-width: toEm(1199.98)) {
+			column-gap: toRem(10);
+		}
+		@media (max-width: toEm(960)) {
+			flex-direction: column;
+			text-align: right;
+			row-gap: toRem(28);
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		@media (any-hover: hover) {
+			&:hover {
+				.menu__link {
+					color: $purpleColor;
+				}
+				.menu__link::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+	// .menu__link
+
+	&__link {
+		position: relative;
+		color: $darkColor;
+		font-size: toRem(14);
+		font-weight: 500;
+		line-height: toRem(21);
+		text-transform: capitalize;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 0;
+			height: toRem(2);
+			border-radius: toRem(5);
+			background: $purpleColor;
+			transition: width 0.3s;
+		}
+
+		@media (max-width: toEm(960)) {
+			font-size: toRem(28);
+		}
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: toEm(960)) {
+		width: toRem(25);
+		display: block;
+		flex: 0 0 toRem(25);
+		height: toRem(18);
+		position: relative;
+		z-index: 17;
+
+		&::before,
+		&::after,
+		span {
+			content: "";
+			height: toRem(2);
+			width: 100%;
+			position: absolute;
+			left: 0;
+			transition: all 0.3s;
+			background-color: $darkColor;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: 50%;
+			margin-top: toRem(-1);
+		}
+	}
+}
+
+@media (max-width: toEm(960)) {
+	.menu-open .icon-menu {
+		span {
+			transform: scale(0);
+		}
+
+		&::before {
+			transform: rotate(-45deg);
+			top: 50%;
+			margin-top: toRem(-1);
+		}
+
+		&::after {
+			transform: rotate(45deg);
+			bottom: 50%;
+			margin-bottom: toRem(-1);
+		}
+	}
+}
+.menu-open body {
+	overflow: hidden;
+}
+.action-header {
+	display: flex;
+	gap: toRem(10);
+	@media (max-width: toEm(480)) {
+		align-self: flex-end;
+	}
+	// .action-header__search
+
+	&__button {
+	}
+}
+.button {
+	flex-shrink: 0;
+	font-weight: 500;
+	border-radius: toRem(5);
+	padding: toRem(5) toRem(23);
+	border: toRem(1) solid transparent;
+	transition: all 0.2s;
+	&--background {
+		background-color: $purpleColor;
+		color: rgb(255, 255, 255);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $purpleColor;
+				background-color: transparent;
+				border: toRem(1) solid $purpleColor;
+			}
+		}
+	}
+	&--transparent {
+		background-color: transparent;
+		@media (max-width: toEm(480)) {
+			background-color: $purpleColor;
+			color: rgb(255, 255, 255);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				padding: toRem(5) toRem(23);
+				background-color: $purpleColor;
+				color: rgb(255, 255, 255);
+			}
+		}
+	}
+}
