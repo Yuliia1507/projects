@@ -1,0 +1,37 @@
+[class*="_icon-"]::before {
+	display: inline-block;
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+._icon-facebook1:before {
+	content: "\e900";
+}
+._icon-instagram:before {
+	content: "\e90b";
+}
+._icon-cog:before {
+	content: "\e994";
+}
+._icon-eye:before {
+	content: "\e9ce";
+}
+._icon-mail4:before {
+	content: "\ea86";
+}
+._icon-telegram:before {
+	content: "\ea95";
+}
+._icon-github:before {
+	content: "\eab0";
+}
+._icon-skype:before {
+	content: "\eac5";
+}
