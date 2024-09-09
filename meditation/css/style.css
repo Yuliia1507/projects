@@ -542,10 +542,10 @@ body.menu-open {
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
-  -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
-  transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  transition: opacity 1s ease-out, transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
 }
 @media (min-width: 103.375em) {
   .hero__title {
@@ -587,10 +587,10 @@ body.menu-open {
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
-  -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
-  transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  transition: opacity 1s ease-out, transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
 }
@@ -640,10 +640,10 @@ body.menu-open {
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
-  -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
-  transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  transition: opacity 1s ease-out, transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
 }
