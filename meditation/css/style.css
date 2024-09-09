@@ -782,8 +782,8 @@ body.menu-open {
   opacity: 1;
 }
 .hero__image {
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
   opacity: 0;
 }
 .hero__image img {
@@ -1055,10 +1055,10 @@ body.menu-open {
   -webkit-transform: translateY(50px);
       -ms-transform: translateY(50px);
           transform: translateY(50px);
-  -webkit-transition: opacity 2s ease, -webkit-transform 2s ease;
-  transition: opacity 2s ease, -webkit-transform 2s ease;
-  transition: opacity 2s ease, transform 2s ease;
-  transition: opacity 2s ease, transform 2s ease, -webkit-transform 2s ease;
+  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
+  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
 }
 .meditation__item:nth-child(1) {
   -webkit-transition-delay: 0.1s;
@@ -1614,10 +1614,10 @@ body.menu-open {
   -webkit-transform: translateX(50px);
       -ms-transform: translateX(50px);
           transform: translateX(50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .practice__item.visible {
   opacity: 1;
@@ -2152,10 +2152,10 @@ body.menu-open {
   -webkit-transform: translateX(-50px);
       -ms-transform: translateX(-50px);
           transform: translateX(-50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 @media (min-width: 103.375em) {
   .sound__content {
@@ -2192,10 +2192,10 @@ body.menu-open {
   -webkit-transform: translateX(50px);
       -ms-transform: translateX(50px);
           transform: translateX(50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .sound__image.visible {
   opacity: 1;
@@ -2769,10 +2769,10 @@ body.menu-open {
   -webkit-transform: translateX(-50px);
       -ms-transform: translateX(-50px);
           transform: translateX(-50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .advantages__left.visible, .visible.advantages__right {
   opacity: 1;
@@ -2814,10 +2814,10 @@ body.menu-open {
   -webkit-transform: translateX(50px);
       -ms-transform: translateX(50px);
           transform: translateX(50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .advantages__right.visible {
   opacity: 1;
@@ -3200,10 +3200,10 @@ body.menu-open {
   -webkit-transform: translateX(50px);
       -ms-transform: translateX(50px);
           transform: translateX(50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .transformation__image--right.visible {
   opacity: 1;
@@ -3216,10 +3216,10 @@ body.menu-open {
   -webkit-transform: translateX(-50px);
       -ms-transform: translateX(-50px);
           transform: translateX(-50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .transformation__image--left.visible {
   opacity: 1;
@@ -3235,10 +3235,10 @@ body.menu-open {
   -webkit-transform: translateX(50px);
       -ms-transform: translateX(50px);
           transform: translateX(50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .item-transformation--right.visible {
   opacity: 1;
@@ -3251,10 +3251,10 @@ body.menu-open {
   -webkit-transform: translateX(-50px);
       -ms-transform: translateX(-50px);
           transform: translateX(-50px);
-  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transition: opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .item-transformation--left.visible {
   opacity: 1;

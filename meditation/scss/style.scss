@@ -353,7 +353,7 @@ body {
 		}
 	}
 	&__image {
-		transition: opacity 2s;
+		transition: opacity 1s;
 		opacity: 0;
 		img{
 			width: 100%;
@@ -468,8 +468,8 @@ body {
 		opacity: 0;
 		transform: translateY(50px);
 		transition:
-			opacity 2s ease,
-			transform 2s ease;
+			opacity 1.5s ease,
+			transform 1.5s ease;
 		&:nth-child(1) {
 			transition-delay: 0.1s;
 		}
@@ -654,8 +654,8 @@ body {
 		opacity: 0;
 		transform: translateX(50px);
 		transition:
-			opacity 1.5s ease,
-			transform 1.5s ease;
+			opacity 1s ease,
+			transform 1s ease;
 		&.visible {
 			opacity: 1;
 			transform: translateX(0);
@@ -846,8 +846,8 @@ body {
 		opacity: 0;
 		transform: translateX(-50px);
 		transition:
-			opacity 1.5s ease,
-			transform 1.5s ease;
+			opacity 1s ease,
+			transform 1s ease;
 		&.visible {
 			opacity: 1;
 			transform: translateX(0);
@@ -867,8 +867,8 @@ body {
 		opacity: 0;
 		transform: translateX(50px);
 		transition:
-			opacity 1.5s ease,
-			transform 1.5s ease;
+			opacity 1s ease,
+			transform 1s ease;
 		&.visible {
 			opacity: 1;
 			transform: translateX(0);
@@ -1112,8 +1112,8 @@ body {
 		opacity: 0;
 		transform: translateX(-50px);
 		transition:
-			opacity 1.5s ease,
-			transform 1.5s ease;
+			opacity 1s ease,
+			transform 1s ease;
 		&.visible {
 			opacity: 1;
 			transform: translateX(0);
@@ -1128,8 +1128,8 @@ body {
 		opacity: 0;
 		transform: translateX(50px);
 		transition:
-			opacity 1.5s ease,
-			transform 1.5s ease;
+			opacity 1s ease,
+			transform 1s ease;
 		&.visible {
 			opacity: 1;
 			transform: translateX(0);
@@ -1272,8 +1272,8 @@ body {
 			opacity: 0;
 			transform: translateX(50px);
 			transition:
-				opacity 1.5s ease,
-				transform 1.5s ease;
+				opacity 1s ease,
+				transform 1s ease;
 			&.visible {
 				opacity: 1;
 				transform: translateX(0);
@@ -1283,8 +1283,8 @@ body {
 			opacity: 0;
 			transform: translateX(-50px);
 			transition:
-				opacity 1.5s ease,
-				transform 1.5s ease;
+				opacity 1s ease,
+				transform 1s ease;
 			&.visible {
 				opacity: 1;
 				transform: translateX(0);
@@ -1305,8 +1305,8 @@ body {
 		opacity: 0;
 		transform: translateX(50px);
 		transition:
-			opacity 1.5s ease,
-			transform 1.5s ease;
+			opacity 1s ease,
+			transform 1s ease;
 		&.visible {
 			opacity: 1;
 			transform: translateX(0);
@@ -1316,8 +1316,8 @@ body {
 		opacity: 0;
 		transform: translateX(-50px);
 		transition:
-			opacity 1.5s ease,
-			transform 1.5s ease;
+			opacity 1s ease,
+			transform 1s ease;
 		&.visible {
 			opacity: 1;
 			transform: translateX(0);
