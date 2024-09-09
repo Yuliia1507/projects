@@ -242,7 +242,7 @@ body {
 	position: relative;
 	@include adaptiveValue("padding-top", 200, 100);
 	padding-bottom: toRem(5);
-	background: url("../img/hero-bg.png") 0 0 / cover no-repeat;
+	background: url("../img/hero-bg.webp") 0 0 / cover no-repeat;
 	@media (max-width: toEm(1550)) {
 		background: url("../img/hero-bg.png") center / cover no-repeat;
 	}
@@ -790,9 +790,9 @@ body {
 	@include adaptiveValue("padding-top", 59, 15);
 	@include adaptiveValue("padding-bottom", 158, 50);
 	width: 100%;
-	background: url("../img/sound-background.png") right / cover no-repeat;
+	background: url("../img/sound-background.webp") right / cover no-repeat;
 	@media (max-width: toEm(775)) {
-		background: url("../img/sound-background.png") center / cover no-repeat;
+		background: url("../img/sound-background.webp") center / cover no-repeat;
 	}
 	// .sound__container
 
@@ -997,7 +997,7 @@ body {
 	@include adaptiveValue("padding-top", 128, 80);
 	@include adaptiveValue("padding-bottom", 215, 80);
 	background-color: #fff;
-	background: url("../img/advantages-bg.png") 0 0 / auto 100% repeat-x;
+	background: url("../img/advantages-bg.webp") 0 0 / auto 100% repeat-x;
 	position: relative;
 	overflow: hidden;
 	&::before {
@@ -1007,7 +1007,7 @@ body {
 		left: 0;
 		width: 200%;
 		height: 100%;
-		background: url("../img/advantages-bg-top.png") 0 0 / auto 100% repeat-x;
+		background: url("../img/advantages-bg-top.webp") 0 0 / auto 100% repeat-x;
 		z-index: -2;
 		animation: moveBackground 4s ease-in-out infinite;
 		@keyframes moveBackground {

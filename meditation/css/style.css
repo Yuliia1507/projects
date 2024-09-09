@@ -462,7 +462,7 @@ body.menu-open {
   overflow: hidden;
   position: relative;
   padding-bottom: 0.3125rem;
-  background: url("../img/hero-bg.png") 0 0/cover no-repeat;
+  background: url("../img/hero-bg.webp") 0 0/cover no-repeat;
 }
 @media (min-width: 103.375em) {
   .hero {
@@ -2006,7 +2006,7 @@ body.menu-open {
 .sound {
   scroll-margin-top: 4.8125rem;
   width: 100%;
-  background: url("../img/sound-background.png") right/cover no-repeat;
+  background: url("../img/sound-background.webp") right/cover no-repeat;
 }
 @media (min-width: 103.375em) {
   .sound {
@@ -2054,7 +2054,7 @@ body.menu-open {
 }
 @media (max-width: 48.4375em) {
   .sound {
-    background: url("../img/sound-background.png") center/cover no-repeat;
+    background: url("../img/sound-background.webp") center/cover no-repeat;
   }
 }
 @media (min-width: 103.375em) {
@@ -2506,7 +2506,7 @@ body.menu-open {
 .advantages {
   scroll-margin-top: 4.8125rem;
   background-color: #fff;
-  background: url("../img/advantages-bg.png") 0 0/auto 100% repeat-x;
+  background: url("../img/advantages-bg.webp") 0 0/auto 100% repeat-x;
   position: relative;
   overflow: hidden;
 }
@@ -2561,7 +2561,7 @@ body.menu-open {
   left: 0;
   width: 200%;
   height: 100%;
-  background: url("../img/advantages-bg-top.png") 0 0/auto 100% repeat-x;
+  background: url("../img/advantages-bg-top.webp") 0 0/auto 100% repeat-x;
   z-index: -2;
   -webkit-animation: moveBackground 4s ease-in-out infinite;
           animation: moveBackground 4s ease-in-out infinite;
