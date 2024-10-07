@@ -1,0 +1,71 @@
+[class*="_icon-"]::before {
+	display: inline-block;
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow-feedback:before {
+	content: "\e909";
+}
+._icon-dribble:before {
+	content: "\e907";
+}
+._icon-location:before {
+	content: "\e912";
+}
+._icon-bank:before {
+	content: "\e903";
+	color: #2f2b6d;
+}
+._icon-arrow-up-right:before {
+	content: "\e900";
+}
+._icon-arrow:before {
+	content: "\e910";
+}
+._icon-arrow-right:before {
+	content: "\e904";
+}
+._icon-camera:before {
+	content: "\e901";
+}
+._icon-marketing:before {
+	content: "\e902";
+}
+._icon-chat:before {
+	content: "\e906";
+}
+._icon-facebook:before {
+	content: "\e905";
+}
+._icon-finance:before {
+	content: "\e90a";
+}
+._icon-instagram:before {
+	content: "\e90b";
+}
+._icon-development:before {
+	content: "\e90c";
+}
+._icon-behance:before {
+	content: "\e90d";
+}
+._icon-pen:before {
+	content: "\e90f";
+}
+._icon-twitter:before {
+	content: "\e913";
+}
+._icon-phone:before {
+	content: "\e90e";
+}
+._icon-mail:before {
+	content: "\e908";
+}
