@@ -1,0 +1,53 @@
+[class*="_icon-"]::before {
+	display: inline-block;
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow_down:before {
+	content: "\e900";
+}
+._icon-support:before {
+	content: "\e909";
+}
+._icon-add:before {
+	content: "\e901";
+}
+._icon-arrow-right:before {
+	content: "\e902";
+	color: #4f4f4f;
+}
+._icon-cart:before {
+	content: "\e903";
+}
+._icon-sun:before {
+	content: "\e904";
+}
+._icon-logo:before {
+	content: "\e905";
+}
+._icon-payment:before {
+	content: "\e906";
+}
+._icon-search:before {
+	content: "\e907";
+}
+._icon-shipping:before {
+	content: "\e908";
+}
+._icon-nutrients:before {
+	content: "\e90a";
+}
+._icon-water:before {
+	content: "\e90b";
+}
+._icon-plant-pot:before {
+	content: "\e90c";
+}
