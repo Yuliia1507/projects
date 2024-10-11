@@ -225,11 +225,22 @@ body.menu-open {
     color: var(--accent-color);
   }
 }
+.color-settings__icon {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 .color-settings__icon::before {
   -webkit-animation: rotate 4s linear infinite;
           animation: rotate 4s linear infinite;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media (any-hover: hover) {
+  .color-settings__icon:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 @-webkit-keyframes rotate {
   0% {
@@ -253,13 +264,22 @@ body.menu-open {
 }
 .color-settings__palette {
   display: none;
+  opacity: 0;
   position: fixed;
   left: 3.75rem;
   gap: 0.3125rem;
   z-index: 10;
 }
+.color-settings__palette.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
 .color-settings__btn {
   border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media (min-width: 101.875em) {
   .color-settings__btn {
@@ -303,6 +323,13 @@ body.menu-open {
 @media (max-width: 20em) {
   .color-settings__btn {
     height: 1.5625rem;
+  }
+}
+@media (any-hover: hover) {
+  .color-settings__btn:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 

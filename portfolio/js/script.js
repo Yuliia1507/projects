@@ -143,32 +143,31 @@ document.addEventListener('mousemove', function (e) {
 
 
 document.getElementById('settings-icon').addEventListener('click', function (e) {
-	e.stopPropagation(); // Prevent click from propagating to the document
+	e.stopPropagation();
 	const palette = document.getElementById('color-palette');
-	palette.style.display = palette.style.display === 'flex' ? 'none' : 'flex';
+	palette.classList.toggle('show');
 });
 
 document.querySelectorAll('.color-settings__btn').forEach(option => {
 	option.addEventListener('click', function () {
 		const newColor = this.getAttribute('data-color');
 		document.documentElement.style.setProperty('--accent-color', newColor);
-		document.getElementById('color-palette').style.display = 'none';
+		localStorage.setItem('accentColor', newColor);
+		document.getElementById('color-palette').classList.remove('show');
 	});
 });
 
-// Close color palette when clicking outside
 document.addEventListener('click', function (e) {
 	const palette = document.getElementById('color-palette');
 	const settingsIcon = document.getElementById('settings-icon');
 
-	// Check if the click is outside the palette and settings icon
-	if (palette.style.display === 'flex' && !palette.contains(e.target) && !settingsIcon.contains(e.target)) {
-		palette.style.display = 'none';
+	if (palette.classList.contains('show') && !palette.contains(e.target) && !settingsIcon.contains(e.target)) {
+		palette.classList.remove('show');
 	}
 });
 
-// Set initial accent color
-document.documentElement.style.setProperty('--accent-color', '#00fff7');
+
+
 
 //==================================
 
