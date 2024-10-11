@@ -269,6 +269,8 @@ body.menu-open {
   left: 3.75rem;
   gap: 0.3125rem;
   z-index: 10;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 .color-settings__palette.show {
   display: -webkit-box;

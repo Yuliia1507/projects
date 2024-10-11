@@ -109,6 +109,7 @@ body {
 		left: toRem(60);
 		gap: toRem(5);
 		z-index: 10;
+		transition: opacity 0.3s;
 		&.show {
 			display: flex;
 			opacity: 1;
