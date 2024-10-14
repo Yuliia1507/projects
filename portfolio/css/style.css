@@ -594,7 +594,6 @@ body.menu-open {
     position: relative;
     -webkit-transition: 0.1s;
     transition: 0.1s;
-    margin: 10px 10px;
     cursor: pointer;
     display: inline-block;
   }
