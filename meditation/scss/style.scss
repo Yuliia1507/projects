@@ -442,7 +442,6 @@ body {
 //===================================================
 
 .meditation {
-	scroll-margin-top: toRem(77);
 	@include adaptiveValue("padding-top", 120, 50);
 	@include adaptiveValue("padding-bottom", 45, 10);
 	// .meditation__container
@@ -573,7 +572,6 @@ body {
 }
 
 .practice {
-	scroll-margin-top: toRem(77);
 	@include adaptiveValue("padding-top", 77, 10);
 	@include adaptiveValue("padding-bottom", 61, 10);
 	// .practice__container
@@ -785,7 +783,6 @@ body {
 }
 
 .sound {
-	scroll-margin-top: toRem(77);
 	@include adaptiveValue("padding-top", 59, 15);
 	@include adaptiveValue("padding-bottom", 158, 50);
 	width: 100%;
@@ -992,7 +989,6 @@ body {
 }
 //=====================================
 .advantages {
-	scroll-margin-top: toRem(77);
 	@include adaptiveValue("padding-top", 128, 80);
 	@include adaptiveValue("padding-bottom", 215, 80);
 	background-color: #fff;
@@ -1201,7 +1197,6 @@ body {
 }
 
 .transformation {
-	scroll-margin-top: toRem(77);
 	@include adaptiveValue("padding-top", 67, 30);
 	@include adaptiveValue("padding-bottom", 133, 20);
 	background: url("../img/transformation-background.png") center / cover no-repeat;

@@ -1,37 +1,32 @@
 "use strict"
-
 document.addEventListener("click", documentActions);
 
 function documentActions(e) {
 	const targetElement = e.target;
 
+	// Toggle menu open/close on burger icon click
 	if (targetElement.closest('.icon-menu')) {
 		document.body.classList.toggle('menu-open');
+		document.querySelector('.menu__body').classList.toggle('open');
+		document.querySelector('.icon-menu').classList.toggle('open'); // Toggle icon state
 	}
 }
 
 let wrapperMenu = document.querySelector('.icon-menu');
 
-wrapperMenu.addEventListener('click', function () {
-	wrapperMenu.classList.toggle('open');
-})
-
-const icons = document.querySelectorAll('.menu__item');
-
-
+// Close menu and reset icon state when menu links are clicked
 document.querySelectorAll('.menu__link').forEach(link => {
 	link.addEventListener('click', function () {
+		// Remove 'active' class from previously active link and add to the clicked link
 		document.querySelector('.menu__link.active').classList.remove('active');
 		this.classList.add('active');
 
-		// Закриття меню при натисканні на пункт навігації
+		// Close the menu
 		document.querySelector('.menu__body').classList.remove('open');
 		document.body.classList.remove('menu-open');
-		icons.forEach(icon => icon.classList.remove('active'));
+		document.querySelector('.icon-menu').classList.remove('open'); // Reset icon state
 	});
 });
-
-document.addEventListener('click', documentActions);
 
 //==================================
 
@@ -46,22 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (activeLink) {
 				const rect = activeLink.getBoundingClientRect();
 				const headerRect = document.querySelector('header').getBoundingClientRect();
-				animation.style.left = `${rect.left - headerRect.left - 15}px`;
-				animation.style.width = `${rect.width + 30}px`;
-				animation.classList.add('show'); // Показуємо елемент анімації
+
+				// Використовуємо requestAnimationFrame для плавного оновлення позиції
+				requestAnimationFrame(() => {
+					animation.style.left = `${rect.left - headerRect.left - 15}px`;
+					animation.style.width = `${rect.width + 30}px`;
+					animation.classList.add('show');
+				});
 			} else {
-				animation.classList.remove('show'); // Приховуємо елемент анімації, якщо активного пункту немає
+				animation.classList.remove('show');
 			}
 		} else {
-			animation.classList.remove('show'); // Приховуємо елемент анімації на маленьких екранах
+			animation.classList.remove('show');
 		}
 	}
 
-	// Початкове позиціонування та видимість
-	updateAnimationPosition();
+	// Оновлюємо позицію після завантаження всіх ресурсів
+	window.addEventListener('load', () => {
+		setTimeout(updateAnimationPosition, 100); // Невелика затримка для повного завантаження стилів та ресурсів
+	});
 
 	// Оновлюємо позицію при зміні розміру вікна
-	window.addEventListener('resize', updateAnimationPosition);
+	window.addEventListener('resize', () => {
+		requestAnimationFrame(updateAnimationPosition);
+	});
 
 	// Динамічне перемикання активного пункту меню
 	document.querySelectorAll('.menu__link').forEach(link => {
@@ -70,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			link.classList.add('active');
 
 			// Використовуємо тайм-аут для коректного оновлення анімації
-			setTimeout(updateAnimationPosition, 10); // Невелика затримка для перерахунку розмірів
+			setTimeout(updateAnimationPosition, 10);
 		});
 	});
 });
@@ -159,17 +162,25 @@ items.forEach(item => {
 
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
+let ticking = false;
 
 window.addEventListener('scroll', function () {
 	const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-	if (scrollTop > lastScrollTop) {
-		// Скролимо вниз, додаємо клас hide
-		header.classList.add('hide');
-	} else {
-		// Скролимо вгору, видаляємо клас hide
-		header.classList.remove('hide');
-	}
+	if (!ticking) {
+		window.requestAnimationFrame(() => {
+			if (scrollTop > lastScrollTop) {
+				// Скролимо вниз, додаємо клас hide
+				header.classList.add('hide');
+			} else {
+				// Скролимо вгору, видаляємо клас hide
+				header.classList.remove('hide');
+			}
 
-	lastScrollTop = scrollTop;
+			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Звертаємо увагу на граничні значення
+			ticking = false;
+		});
+
+		ticking = true;
+	}
 });
