@@ -530,8 +530,8 @@ body {
 			background-color: var(--accent-color);
 			position: absolute;
 			z-index: -1;
-			@include adaptiveValue("top", 100, 10);
-			@include adaptiveValue("right", 40, 20);
+			@include adaptiveValue("top", 100, 80);
+			@include adaptiveValue("right", 40, 10);
 			border-radius: 50%;
 		}
 		&::after {
@@ -665,13 +665,24 @@ body {
 			}
 		}
 		@media (max-width: toEm(850)) {
-			right: 20%;
-			top: 10%;
+			right: 35%;
+			top: 13%;
 			@keyframes moveRight {
 				to {
-					top: 0;
-					right: 6%;
-					opacity: 0.9;
+					top: 8%;
+					right: 20%;
+					opacity: 0.7;
+				}
+			}
+		}
+		@media (max-width: toEm(660)) {
+			right: 35%;
+			top: 13%;
+			@keyframes moveRight {
+				to {
+					top: 7%;
+					right: 9%;
+					opacity: 0.7;
 				}
 			}
 		}
@@ -694,20 +705,19 @@ body {
 			right: 35%;
 			@keyframes moveLeft {
 				to {
-					top: toRem(0);
-					opacity: 0.5;
-					right: 65%;
+					top: toRem(25);
+					opacity: 0.7;
+					right: 60%;
 				}
 			}
 		}
 	}
 	&--bottom {
-		@include adaptiveValue("width", 200, 120, $widthTo: 550);
-		@include adaptiveValue("height", 200, 120, $widthTo: 550);
+		@include adaptiveValue("width", 200, 100, $widthTo: 550);
+		@include adaptiveValue("height", 200, 100, $widthTo: 550);
 		right: 20%;
 		top: 50%;
 		animation: moveBottom 2s forwards;
-		z-index: -1;
 		@keyframes moveBottom {
 			to {
 				top: 60%;
@@ -722,16 +732,7 @@ body {
 			@keyframes moveBottom {
 				to {
 					top: 30%;
-					right: 70%;
-					opacity: 0.6;
-				}
-			}
-		}
-		@media (max-width: toEm(480)) {
-			@keyframes moveBottom {
-				to {
-					top: 25%;
-					right: 58%;
+					right: 67%;
 					opacity: 0.6;
 				}
 			}
