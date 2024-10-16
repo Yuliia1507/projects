@@ -983,6 +983,10 @@ body.menu-open {
   background-color: var(--accent-color);
   position: absolute;
   z-index: -1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   border-radius: 50%;
 }
 @media (min-width: 101.875em) {
@@ -1049,28 +1053,6 @@ body.menu-open {
 @media (max-width: 20em) {
   .hero__image::before {
     top: 5rem;
-  }
-}
-@media (min-width: 101.875em) {
-  .hero__image::before {
-    right: 2.5rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 101.875em) {
-  @supports (right: clamp( 0.625rem , 0.1669847328rem  +  2.2900763359vw , 2.5rem )) {
-    .hero__image::before {
-      right: clamp( 0.625rem , 0.1669847328rem  +  2.2900763359vw , 2.5rem );
-    }
-  }
-  @supports not (right: clamp( 0.625rem , 0.1669847328rem  +  2.2900763359vw , 2.5rem )) {
-    .hero__image::before {
-      right: calc(0.625rem + 1.875 * (100vw - 20rem) / 81.875);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .hero__image::before {
-    right: 0.625rem;
   }
 }
 .hero__image::after {

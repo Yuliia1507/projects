@@ -531,7 +531,8 @@ body {
 			position: absolute;
 			z-index: -1;
 			@include adaptiveValue("top", 100, 80);
-			@include adaptiveValue("right", 40, 10);
+			left: 50%;
+			transform: translateX(-50%);
 			border-radius: 50%;
 		}
 		&::after {
