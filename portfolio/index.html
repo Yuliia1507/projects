@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Portfolio" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/globe.ico" type="image/x-icon">
+	<title>Portfolio</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="color-settings">
+			<div class="color-settings__icon _icon-cog" id="settings-icon"></div>
+			<div class="color-settings__palette" id="color-palette">
+				<button class="color-settings__btn" data-color="#009df8" style="background-color: #009df8;"></button>
+				<button class="color-settings__btn" data-color="#d9ff00" style="background-color: #d9ff00;"></button>
+				<button class="color-settings__btn" data-color="#ff3c00" style="background-color: #ff3c00;"></button>
+			</div>
+		</div>
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo logo">
+					Portfolio.
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link active" href="#about">About</a>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="#projects">Projects</a></li>
+							<li class="menu__item"><a class="menu__link" href="#skill">Skills</a>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="#service">Service</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<a href="mailTo:yuliia.devweb@gmail.com" data-da=".menu__list,5,500" class="header__link">
+					<span>Mail Me</span>
+				</a>
+				<button aria-label="Burger menu button" class="icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<section id="about" class="hero">
+				<div class="hero__container">
+					<div class="hero__info">
+						<h1 class="hero__title">
+							Hi, I'm Yuliia!
+						</h1>
+						<div class="hero__typewriter" data-period="3000" data-type='[ "Frontend Developer", "Freelancer"]'>
+						</div>
+						<div class="hero__text">
+							"I’m focused on writing clean, maintainable code without relying on frameworks. My approach
+							emphasizes simplicity, clarity, and efficiency to ensure that projects are scalable and easy to
+							manage".
+						</div>
+						<div class="hero__social social">
+							<div class="social__wrap">
+								<a target="_blank" href="https://www.linkedin.com/in/yuliia-z-5418aa331/"
+									class="social__link _icon-linkedin"></a>
+								<a target="_blank" href="https://github.com/Yuliia1507" class="social__link _icon-github"></a>
+								<a target="_blank" href="https://www.instagram.com/yuliia.__.ua/"
+									class="social__link _icon-instagram"></a>
+								<a target="_blank" href="https://t.me/yuliia_web_dev" class="social__link _icon-telegram"></a>
+							</div>
+						</div>
+					</div>
+					<div class="hero__image">
+						<img src="img/profile-photo.png" alt="profile-photo">
+					</div>
+					<div class="hero__circle circle circle--right">
+					</div>
+					<div class="hero__circle circle circle--left">
+					</div>
+					<div class="circle circle--bottom">
+					</div>
+				</div>
+			</section>
+			<section class="projects" id="projects">
+				<div class="circle circle--projects">
+				</div>
+				<div class="projects__container">
+					<h2 class="projects__title title">My Projects</h2>
+					<div class="projects__text text">I have recently worked on projects where I converted Figma templates
+						into fully functional and responsive
+						websites. Each project required a keen eye for detail to maintain the visual integrity of the original
+						designs while
+						ensuring optimal performance across different devices and browsers. By closely collaborating with
+						designers and
+						stakeholders, I successfully translated their visions into interactive and engaging user experiences.
+					</div>
+					<div class="projects__swiper mySwiper">
+						<div class="swiper-wrapper">
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/eduera/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/eduera.png" alt="project">
+							</a>
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/daunku/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/daunku.png" alt="project">
+							</a>
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/trading__skills/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/trading.png" alt="project">
+							</a>
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/realco/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/realco.png" alt="project">
+							</a>
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/metaverse/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/metaverse.png" alt="project">
+							</a>
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/air/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/air.png" alt="project">
+							</a>
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/meditation/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/meditation.png" alt="project">
+							</a>
+							<a target="_blank" href="https://yuliia1507.github.io/portfolio/clerksy/"
+								class="projects__item item-project swiper-slide">
+								<img src="img/clerksy.png" alt="project">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="skill" class="skills">
+				<div class="circle circle--left-skill">
+				</div>
+				<div class="circle circle--right-skill">
+				</div>
+				<div class="skills__container">
+					<h2 class="skills__title title">My Skills</h2>
+					<div class="skills__text text">I continuously seek out new technologies and methodologies to remain at
+						the
+						cutting edge of web development. This
+						commitment to ongoing learning ensures that my skills are always up-to-date, enabling me to create
+						innovative and
+						effective solutions.</div>
+					<div class="skills__logos logos">
+						<div class="logos__slide">
+							<div class="logos__item item-logo">
+								<img src="img/html.png" alt="html">
+								<span>Html</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/css.png" alt="css">
+								<span>CSS</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/js.png" alt="js">
+								<span>JavaScript</span>
+
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/sass.png" alt="scss">
+								<span>Sass/Scss</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/vscode.png" alt="vscode">
+								<span>VScode</span>
+
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/figma.png" alt="figma">
+								<span>Figma</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/photoshop.png" alt="photoshop">
+								<span>Photoshop</span>
+
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/github.png" alt="github">
+								<span>GitHub</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/html.png" alt="html">
+								<span>Html</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/css.png" alt="css">
+								<span>CSS</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/js.png" alt="js">
+								<span>JavaScript</span>
+
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/sass.png" alt="scss">
+								<span>Sass/Scss</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/vscode.png" alt="vscode">
+								<span>VScode</span>
+
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/figma.png" alt="figma">
+								<span>Figma</span>
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/photoshop.png" alt="photoshop">
+								<span>Photoshop</span>
+
+							</div>
+							<div class="logos__item item-logo">
+								<img src="img/github.png" alt="github">
+								<span>GitHub</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="service" id="service">
+				<div class="service__container">
+					<h2 class="service__title title">
+						What I do
+					</h2>
+					<div class="service__text text">With more than 1 year of experience as a front-end developer, I
+						specialize in converting Figma designs into responsive and visually appealing websites.
+						<br><span>
+							<br> My work
+							involves:
+							<br></span>
+					</div>
+					<div class="service__wrap">
+						<div class="service__info info-service">
+							<div class="info-service__item">
+								<h3 class="info-service__title">Responsive Design:</h3>
+								<p class="info-service__text">Crafting websites that look great and function seamlessly on any
+									device, from desktops to mobile phones.</p>
+							</div>
+							<div class="info-service__item">
+								<h3 class="info-service__title">Interactive User Experiences:</h3>
+								<p class="info-service__text">Building dynamic and engaging user experiences using JavaScript.
+								</p>
+							</div>
+							<div class="info-service__item">
+								<h3 class="info-service__title">Cross-Browser Compatibility:</h3>
+								<p class="info-service__text">Making sure that websites work consistently across all major
+									browsers and platforms.</p>
+							</div>
+							<div class="info-service__item">
+								<h3 class="info-service__title">Animation and Transitions:</h3>
+								<p class="info-service__text">Implementing smooth animations and transitions to enhance user
+									interaction and provide a polished look and feel.</p>
+							</div>
+							<div class="info-service__item">
+								<h3 class="info-service__title">Collaboration and Communication:</h3>
+								<p class="info-service__text">Working closely with designers, back-end developers, and other
+									stakeholders to deliver cohesive and high-quality
+									projects.</p>
+							</div>
+						</div>
+						<div class="service__right">
+							<div class="service__image">
+								<img src="img/devices.png" alt="Image">
+							</div>
+						</div>
+						<div class="service__rotation">
+							<div class="service__portfolio">
+								<div class="service__rotate-text">
+									<svg viewBox="0 0 220 220">
+										<path id="curve" d="M 110 110,  m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0"
+											fill="transparent">
+										</path>
+										<text>
+											<textPath xlink:href="#curve" style="font-size: 22.5px ">
+												Portfolio - Portfolio - Portfolio - Portfolio - Portfolio -
+											</textPath>
+										</text>
+									</svg>
+								</div>
+								<div class="service__counter">
+									<span>1+</span>
+									<p>year of <br> experience</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="testimonials">
+				<div class="circle circle--testimonials">
+				</div>
+				<div class="testimonials__container">
+					<h3 class="testimonials__title title">Testimonials</h3>
+					<div class="testimonials__text text">Feedbacks provide social proof of my skills and capabilities.
+					</div>
+
+					<div class="testimonials__swiper swiper">
+						<div class="testimonials__wrapper swiper-wrapper">
+							<div class="testimonials__slide swiper-slide">
+								<h3 class="swiper-slide__title">Paul Harris</h3>
+								<div data-rating="5" class="testimonials__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="swiper-slide__text">"Working with Yuliia was a fantastic experience. Her
+									ability to transform our Figma designs into a fully
+									functional and responsive website was impressive. Highly recommended !" </div>
+							</div>
+							<div class="testimonials__slide swiper-slide">
+								<h3 class="swiper-slide__title">David Lee</h3>
+								<div data-rating="5" class="testimonials__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="swiper-slide__text">“Collaborating with Yuliia was a great experience. She
+									seamlessly integrated into our team and was always open to
+									feedback. Her positive attitude and willingness to go the extra mile made the project a
+									success.”</div>
+							</div>
+							<div class="testimonials__slide swiper-slide">
+								<h3 class="swiper-slide__title">Sophia Nguyen</h3>
+								<div data-rating="5" class="testimonials__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="swiper-slide__text">“Yuliia took our Figma designs and turned them into a
+									pixel-perfect website. Her attention to detail is unmatched, and
+									she made sure that the final product looked and functioned just like our initial vision."
+								</div>
+							</div>
+							<div class="testimonials__slide swiper-slide">
+								<h3 class="swiper-slide__title">Paul Harris</h3>
+								<div data-rating="5" class="testimonials__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="swiper-slide__text">"Working with Yuliia was a fantastic experience. Her
+									ability to transform our Figma designs into a fully
+									functional and responsive website was impressive. Highly recommended !" </div>
+							</div>
+							<div class="testimonials__slide swiper-slide">
+								<h3 class="swiper-slide__title">David Lee</h3>
+								<div data-rating="5" class="testimonials__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="swiper-slide__text">“Collaborating with Yuliia was a great experience. She
+									seamlessly integrated into our
+									team and was always open to
+									feedback. Her positive attitude and willingness to go the extra mile made the project a
+									success.”</div>
+							</div>
+							<div class="testimonials__slide swiper-slide">
+								<h3 class="swiper-slide__title">Sophia Nguyen</h3>
+								<div data-rating="5" class="testimonials__rating rating">
+									<div class="rating__items">
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="1">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="2">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="3">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="4">
+										</label>
+										<label class="rating__item">
+											<input class="rating__input" type="radio" name="rating" value="5">
+										</label>
+									</div>
+								</div>
+								<div class="swiper-slide__text">“Yuliia took our Figma designs and turned them into a
+									pixel-perfect website. Her
+									attention to detail is unmatched, and
+									she made sure that the final product looked and functioned just like our initial vision."
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next">
+							<i class="ri-arrow-right-s-line"></i>
+						</div>
+						<div class="swiper-button-prev">
+							<i class="ri-arrow-left-s-line"></i>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="circle circle--footer">
+			</div>
+			<div class="footer__container">
+				<div class="footer__social social">
+					<div class="social__wrap social__wrap--footer">
+						<a target="_blank" href="https://www.linkedin.com/in/yuliia-z-5418aa331/"
+							class="social__link _icon-linkedin"></a>
+						<a target="_blank" href="https://github.com/Yuliia1507" class="social__link _icon-github"></a>
+						<a target="_blank" href="https://www.instagram.com/yuliia.__.ua/"
+							class="social__link _icon-instagram"></a>
+						<a target="_blank" href="https://t.me/yuliia_web_dev" class="social__link _icon-telegram"></a>
+						<a href="mailTo:yuliia.devweb@gmail.com" class="social__link _icon-mail"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<button id="scrollToTopBtn">
+			<img src="img/arrow-up.svg" alt="">
+		</button>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="js/script.js"></script>
+	</div>
+
+	<div class="highlight"></div>
+</body>
+
+</html>
