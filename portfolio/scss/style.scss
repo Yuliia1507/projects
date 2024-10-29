@@ -161,11 +161,14 @@ body {
 	// .header__logo
 
 	&__logo {
-		color: var(--accent-color);
 		@include adaptiveValue("font-size", 45, 30);
 		font-weight: 600;
 		z-index: 17;
 		flex-grow: 1;
+		span{
+					color: var(--accent-color);
+
+		}
 	}
 
 	// .header__menu

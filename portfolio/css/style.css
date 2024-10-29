@@ -409,7 +409,6 @@ body.menu-open {
           align-items: center;
 }
 .header__logo {
-  color: var(--accent-color);
   font-weight: 600;
   z-index: 17;
   -webkit-box-flex: 1;
@@ -437,6 +436,9 @@ body.menu-open {
   .header__logo {
     font-size: 1.875rem;
   }
+}
+.header__logo span {
+  color: var(--accent-color);
 }
 .header__menu {
   -webkit-box-flex: 1;
