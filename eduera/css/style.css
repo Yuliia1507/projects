@@ -2076,6 +2076,7 @@ body.menu-open {
   }
 }
 .category {
+  scroll-margin-top: 6.25rem;
   overflow: visible;
   position: relative;
 }
@@ -2649,6 +2650,7 @@ body.menu-open {
 }
 
 .courses {
+  scroll-margin-top: 6.25rem;
   position: relative;
 }
 @media (min-width: 102.8125em) {
@@ -3888,6 +3890,7 @@ body.menu-open {
 }
 
 .instructors {
+  scroll-margin-top: 6.25rem;
   position: relative;
 }
 @media (min-width: 102.8125em) {
