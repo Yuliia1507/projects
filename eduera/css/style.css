@@ -176,6 +176,10 @@ textarea {
           appearance: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #d9ecff;
   background-color: #162359;

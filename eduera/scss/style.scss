@@ -26,7 +26,9 @@ $maxWidthContainer: 1615;
 $containerPadding: 30;
 // Ширина спрацьовування першого брейкпоінту
 $containerWidth: $maxWidthContainer + $containerPadding;
-
+html {
+	scroll-behavior: smooth;
+}
 body {
 	color: $lightGrey;
 	background-color: $bgColor;
@@ -67,7 +69,7 @@ body {
 	@include adaptiveValue("padding-top", 34, 10);
 	@include adaptiveValue("padding-bottom", 26, 10);
 	transition: all 0.3s ease;
-	
+
 	&.scrolled {
 		padding-top: toRem(5);
 		padding-bottom: toRem(5);
@@ -195,7 +197,7 @@ body {
 		@include adaptiveValue("font-size", 22, 16);
 		font-weight: 700;
 		line-height: toRem(24);
-		&.active{
+		&.active {
 			color: $yellowColor;
 		}
 		&::after {
@@ -1980,4 +1982,3 @@ body {
 		filter: blur(800px);
 	}
 }
-
