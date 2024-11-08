@@ -301,7 +301,6 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 	@media (max-width: toEm(500)) {
 		align-self: flex-end;
 		font-size: toRem(24);
-		color: #fff;
 	}
 	&__button {
 		flex-shrink: 0;
