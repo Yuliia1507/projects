@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?p9ucyu');
+  src:  url('fonts/icons.eot?p9ucyu#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?p9ucyu') format('truetype'),
+    url('fonts/icons.woff?p9ucyu') format('woff'),
+    url('fonts/icons.svg?p9ucyu#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-truck1:before {
+  content: "\e903";
+}
+._icon-strategy-6:before {
+  content: "\e902";
+}
+._icon-arrow__down:before {
+  content: "\e906";
+}
+._icon-arrow-right:before {
+  content: "\e907";
+}
+._icon-building:before {
+  content: "\e908";
+}
+._icon-checkmark:before {
+  content: "\e909";
+}
+._icon-facebook1:before {
+  content: "\e90a";
+}
+._icon-s-github:before {
+  content: "\e90b";
+}
+._icon-phone:before {
+  content: "\e90c";
+}
+._icon-s-dribbble:before {
+  content: "\e90d";
+}
+._icon-s-fingers:before {
+  content: "\e90e";
+}
+._icon-s-linkedin:before {
+  content: "\e90f";
+}
+._icon-strategy-1:before {
+  content: "\e905";
+}
+._icon-strategy-2:before {
+  content: "\e910";
+}
+._icon-strategy-3:before {
+  content: "\e911";
+}
+._icon-strategy-4:before {
+  content: "\e912";
+}
+._icon-strategy-5:before {
+  content: "\e913";
+}
+._icon-s-x:before {
+  content: "\e915";
+}
+._icon-youtube1:before {
+  content: "\e917";
+}
+._icon-truck:before {
+  content: "\e900";
+}
+._icon-transport:before {
+  content: "\e900";
+}
+._icon-transaction:before {
+  content: "\e900";
+}
+._icon-shipping:before {
+  content: "\e900";
+}
+._icon-github:before {
+  content: "\e901";
+}
+._icon-facebook:before {
+  content: "\e904";
+}
+._icon-youtube:before {
+  content: "\ea9d";
+}
+._icon-dribbble:before {
+  content: "\eaa7";
+}
+._icon-linkedin:before {
+  content: "\eac9";
+}

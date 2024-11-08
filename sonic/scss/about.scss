@@ -1,0 +1,183 @@
+@use "sass:math";
+
+@import "_functions.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1216;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+//=================about================================
+.journey {
+	background: #f9fafb;
+	@include adaptiveValue("padding-top", 96, 20);
+	@include adaptiveValue("padding-bottom", 96, 20);
+
+	// .journey__container
+
+	&__container {
+	}
+
+	// .journey__label
+
+	&__label {
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+
+	// .journey__title
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 64, 30);
+		}
+	}
+
+	// .journey__wrapper
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: toRem(63);
+		@media (max-width: toEm(880)) {
+			flex-direction: column;
+		}
+	}
+
+	// .journey__item
+
+	&__item {
+	}
+	&__content {
+		@include adaptiveValue("padding-top", 44, 20);
+		@include adaptiveValue("padding-bottom", 44, 20);
+		flex: 1 1 calc(50% - toRem(63));
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: toRem(32);
+		@media (max-width: toEm(480)) {
+			grid-template-columns: 1fr;
+			gap: toRem(20);
+		}
+	}
+	// .journey__image
+
+	&__image {
+		flex: 1 1 calc(50% - toRem(63));
+		max-width: toRem(592);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.item-journey {
+	font-family: "Inter";
+	text-align: center;
+
+	// .item-journey__counter
+
+	&__counter {
+		color: #0086c9;
+		@include adaptiveValue("font-size", 60, 30);
+		font-weight: 600;
+		@include adaptiveValue("line-height", 72, 30);
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+	&__title {
+		color: #101828;
+		font-size: toRem(18);
+		font-weight: 600;
+		line-height: toRem(28);
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+	&__text {
+		color: #475467;
+		line-height: toRem(24);
+	}
+}
+
+.about {
+	@include adaptiveValue("padding-top", 96, 20);
+	@include adaptiveValue("padding-bottom", 96, 20);
+
+	// .about__container
+	span {
+		display: inline-block;
+		color: #475467;
+		font-size: toRem(20);
+		line-height: toRem(30);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 15);
+		}
+	}
+	&__container {
+		display: flex;
+		@include adaptiveValue("gap", 74, 15);
+		@media (max-width: toEm(767.98)) {
+			flex-direction: column;
+		}
+	}
+
+	// .about__left
+
+	&__left {
+	}
+
+	// .about__label
+
+	&__label {
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+
+	// .about__title
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+
+	// .about__text
+
+	&__text {
+		color: #475467;
+		font-size: toRem(18);
+		line-height: toRem(28);
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 25, 10);
+			}
+		}
+	}
+
+	// .about__right
+
+	&__right {
+	}
+	&__line {
+		width: 100%;
+		height: toRem(1);
+		background-color: #eaecf0;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 15);
+		}
+	}
+}

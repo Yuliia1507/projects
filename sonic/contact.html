@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/contact.css">
+
+	<link rel="shortcut icon" href="img/globe.ico" type="image/x-icon">
+	<title>Contact</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo logo">
+					<a href="index.html">
+						<img src="img/logo.png" alt="logo">
+
+					</a>
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link" href="about.html">About</a>
+							</li>
+							<li class="menu__item menu__item--position "><a class="menu__link _icon-arrow__down"
+									href="shippers.html">Shippers</a>
+								<div class="sub-menu">
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Shippers#1
+											</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Shippers#2
+											</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Shippers#3
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__item menu__item--position"><a class="menu__link _icon-arrow__down"
+									href="carriers.html">Carriers</a>
+								<div class="sub-menu">
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Carriers#1
+											</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Carriers#2
+											</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Carriers#3
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__action action-header" data-da=".menu__list,5,500">
+					<a href="#" class="action-header__link">Log In</a>
+					<button class="action-header__button">Get a quote</button>
+				</div>
+				<button aria-label="Burger menu button" class="icon-menu">
+					<span class="icon-menu__line icon-menu__line--half icon-menu__line--start"></span>
+					<span class="icon-menu__line"></span>
+					<span class="icon-menu__line icon-menu__line--half icon-menu__line--end"></span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<div class="contact">
+				<aside class="contact__sidebar">
+					<div class="contact__wrap">
+						<h2 class="contact__title">
+							Let’s Start
+						</h2>
+						<div class="contact__text">We’ love to hear from you. Give us a call and see how we can solve your
+							logistical challenges.</div>
+						<div class="contact__item item-contact">
+							<h3 class="item-contact__title _icon-strategy-1">
+								Email us
+							</h3>
+							<p class="item-contact__text">Let us know how we can help.</p>
+							<a class="contact__link" href="mailto:support@sonic-logistics.com">support@sonic-logistics.com</a>
+						</div>
+						<div class="contact__item item__contact">
+							<h3 class="item-contact__title _icon-strategy-1">
+								Call Us </h3>
+							<p class="item-contact__text">Available 24 hours a day, 7 days a week.</p>
+							<a class="contact__link" href="tel:4695454687">(469) 545-4687</a>
+						</div>
+					</div>
+					<div class="contact__social social">
+						<a class="social__link _icon-s-x" href="#"></a>
+						<a class="social__link _icon-s-linkedin" href="#"></a>
+						<a class="social__link _icon-facebook1" href="#"></a>
+						<a class="social__link _icon-github" href="#"></a>
+						<a class="social__link _icon-s-fingers" href="#"></a>
+						<a class="social__link _icon-s-dribbble" href="#"></a>
+					</div>
+				</aside>
+				<div class="contact__info info-contact">
+					<div class="info-contact__container">
+						<h2 class="info-contact__title title">Get a Quote</h2>
+						<p class="info-contact__text">Or give us a call. We’re available 24/7.</p>
+						<form class="info-contact__form">
+							<div class="info-contact__row">
+								<div class="info-contact__item">
+									<label for="fname">First name</label>
+									<input id="fname" required type="text" placeholder="First name">
+								</div>
+								<div class="info-contact__item">
+									<label for="lname">Last name</label>
+									<input id="lname" required type="text" placeholder="Last name">
+								</div>
+							</div>
+							<div class="info-contact__item">
+								<label for="email">Email</label>
+								<input required id="email" type="email" placeholder="you@company.com">
+							</div>
+							<div class="info-contact__item">
+								<label for="phone-number">Phone</label>
+								<div class="info-contact__phone phone-input">
+									<select id="country-code">
+										<option value="+1">US</option>
+										<option value="+380">UA</option>
+									</select>
+									<input required type="tel" id="phone-number" placeholder="+1 (555) 000-0000">
+								</div>
+							</div>
+							<div class="info-contact__item">
+								<label for="message">Message</label>
+								<textarea required placeholder="Leave us a message..."></textarea>
+							</div>
+							<div class="info-contact__checkbox checkbox">
+								<label class="checkbox__item">Website design
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+								<label class="checkbox__item">Content creation
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+								<label class="checkbox__item">UX design
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+								<label class="checkbox__item">Strategy & consulting
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+								<label class="checkbox__item">User research
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+								<label class="checkbox__item">Other
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<button class="info-contact__button" type="submit">Get started</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
