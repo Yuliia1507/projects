@@ -73,62 +73,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-function moveElements() {
-	let screenWidth = window.innerWidth;
-	let elementsToMove = document.querySelectorAll("[data-da]");
+// function moveElements() {
+// 	let screenWidth = window.innerWidth;
+// 	let elementsToMove = document.querySelectorAll("[data-da]");
 
-	elementsToMove.forEach(function (element) {
-		let data = element.getAttribute("data-da").split(",");
-		if (data.length === 3) {
-			let destinationSelector = data[0].trim();
-			let order = parseInt(data[1].trim());
-			let requiredScreenWidth = parseInt(data[2].trim());
-			let destination = document.querySelector(destinationSelector);
-			let initialParent = element.dataset.initialParent; // Отримати початкового батька напряму
+// 	elementsToMove.forEach(function (element) {
+// 		let data = element.getAttribute("data-da").split(",");
+// 		if (data.length === 3) {
+// 			let destinationSelector = data[0].trim();
+// 			let order = parseInt(data[1].trim());
+// 			let requiredScreenWidth = parseInt(data[2].trim());
+// 			let destination = document.querySelector(destinationSelector);
+// 			let initialParent = element.dataset.initialParent; // Отримати початкового батька напряму
 
-			if (!destination) return;
+// 			if (!destination) return;
 
-			if (screenWidth <= requiredScreenWidth && !element.classList.contains("moved")) {
-				if (order === 1) {
-					destination.insertBefore(element, destination.firstChild);
-				} else {
-					let previousElement = destination.children[order - 2];
-					if (previousElement) {
-						destination.insertBefore(element, previousElement.nextSibling);
-					} else {
-						destination.appendChild(element);
-					}
-				}
-				element.classList.add("moved");
-				// Зберегти початкове положення тільки якщо воно ще не збережено
-				if (!element.dataset.initialParent) {
-					element.dataset.initialParent = initialParent;
-				}
-			} else if (screenWidth > requiredScreenWidth && element.classList.contains("moved")) {
-				// Перевірити, чи є початкове положення
-				if (initialParent) {
-					let initialParentElement = document.querySelector(".header__container"); // Отримати початкового батька напряму
-					if (initialParentElement) {
-						initialParentElement.appendChild(element); // Повернути елемент на його початкове місце
-						element.classList.remove("moved");
-					} else {
-						// Handle the case where the initial parent element is not found
-						console.error("Initial parent element not found");
-					}
-				} else {
-					// Handle the case where the initial parent data is missing
-					console.error("Initial parent data missing");
-				}
-			}
-		}
-	});
-}
+// 			if (screenWidth <= requiredScreenWidth && !element.classList.contains("moved")) {
+// 				if (order === 1) {
+// 					destination.insertBefore(element, destination.firstChild);
+// 				} else {
+// 					let previousElement = destination.children[order - 2];
+// 					if (previousElement) {
+// 						destination.insertBefore(element, previousElement.nextSibling);
+// 					} else {
+// 						destination.appendChild(element);
+// 					}
+// 				}
+// 				element.classList.add("moved");
+// 				// Зберегти початкове положення тільки якщо воно ще не збережено
+// 				if (!element.dataset.initialParent) {
+// 					element.dataset.initialParent = initialParent;
+// 				}
+// 			} else if (screenWidth > requiredScreenWidth && element.classList.contains("moved")) {
+// 				// Перевірити, чи є початкове положення
+// 				if (initialParent) {
+// 					let initialParentElement = document.querySelector(".header__container"); // Отримати початкового батька напряму
+// 					if (initialParentElement) {
+// 						initialParentElement.appendChild(element); // Повернути елемент на його початкове місце
+// 						element.classList.remove("moved");
+// 					} else {
+// 						// Handle the case where the initial parent element is not found
+// 						console.error("Initial parent element not found");
+// 					}
+// 				} else {
+// 					// Handle the case where the initial parent data is missing
+// 					console.error("Initial parent data missing");
+// 				}
+// 			}
+// 		}
+// 	});
+// }
 
-moveElements();
+// moveElements();
 
-window.addEventListener("resize", function () {
-	moveElements();
-});
+// window.addEventListener("resize", function () {
+// 	moveElements();
+// });
 
 
 
@@ -225,26 +225,26 @@ window.onload = function () {
 	}
 };
 
-const swiper = new Swiper(".mySwiper", {
-	effect: "coverflow",
-	grabCursor: true,
-	centeredSlides: true,
-	loop: true,
-	slidesPerView: "auto",
-	coverflowEffect: {
-		rotate: 0,
-		stretch: 0,
-		depth: 150,
-		modifier: 2.5,
-		slideShadows: true,
-	},
-	autoplay: {
+// const swiper = new Swiper(".mySwiper", {
+// 	effect: "coverflow",
+// 	grabCursor: true,
+// 	centeredSlides: true,
+// 	loop: true,
+// 	slidesPerView: "auto",
+// 	coverflowEffect: {
+// 		rotate: 0,
+// 		stretch: 0,
+// 		depth: 150,
+// 		modifier: 2.5,
+// 		slideShadows: true,
+// 	},
+// 	autoplay: {
 
-		delay: 3000,
-		disableOnInteraction: false,
-	}
+// 		delay: 3000,
+// 		disableOnInteraction: false,
+// 	}
 
-});
+// });
 
 const swiperFeedbacks = new Swiper(".testimonials__swiper", {
 	loop: true,
@@ -367,3 +367,74 @@ document.addEventListener("DOMContentLoaded", function () {
 	elementsToObserve.forEach(element => observer.observe(element));
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	const btn7Days = document.getElementById("btn-landing");
+	const btn30Days = document.getElementById("btn-corporate");
+	const collection7Days = document.getElementById("landing");
+	const collection30Days = document.getElementById("corporate");
+	const showMoreBtn = document.querySelector(".projects__button");
+
+	let activeCollection = collection7Days; // Initially, the active collection is the 7-day one
+	const itemsToShow = 3;
+	let itemsShown = itemsToShow;
+
+	// Function to toggle active collection and buttons
+	function toggleCollection(collectionToShow, collectionToHide, btnToActivate, btnToDeactivate) {
+		collectionToShow.classList.add("active");
+		collectionToHide.classList.remove("active");
+		btnToActivate.classList.add("active");
+		btnToDeactivate.classList.remove("active");
+
+		activeCollection = collectionToShow; // Set the active collection
+		itemsShown = itemsToShow; // Reset the count of shown items for the new active collection
+		toggleItems(); // Adjust visibility for the newly active collection
+	}
+
+	// Event listeners for buttons
+	btn7Days.addEventListener("click", function () {
+		toggleCollection(collection7Days, collection30Days, btn7Days, btn30Days);
+	});
+
+	btn30Days.addEventListener("click", function () {
+		toggleCollection(collection30Days, collection7Days, btn30Days, btn7Days);
+	});
+
+	// Function to show/hide items in the active collection
+	function toggleItems() {
+		const items = activeCollection.querySelectorAll(".projects__item");
+
+		if (window.innerWidth <= 767) {
+			items.forEach((item, index) => {
+				item.style.display = index < itemsShown ? "grid" : "none";
+			});
+		} else {
+			items.forEach(item => {
+				item.style.display = "grid";
+			});
+		}
+
+		// Update button text based on the number of visible items
+		showMoreBtn.textContent = itemsShown >= items.length ? "Hide" : "See All";
+	}
+
+	// Initial call to set up the visibility of the active collection
+	toggleItems();
+
+	showMoreBtn.addEventListener("click", function () {
+		const items = activeCollection.querySelectorAll(".projects__item");
+
+		// Toggle between showing all items or only a few
+		if (itemsShown >= items.length) {
+			itemsShown = itemsToShow; // Reset to initial number if all items are shown
+		} else {
+			itemsShown += itemsToShow; // Show 3 more items each time the button is clicked
+		}
+
+		toggleItems();
+	});
+
+	// Adjust visibility on window resize
+	window.addEventListener("resize", toggleItems);
+});

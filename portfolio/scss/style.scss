@@ -165,9 +165,8 @@ body {
 		font-weight: 600;
 		z-index: 17;
 		flex-grow: 1;
-		span{
-					color: var(--accent-color);
-
+		span {
+			color: var(--accent-color);
 		}
 	}
 
@@ -1067,11 +1066,84 @@ body {
 	&__text {
 		@include adaptiveValue("margin-bottom", 70, 30);
 	}
+	&__wrap {
+		display: grid;
+		@include adaptiveValue("gap", 40, 20);
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: toEm(1200)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: toEm(767)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 20);
+		}
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		padding: toRem(5);
+		background: #2e2d2d;
+		border-radius: toRem(20);
+		width: fit-content;
+	}
+	&__btn {
+		transition: color 0.3s;
+		padding: toRem(15) toRem(30);
+		border-radius: toRem(20);
+		color: var(--accent-color);
+
+		@include adaptiveValue("font-size", 24, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+			}
+		}
+		&.active {
+			color: #fff;
+			background: var(--accent-color);
+		}
+	}
+	&__info {
+		display: none;
+		&.active {
+			display: block;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 72, 20);
+		}
+	}
+	&__button {
+		padding: toRem(10) toRem(20);
+		border: toRem(1) solid var(--accent-color);
+		border-radius: toRem(20);
+		display: none;
+		text-transform: capitalize;
+		@media(any-hover:hover){
+			&:hover{
+				color: var(--accent-color);
+			}
+		}
+		@media (max-width: toEm(767)) {
+			display: grid;
+			justify-self: center;
+		}
+	}
+	&__item {
+		transition:
+			opacity 0.3s ease,
+			visibility 0.3s ease;
+	}
 }
 
 .item-project {
 	height: auto;
-	max-width: toRem(500);
 	border: toRem(10) solid rgba(87, 86, 86, 0.838);
 	border-radius: toRem(25);
 	border-bottom: toRem(10) solid var(--accent-color);
