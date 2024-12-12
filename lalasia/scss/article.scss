@@ -1,0 +1,242 @@
+@use "sass:math";
+
+// Кольори
+$mainColor: #151411;
+$greenColor: #518581;
+$yellowColor: #ffb23f;
+// Функції
+@import "_functions.scss";
+// Шрифти
+@import "_fonts.scss";
+// Іконки
+@import "_icons.scss";
+// Обнулення
+@import "_reset.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1240;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+.hero {
+	&--article {
+		padding-bottom: toRem(150);
+	}
+	// .hero__info
+
+	&__info {
+	}
+	&__swiper {
+		position: relative;
+	}
+}
+.info-article {
+	&--article {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		z-index: 10;
+		@include adaptiveValue("width", 1080, 250);
+		background: var(--Screen-Color, #fff);
+		box-shadow: 0px 4px 140px 0px rgba(175, 173, 181, 0.2);
+		@include adaptiveValue("padding-top", 47, 10);
+		@include adaptiveValue("padding-bottom", 47, 10);
+		@include adaptiveValue("padding-right", 40, 10);
+		@include adaptiveValue("padding-left", 40, 10);
+		&__content {
+			max-width: toRem(803);
+		}
+	}
+}
+
+.news {
+	padding-top: toRem(150);
+	padding-bottom: toRem(90);
+	// .news__container
+
+	&__container {
+		display: grid;
+	}
+
+	// .news__label
+
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 14, 8);
+		}
+	}
+
+	// .news__title
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 18);
+		}
+	}
+
+	// .news__wrapper
+
+	&__wrapper {
+		display: flex;
+		@include adaptiveValue("gap", 30, 20);
+		@media(max-width: toEm(735)){
+			flex-direction: column;
+		}
+	}
+
+	// .news__info
+
+	&__info {
+		flex: 1 1 calc(50% - toRem(20));
+		display: flex;
+		@include adaptiveValue("gap", 20, 16);
+		flex-direction: column;
+	}
+}
+
+.topics {
+	// .topics__container
+
+	&__container {
+	}
+
+	// .topics__label
+
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 14, 8);
+		}
+	}
+
+	// .topics__title
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 18);
+		}
+	}
+
+	// .topics__header
+
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: toRem(20);
+		justify-content: space-between;
+		margin-bottom: toRem(56);
+		@media (max-width: toEm(880)) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	// .topics__wrapper
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 20, 16);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 30);
+		}
+	}
+
+	// .topics__info
+
+	&__info {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 20, 14);
+	}
+	&__button {
+		width: fit-content;
+		border: 1.5px solid #f3f3f3;
+		text-align: center;
+		padding: toRem(15) toRem(40);
+		@include adaptiveValue("font-size", 18, 16);
+		font-weight: 700;
+		line-height: 130%;
+		margin: 0 auto;
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1.5px solid #6c6a6a;
+				color: #6c6a6a;
+			}
+		}
+	}
+}
+.label {
+}
+.title {
+}
+
+.header-topics {
+	// .header-topics__nav
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 53, 43);
+		padding-bottom: toRem(10);
+		width: 100%;
+		@media (max-width: toEm(660)) {
+			overflow-x: auto;
+			scroll-snap-type: x mandatory; /* Зручний скрол по пунктах */
+			scrollbar-width: thin; /* Для Firefox */
+			scrollbar-color: transparent transparent; /* Для Firefox */
+		}
+	}
+	&__item {
+		flex: 0 0 auto;
+		&:not(:last-child) {
+			white-space: nowrap;
+		}
+	}
+	// .header-topics__link
+
+	&__link {
+		color: #afadb5;
+		@include adaptiveValue("font-size", 18, 14);
+		font-weight: 500;
+		line-height: 180%;
+		@media (max-width: toEm(675)) {
+			white-space: nowrap;
+		}
+		&.active {
+			font-weight: 700;
+			color: $mainColor;
+		}
+	}
+
+	// .header-topics__filter
+
+	&__filter {
+	}
+}
+
+.header-topics__nav::-webkit-scrollbar {
+	width: toRem(6); 
+	height: toRem(6); 
+}
+
+.header-topics__nav::-webkit-scrollbar-thumb {
+	background-color: transparent; 
+	border-radius: toRem(20);
+}
+
+.header-topics__nav:hover::-webkit-scrollbar-thumb {
+	background-color: #51858183; 
+}
+
+.header-topics__nav:hover {
+	scrollbar-color: #51858183 transparent; 
+}

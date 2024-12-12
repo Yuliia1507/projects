@@ -1,0 +1,444 @@
+@use "sass:math";
+
+// Кольори
+$mainColor: #151411;
+$greenColor: #518581;
+$yellowColor: #ffb23f;
+// Функції
+@import "_functions.scss";
+// Шрифти
+@import "_fonts.scss";
+// Іконки
+@import "_icons.scss";
+// Обнулення
+@import "_reset.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1240;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+.hero {
+	// .hero__container
+
+	&__container {
+	}
+
+	// .hero__title
+
+	&__title {
+	}
+
+	// .hero__text
+
+	&__text {
+	}
+
+	// .hero__swiper
+
+	&__swiper {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	&__slide {
+	}
+}
+
+.swiper-wrapper {
+}
+.slide-hero {
+	@include adaptiveValue("padding-top", 149, 40);
+	@include adaptiveValue("padding-bottom", 156, 30);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&--article {
+		@include adaptiveValue("min-height", 550, 200);
+		&__bg {
+			position: relative;
+		}
+	}
+	&__container {
+	}
+	// .slide-hero__label
+
+	&__label {
+		width: fit-content;
+		@include adaptiveValue("padding-top", 8, 6);
+		@include adaptiveValue("padding-bottom", 8, 6);
+		@include adaptiveValue("padding-left", 16, 10);
+		@include adaptiveValue("padding-right", 16, 10);
+		border-radius: toRem(16);
+		background: $greenColor;
+		color: #fff;
+		@include adaptiveValue("font-size", 14, 10);
+		font-weight: 500;
+		line-height: 180%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 14);
+		}
+	}
+
+	// .slide-hero__title
+
+	&__title {
+		color: #fff;
+		@include adaptiveValue("font-size", 44, 16);
+		font-weight: 700;
+		line-height: 130%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 4);
+		}
+	}
+
+	// .slide-hero__text
+
+	&__text {
+		color: #fff;
+		@include adaptiveValue("font-size", 24, 12);
+		font-weight: 700;
+		line-height: 130%;
+	}
+	&__content {
+		position: relative;
+		z-index: 1;
+		max-width: toRe(453);
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.hero__swiper .swiper-pagination {
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+	z-index: 10;
+}
+
+/* Буллети */
+.swiper-pagination .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background-color: rgba(255, 255, 255, 0.5); /* Непрозорий білий колір */
+	border-radius: 50%; /* Круглі буллети */
+	transition:
+		background-color 0.3s,
+		transform 0.3s; /* Анімація */
+	cursor: pointer;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+	background-color: #fff;
+}
+
+.hero__button-next {
+	border-radius: 50%;
+	background: rgba(21, 20, 17, 0.6);
+	backdrop-filter: blur(7.5px);
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: toRem(40);
+	@include adaptiveValue("right", 40, 10, $widthTo: 1500);
+	width: toRem(52);
+	height: toRem(52);
+	padding: toRem(10);
+	@media (max-width: toEm(1375)) {
+		display: none;
+	}
+	img {
+		width: toRem(24);
+		height: toRem(24);
+		will-change: transform;
+		transition: transform 0.3s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+.hero__button-prev {
+	border-radius: 50%;
+	background: rgba(21, 20, 17, 0.6);
+	backdrop-filter: blur(7.5px);
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	@include adaptiveValue("left", 40, 10, $widthTo: 1500);
+	width: toRem(52);
+	height: toRem(52);
+	padding: toRem(10);
+	@media (max-width: toEm(1375)) {
+		display: none;
+	}
+	img {
+		width: toRem(24);
+		height: toRem(24);
+		will-change: transform;
+
+		transition: transform 0.3s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+.filter {
+	@include adaptiveValue("padding-top", 50, 30);
+	@include adaptiveValue("padding-bottom", 50, 30);
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		justify-content: space-between;
+		@media (max-width: toEm(570)) {
+			flex-direction: column;
+			align-items: end;
+			justify-content: end;
+		}
+	}
+}
+.search {
+	&--product {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translateX(0);
+		margin: 0;
+	}
+}
+
+.item-filter {
+	display: flex;
+	align-items: center;
+	gap: toRem(12);
+	background: #fff;
+	box-shadow: 0px 4px 120px 0px rgba(175, 173, 181, 0.15);
+	@include adaptiveValue("padding-top", 27, 10);
+	@include adaptiveValue("padding-bottom", 27, 10);
+	@include adaptiveValue("padding-right", 52, 10);
+	@include adaptiveValue("padding-left", 52, 10);
+	cursor: pointer;
+	span {
+		@include adaptiveValue("font-size", 18, 14);
+		font-weight: 500;
+		line-height: 180%;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+	svg {
+		@include adaptiveValue("width", 30, 20);
+		@include adaptiveValue("height", 27, 20);
+		will-change: transform;
+		transition: transform 0.3s;
+	}
+}
+
+.total-product {
+	// .total-product__container
+
+	&__container {
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(10);
+		@media (max-width: toEm(480)) {
+			flex-direction: column;
+			align-items: baseline;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+	&__title-wrap {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		span {
+			border-radius: toRem(20);
+			background: #f9f9f9;
+			@include adaptiveValue("padding-top", 10, 2);
+			@include adaptiveValue("padding-bottom", 10, 2);
+			@include adaptiveValue("padding-right", 16, 10);
+			@include adaptiveValue("padding-left", 16, 10);
+			@include adaptiveValue("font-size", 14, 12);
+			color: $greenColor;
+		}
+	}
+	// .total-product__title
+
+	&__title {
+	}
+	&__item {
+		display: none;
+		&.visible {
+			display: flex;
+		}
+	}
+	// .total-product__sort-by
+
+	&__sort-by {
+	}
+	&__wrap {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		@include adaptiveValue("gap", 29, 15);
+		padding-bottom: toRem(80);
+		@media (max-width: toEm(480)) {
+			grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+		}
+	}
+	&__pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.title {
+}
+.sort-by {
+	border: 1.5px solid #f9f9f9;
+	@include adaptiveValue("padding-top", 9, 6);
+	@include adaptiveValue("padding-bottom", 9, 5);
+	@include adaptiveValue("padding-right", 20, 5);
+	@include adaptiveValue("padding-left", 20, 5);
+	display: flex;
+	align-items: center;
+	gap: toRem(12);
+	width: fit-content;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	svg {
+		will-change: transform;
+		transition: transform 0.3s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				transform: scale(1.2);
+			}
+		}
+	}
+	// .sort-by__dropdown
+
+	&__dropdown {
+		width: fit-content;
+		text-wrap: nowrap;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		display: none;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+		z-index: 1000;
+
+		li {
+			padding: toRem(10);
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $greenColor;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+.sort-by.active .sort-by__dropdown {
+	display: block;
+}
+
+.pagination {
+	padding-bottom: toRem(105);
+	display: flex;
+	align-items: center;
+
+	&__arrow {
+		transition: transform 0.3s ease;
+		&--prev {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		svg {
+			width: toRem(32);
+			height: toRem(32);
+			fill: none;
+			stroke: #151411;
+		}
+	}
+
+	&__link {
+		text-align: center;
+		@include adaptiveValue("font-size", 18, 14);
+		font-weight: 500;
+		line-height: 180%;
+		padding: toRem(5) toRem(15);
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
+
+		&.active {
+			background: $greenColor;
+			color: #fff;
+		}
+
+		&:hover {
+			background: $greenColor;
+			color: #fff;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: $greenColor;
+		}
+	}
+}

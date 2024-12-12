@@ -1,0 +1,38 @@
+@font-face {
+	font-family: "Eudoxus Sans";
+	src:
+		url("../fonts/eudoxus-sans-regular.woff2") format("woff2"),
+		url("../fonts/eudoxus-sans-regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Eudoxus Sans";
+	src:
+		url("../fonts/eudoxus-sans-medium.woff2") format("woff2"),
+		url("../fonts/eudoxus-sans-medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Eudoxus Sans";
+	src:
+		url("../fonts/eudoxus-sans-bold.woff2") format("woff2"),
+		url("../fonts/eudoxus-sans-bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "icons";
+	src:
+		url("../fonts/icons.woff2") format("woff2"),
+		url("../fonts/icons.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
