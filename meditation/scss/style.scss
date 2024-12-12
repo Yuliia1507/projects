@@ -828,14 +828,15 @@ body {
 		justify-content: space-between;
 		@media (max-width: toEm(775)) {
 			flex-direction: column;
+			align-items: baseline;
 		}
 	}
 
 	// .sound__content
 
 	&__content {
-		flex: 1 0 toRem(290);
 		display: flex;
+		flex: 1 0 toRem(290);
 		flex-direction: column;
 		@include adaptiveValue("gap", 50, 20);
 		opacity: 0;
@@ -881,7 +882,7 @@ body {
 	@include adaptiveValue("padding-left", 46, 10, $widthTo: 900);
 	@include adaptiveValue("padding-right", 46, 10, $widthTo: 900);
 	@include adaptiveValue("padding-bottom", 38, 10, $widthTo: 900);
-	flex: 1;
+	width: 100%;
 	max-width: toRem(650);
 	border-radius: toRem(15);
 	background: linear-gradient(90deg, #c3e2de 27.22%, #cff1ed 48.89%, #edfbf9 96.77%);
@@ -923,6 +924,7 @@ body {
 
 	&__info {
 		display: flex;
+		flex-grow: 1;
 		flex-direction: column;
 		gap: toRem(10);
 		span {
