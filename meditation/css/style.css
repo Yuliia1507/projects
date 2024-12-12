@@ -2922,6 +2922,7 @@ body.menu-open {
 @media (max-width: 48.4375em) {
   .item-advantages {
     text-align: left;
+    max-width: 100%;
   }
 }
 .item-advantages::before {

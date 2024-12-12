@@ -1152,6 +1152,7 @@ body {
 	);
 	@media (max-width: toEm(775)) {
 		text-align: left;
+		max-width: 100%;
 	}
 	&::before {
 		content: "";
