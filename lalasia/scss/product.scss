@@ -113,7 +113,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 	&__content {
 		position: relative;
 		z-index: 1;
-		max-width: toRe(453);
+		max-width: toRem(453);
 	}
 	&__bg {
 		position: absolute;
