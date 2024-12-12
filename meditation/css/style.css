@@ -1009,33 +1009,30 @@ body.menu-open {
   grid-template-columns: repeat(3, 1fr);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 @media (min-width: 103.375em) {
   .meditation__container {
     gap: 11.25rem;
   }
 }
-@media (min-width: 20em) and (max-width: 103.375em) {
-  @supports (gap: clamp( 1.25rem , -1.1488005997rem  +  11.9940029985vw , 11.25rem )) {
+@media (min-width: 75em) and (max-width: 103.375em) {
+  @supports (gap: clamp( 1.875rem , -22.9047356828rem  +  33.0396475771vw , 11.25rem )) {
     .meditation__container {
-      gap: clamp( 1.25rem , -1.1488005997rem  +  11.9940029985vw , 11.25rem );
+      gap: clamp( 1.875rem , -22.9047356828rem  +  33.0396475771vw , 11.25rem );
     }
   }
-  @supports not (gap: clamp( 1.25rem , -1.1488005997rem  +  11.9940029985vw , 11.25rem )) {
+  @supports not (gap: clamp( 1.875rem , -22.9047356828rem  +  33.0396475771vw , 11.25rem )) {
     .meditation__container {
-      gap: calc(1.25rem + 10 * (100vw - 20rem) / 83.375);
+      gap: calc(1.875rem + 9.375 * (100vw - 75rem) / 28.375);
     }
   }
 }
-@media (max-width: 20em) {
+@media (max-width: 75em) {
   .meditation__container {
-    gap: 1.25rem;
+    gap: 1.875rem;
   }
 }
-@media (max-width: 60em) {
+@media (max-width: 75em) {
   .meditation__container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1147,7 +1144,7 @@ body.menu-open {
     padding-right: 0.9375rem;
   }
 }
-@media (max-width: 35em) {
+@media (max-width: 75em) {
   .item-meditation {
     max-width: 100%;
   }

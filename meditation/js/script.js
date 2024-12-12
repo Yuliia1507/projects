@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Оновлюємо позицію після завантаження всіх ресурсів
 	window.addEventListener('load', () => {
-		setTimeout(updateAnimationPosition, 100); // Невелика затримка для повного завантаження стилів та ресурсів
+		setTimeout(updateAnimationPosition, 200); // Збільшена затримка для повного завантаження стилів та ресурсів
 	});
 
 	// Оновлюємо позицію при зміні розміру вікна
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			link.classList.add('active');
 
 			// Використовуємо тайм-аут для коректного оновлення анімації
-			setTimeout(updateAnimationPosition, 10);
+			setTimeout(updateAnimationPosition, 50);
 		});
 	});
 });
