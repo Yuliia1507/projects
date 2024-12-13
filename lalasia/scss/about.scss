@@ -48,17 +48,14 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 }
 
 .video {
-	max-height: toRem(550);
 	position: relative;
 	width: 100%;
-	height: 100%;
-	max-width: 100%;
-	overflow: hidden;
 	cursor: pointer;
 	video {
-		object-fit: cover;
-		width: 100%;
+		max-height: toRem(550);
 		height: 100%;
+		width: 100%;
+		object-fit: cover;
 	}
 	&__button {
 		@include adaptiveValue("width", 56, 24);
@@ -77,6 +74,9 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 		transition:
 			opacity 0.3s ease,
 			visibility 0.3s ease;
+		@media (max-width: toEm(767.98)) {
+			display: none;
+		}
 
 		@media (any-hover: hover) {
 			&:hover {

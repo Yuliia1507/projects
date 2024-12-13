@@ -115,19 +115,16 @@ textarea {
 }
 
 .video {
-  max-height: 34.375rem;
   position: relative;
   width: 100%;
-  height: 100%;
-  max-width: 100%;
-  overflow: hidden;
   cursor: pointer;
 }
 .video video {
+  max-height: 34.375rem;
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .video__button {
   position: absolute;
@@ -195,6 +192,11 @@ textarea {
 @media (max-width: 20em) {
   .video__button {
     height: 1.5rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .video__button {
+    display: none;
   }
 }
 @media (any-hover: hover) {

@@ -431,29 +431,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-	const videoPlayer = document.getElementById("videoPlayer");
-	const videoButton = document.querySelector(".video__button");
+    const video = document.getElementById("videoPlayer");
+    const playButton = document.querySelector(".video__button");
 
-	// Функція для запуску відео та приховування кнопки
-	const playVideo = () => {
-		videoPlayer.play();
-		videoButton.style.opacity = "0";
-		videoButton.style.visibility = "hidden";
-	};
+    // Перевіряємо наявність елементів
+    if (!video || !playButton) return;
 
-	// Функція для відображення кнопки, коли відео ставиться на паузу
-	const showButton = () => {
-		videoButton.style.opacity = "1";
-		videoButton.style.visibility = "visible";
-	};
+    // При кліку на кнопку "Play"
+    playButton.addEventListener("click", () => {
+        video.play(); // Запускаємо відео
+        playButton.style.opacity = "0"; // Приховуємо кнопку
+        playButton.style.pointerEvents = "none"; // Вимикаємо кліки по кнопці
+    });
 
-	// Додавання обробників подій
-	videoButton.addEventListener("click", playVideo);
+    // Показуємо кнопку при паузі
+    video.addEventListener("pause", () => {
+        playButton.style.opacity = "1";
+        playButton.style.pointerEvents = "auto";
+    });
 
-	videoPlayer.addEventListener("pause", showButton);
-	videoPlayer.addEventListener("play", () => {
-		videoButton.style.opacity = "0";
-		videoButton.style.visibility = "hidden";
-	});
+    // При відтворенні приховуємо кнопку
+    video.addEventListener("play", () => {
+        playButton.style.opacity = "0";
+        playButton.style.pointerEvents = "none";
+    });
 });
-

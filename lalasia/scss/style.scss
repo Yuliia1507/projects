@@ -1383,11 +1383,12 @@ body {
 		align-items: center;
 		@include adaptiveValue("gap", 24, 15);
 		justify-content: space-between;
-		@media (max-width: toEm(450)) {
-			display: none;
-		}
+	
 		time {
 			text-wrap: nowrap;
+				@media (max-width: toEm(450)) {
+			display: none;
+		}
 		}
 		&--article {
 			justify-content: flex-start;
