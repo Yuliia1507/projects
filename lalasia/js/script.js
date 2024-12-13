@@ -430,66 +430,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+	const videoPlayer = document.getElementById("videoPlayer");
+	const videoButton = document.querySelector(".video__button");
 
-// Функція для приховування оверлею
-function hideOverlay(overlay) {
-	if (overlay) overlay.style.display = 'none';
-}
+	// Функція для запуску відео та приховування кнопки
+	const playVideo = () => {
+		videoPlayer.play();
+		videoButton.style.opacity = "0";
+		videoButton.style.visibility = "hidden";
+	};
 
-// Функція для показу оверлею
-function showOverlay(overlay) {
-	if (overlay) overlay.style.display = 'flex';
-}
+	// Функція для відображення кнопки, коли відео ставиться на паузу
+	const showButton = () => {
+		videoButton.style.opacity = "1";
+		videoButton.style.visibility = "visible";
+	};
 
-// Функція для відтворення/паузи відео
-function toggleVideo(video, overlay) {
-	if (!video) return;
+	// Додавання обробників подій
+	videoButton.addEventListener("click", playVideo);
 
-	if (video.paused) {
-		video.play().then(() => {
-			hideOverlay(overlay); // Приховуємо оверлей після успішного відтворення
-		}).catch(error => {
-			console.error('Play video failed:', error);
-		});
-	} else {
-		video.pause();
-		showOverlay(overlay); // Показуємо оверлей, якщо відео на паузі
-	}
-}
-
-// Додаємо обробник кліку на контейнер відео
-const heroVideoContainer = document.querySelector('.hero__video');
-
-if (heroVideoContainer) {
-	heroVideoContainer.addEventListener('click', function (event) {
-		// Запобігаємо обробці кліку на кнопці
-		if (event.target.classList.contains('play-button')) return;
-
-		// Ідентифікуємо відео та оверлей
-		const video = this.querySelector('video');
-		const overlay = this.querySelector('.video__overlay');
-
-		// Перемикаємо стан відео
-		toggleVideo(video, overlay);
-
-		// Зупиняємо спливання події
-		event.stopPropagation();
+	videoPlayer.addEventListener("pause", showButton);
+	videoPlayer.addEventListener("play", () => {
+		videoButton.style.opacity = "0";
+		videoButton.style.visibility = "hidden";
 	});
-}
-
-// Додаємо обробник кліку на кнопку відтворення
-document.addEventListener('click', function (event) {
-	if (event.target.classList.contains('play-button')) {
-		event.preventDefault(); // Відміняємо стандартну поведінку
-
-		// Ідентифікуємо відео та оверлей
-		const video = event.target.closest('.video')?.querySelector('video');
-		const overlay = event.target.closest('.video')?.querySelector('.video__overlay');
-
-		// Перемикаємо стан відео
-		toggleVideo(video, overlay);
-
-		// Зупиняємо спливання події
-		event.stopPropagation();
-	}
 });
+
