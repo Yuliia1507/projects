@@ -552,6 +552,16 @@ body {
 	font-weight: 700;
 	line-height: 130%;
 }
+.label, .title, .text {
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.label.visible, .title.visible, .text.visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
 .item-benefits {
 	@include adaptiveValue("padding-top", 26, 16);
 	@include adaptiveValue("padding-bottom", 26, 18);
@@ -1452,7 +1462,24 @@ body {
 		text-transform: capitalize;
 	}
 }
+.cta__title.typing {
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 .footer {
 	@include adaptiveValue("padding-bottom", 88, 24);
 

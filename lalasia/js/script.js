@@ -494,3 +494,55 @@ document.addEventListener("DOMContentLoaded", () => {
 		playButton.style.pointerEvents = "none";
 	});
 });
+
+
+// Створення Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('visible');
+			observer.unobserve(entry.target); // Прибираємо спостереження, якщо елемент став видимим
+		}
+	});
+}, { threshold: 0.5 }); // Коли 50% елемента з'являється на екрані
+
+// Спостереження за елементами
+document.querySelectorAll('.label, .title, .text').forEach(element => {
+	observer.observe(element);
+});
+
+const titleElement = document.querySelector(".cta__title"); // Перевірте, щоб клас був правильним
+
+if (titleElement) { // Перевірка на наявність елемента
+	const text = titleElement.textContent.trim(); // Отримуємо текст з елемента
+	titleElement.textContent = ''; // Очищаємо текст
+
+	const speed = 100; // Швидкість друку в мілісекундах
+	let i = 0;
+
+	function typeWriter() {
+		if (i < text.length) {
+			titleElement.textContent += text.charAt(i); // Додаємо по одному символу
+			i++;
+			setTimeout(typeWriter, speed); // Викликаємо рекурсивно
+		}
+	}
+
+	// Опції для Intersection Observer
+	const options = {
+		threshold: 0.5 // Спрацьовує, коли елемент буде на 50% видимий
+	};
+
+	// Створення нового спостерігача
+	const typingObserver = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				typeWriter(); // Почати анімацію друку при видимості елемента
+				typingObserver.unobserve(entry.target); // Зупинити спостереження після початку анімації
+			}
+		});
+	}, options);
+
+	// Спостерігаємо за елементом
+	typingObserver.observe(titleElement);
+}
