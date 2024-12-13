@@ -335,7 +335,9 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 	}
 }
 
-.title {
+.pagination__arrow[disabled] {
+	opacity: 0.5;
+	pointer-events: none;
 }
 .sort-by {
 	border: 1.5px solid #f9f9f9;

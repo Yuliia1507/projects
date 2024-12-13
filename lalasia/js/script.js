@@ -283,16 +283,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-	const itemsPerPage = 9;
+	const itemsPerPage = 9; // Кількість елементів на сторінці
 	let currentPage = 1;
 
 	const items = document.querySelectorAll('.total-product__item');
 	const paginationLinks = document.querySelectorAll('.pagination__link');
-	const productWrap = document.querySelector('.total-product__wrap');
+	const productWrap = document.querySelector('.total-product__wrap'); // Контейнер продуктів
+	const prevArrow = document.querySelector('.pagination__arrow--prev');
+	const nextArrow = document.querySelector('.pagination__arrow--next');
+
+	// Перевірка наявності необхідних елементів
+	if (!productWrap || items.length === 0 || paginationLinks.length === 0) {
+
+		return;
+	}
+
+	// Оновлення видимості продуктів та активного елементу пагінації
 	function updatePagination(page) {
 		const start = (page - 1) * itemsPerPage;
 		const end = page * itemsPerPage;
 
+		// Показуємо тільки продукти поточної сторінки
 		items.forEach((item, index) => {
 			if (index >= start && index < end) {
 				item.classList.add('visible');
@@ -301,31 +312,58 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 
+		// Оновлюємо активний стан для посилань пагінації
 		paginationLinks.forEach(link => {
 			link.classList.remove('active');
 			if (parseInt(link.textContent) === page) {
 				link.classList.add('active');
 			}
 		});
+
+		// Оновлюємо доступність кнопок-стрілок
+		prevArrow.disabled = page === 1;
+		nextArrow.disabled = page === Math.ceil(items.length / itemsPerPage);
 	}
 
+	// Обробка кліку по стрілках
+	prevArrow?.addEventListener('click', function () {
+		if (currentPage > 1) {
+			currentPage--;
+			updatePagination(currentPage);
+			scrollToTop();
+		}
+	});
+
+	nextArrow?.addEventListener('click', function () {
+		if (currentPage < Math.ceil(items.length / itemsPerPage)) {
+			currentPage++;
+			updatePagination(currentPage);
+			scrollToTop();
+		}
+	});
+
+	// Обробка кліку по посиланнях пагінації
 	paginationLinks.forEach(link => {
 		link.addEventListener('click', function (e) {
 			e.preventDefault();
 			currentPage = parseInt(link.textContent);
 			updatePagination(currentPage);
-
-			// Прокрутка до верхньої частини контейнера продуктів
-			window.scrollTo({
-				top: productWrap.offsetTop - 170,
-				behavior: 'smooth'
-			});
+			scrollToTop();
 		});
 	});
 
-	// Ініціалізація пагінації
+	// Функція плавної прокрутки до контейнера продуктів
+	function scrollToTop() {
+		window.scrollTo({
+			top: productWrap.offsetTop - 20, // Відступ від верхнього краю
+			behavior: 'smooth' // Плавна прокрутка
+		});
+	}
+
+	// Ініціалізація
 	updatePagination(currentPage);
 });
+
 
 
 
@@ -431,28 +469,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("videoPlayer");
-    const playButton = document.querySelector(".video__button");
+	const video = document.getElementById("videoPlayer");
+	const playButton = document.querySelector(".video__button");
 
-    // Перевіряємо наявність елементів
-    if (!video || !playButton) return;
+	// Перевіряємо наявність елементів
+	if (!video || !playButton) return;
 
-    // При кліку на кнопку "Play"
-    playButton.addEventListener("click", () => {
-        video.play(); // Запускаємо відео
-        playButton.style.opacity = "0"; // Приховуємо кнопку
-        playButton.style.pointerEvents = "none"; // Вимикаємо кліки по кнопці
-    });
+	// При кліку на кнопку "Play"
+	playButton.addEventListener("click", () => {
+		video.play(); // Запускаємо відео
+		playButton.style.opacity = "0"; // Приховуємо кнопку
+		playButton.style.pointerEvents = "none"; // Вимикаємо кліки по кнопці
+	});
 
-    // Показуємо кнопку при паузі
-    video.addEventListener("pause", () => {
-        playButton.style.opacity = "1";
-        playButton.style.pointerEvents = "auto";
-    });
+	// Показуємо кнопку при паузі
+	video.addEventListener("pause", () => {
+		playButton.style.opacity = "1";
+		playButton.style.pointerEvents = "auto";
+	});
 
-    // При відтворенні приховуємо кнопку
-    video.addEventListener("play", () => {
-        playButton.style.opacity = "0";
-        playButton.style.pointerEvents = "none";
-    });
+	// При відтворенні приховуємо кнопку
+	video.addEventListener("play", () => {
+		playButton.style.opacity = "0";
+		playButton.style.pointerEvents = "none";
+	});
 });
