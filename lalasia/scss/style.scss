@@ -597,7 +597,7 @@ body {
 .product {
 	@include adaptiveValue("padding-bottom", 90, 50);
 	&__container {
-			&:not(:last-child) {
+		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 50, 30);
 		}
 	}
@@ -625,7 +625,6 @@ body {
 		max-width: toRem(656);
 		margin: 0 auto;
 		text-align: center;
-	
 	}
 
 	// .product__swiper
@@ -646,12 +645,10 @@ body {
 		display: flex;
 		flex-direction: column;
 		@media (max-width: toEm(1000)) {
-					width: calc((100% - 15px) / 3);
-
+			width: calc((100% - 15px) / 3);
 		}
-			@media (max-width: toEm(375)) {
-					width: calc((100% - 15px) / 2);
-
+		@media (max-width: toEm(375)) {
+			width: calc((100% - 15px) / 2);
 		}
 		span {
 			display: block;
@@ -966,7 +963,9 @@ body {
 	@include adaptiveValue("padding-top", 90, 50);
 	@include adaptiveValue("padding-bottom", 90, 50);
 	&__container {
-		overflow: visible;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 18);
+		}
 	}
 	&__label {
 		text-align: center;
@@ -976,9 +975,6 @@ body {
 	}
 	&__title {
 		text-align: center;
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 30, 18);
-		}
 	}
 	&__text {
 		max-width: toRem(656);
@@ -1383,12 +1379,12 @@ body {
 		align-items: center;
 		@include adaptiveValue("gap", 24, 15);
 		justify-content: space-between;
-	
+
 		time {
 			text-wrap: nowrap;
-				@media (max-width: toEm(450)) {
-			display: none;
-		}
+			@media (max-width: toEm(450)) {
+				display: none;
+			}
 		}
 		&--article {
 			justify-content: flex-start;

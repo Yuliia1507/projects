@@ -2915,17 +2915,16 @@ textarea {
 }
 
 .video {
-  max-height: 34.375rem;
   position: relative;
   width: 100%;
-  height: 100%;
-  max-width: 100%;
-  overflow: hidden;
   cursor: pointer;
 }
 .video video {
+  max-height: 34.375rem;
+  height: 100%;
   width: 100%;
-  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .video__button {
   position: absolute;
@@ -2993,6 +2992,11 @@ textarea {
 @media (max-width: 20em) {
   .video__button {
     height: 1.5rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .video__button {
+    display: none;
   }
 }
 @media (any-hover: hover) {
@@ -6156,8 +6160,27 @@ body.menu-open {
     padding-bottom: 3.125rem;
   }
 }
-.testimonials__container {
-  overflow: visible;
+@media (min-width: 79.375em) {
+  .testimonials__container:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
+    .testimonials__container:not(:last-child) {
+      margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
+    .testimonials__container:not(:last-child) {
+      margin-bottom: calc(1.125rem + 0.75 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .testimonials__container:not(:last-child) {
+    margin-bottom: 1.125rem;
+  }
 }
 .testimonials__label {
   text-align: center;
@@ -6186,28 +6209,6 @@ body.menu-open {
 }
 .testimonials__title {
   text-align: center;
-}
-@media (min-width: 79.375em) {
-  .testimonials__title:not(:last-child) {
-    margin-bottom: 1.875rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 79.375em) {
-  @supports (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
-    .testimonials__title:not(:last-child) {
-      margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem );
-    }
-  }
-  @supports not (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
-    .testimonials__title:not(:last-child) {
-      margin-bottom: calc(1.125rem + 0.75 * (100vw - 20rem) / 59.375);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .testimonials__title:not(:last-child) {
-    margin-bottom: 1.125rem;
-  }
 }
 .testimonials__text {
   max-width: 41rem;
