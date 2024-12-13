@@ -231,6 +231,28 @@ textarea {
           appearance: none;
 }
 
+@media (min-width: 79.375em) {
+  .hero__container:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
+    .hero__container:not(:last-child) {
+      margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
+    .hero__container:not(:last-child) {
+      margin-bottom: calc(1.125rem + 0.75 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .hero__container:not(:last-child) {
+    margin-bottom: 1.125rem;
+  }
+}
 .hero__swiper {
   position: relative;
   overflow: hidden;
@@ -4418,6 +4440,14 @@ body.menu-open {
     margin-bottom: 1.875rem;
   }
 }
+.hero__search-bar {
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
+}
+.hero__search-bar.visible {
+  opacity: 1; /* Видимість */
+}
 .hero__image {
   position: relative;
   max-width: 77.5rem;
@@ -4429,6 +4459,20 @@ body.menu-open {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.hero__image img.visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 #arrow {
@@ -4436,8 +4480,8 @@ body.menu-open {
   stroke-dashoffset: 55.0996551514;
   -webkit-animation: line 2s ease forwards;
           animation: line 2s ease forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 #arrow-2 {
@@ -4445,6 +4489,8 @@ body.menu-open {
   stroke-dashoffset: 305.3888244629;
   -webkit-animation: line 2s ease forwards;
           animation: line 2s ease forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes line {
@@ -4483,6 +4529,7 @@ body.menu-open {
   background: #fff;
   -webkit-box-shadow: 0px 4px 80px 0px rgba(175, 173, 181, 0.2);
           box-shadow: 0px 4px 80px 0px rgba(175, 173, 181, 0.2);
+  z-index: 5;
 }
 @media (max-width: 54.375em) {
   .search {
@@ -5147,7 +5194,8 @@ body.menu-open {
   }
 }
 
-.label, .title, .text {
+.label,
+.title {
   opacity: 0;
   -webkit-transform: translateY(20px);
       -ms-transform: translateY(20px);
@@ -5158,11 +5206,31 @@ body.menu-open {
   transition: opacity 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-.label.visible, .title.visible, .text.visible {
+.label.visible,
+.title.visible {
   opacity: 1;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
+}
+
+.hero__title,
+.hero__text {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.hero__title.visible,
+.hero__text.visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .item-benefits {

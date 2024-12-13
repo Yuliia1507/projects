@@ -115,6 +115,28 @@ textarea {
           appearance: none;
 }
 
+@media (min-width: 79.375em) {
+  .hero__container:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
+    .hero__container:not(:last-child) {
+      margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.125rem , 0.8723684211rem  +  1.2631578947vw , 1.875rem )) {
+    .hero__container:not(:last-child) {
+      margin-bottom: calc(1.125rem + 0.75 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .hero__container:not(:last-child) {
+    margin-bottom: 1.125rem;
+  }
+}
 .hero__swiper {
   position: relative;
   overflow: hidden;

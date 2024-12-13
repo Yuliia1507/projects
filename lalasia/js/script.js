@@ -546,3 +546,50 @@ if (titleElement) { // Перевірка на наявність елемент
 	// Спостерігаємо за елементом
 	typingObserver.observe(titleElement);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	const title = document.querySelector('.hero__title');
+	const text = document.querySelector('.hero__text');
+
+	// Перевірка наявності елементів
+	if (title) {
+		setTimeout(() => {
+			title.classList.add('visible');
+		}, 300);
+	}
+
+	if (text) {
+		setTimeout(() => {
+			text.classList.add('visible');
+		}, 1000);
+	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	const image = document.querySelector('.hero__image img');
+
+	// Перевірка наявності елемента
+	if (image) {
+		setTimeout(() => {
+			image.classList.add('visible');
+		}, 500); // Картинка з'являється через 0.5 секунди
+	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	const image = document.querySelector('.hero__image img');
+	const searchBar = document.querySelector('.hero__search-bar');
+
+	// Перевірка наявності елементів
+	if (image) {
+		setTimeout(() => {
+			image.classList.add('visible');
+		}, 300); // Картинка з'являється через 0.3 секунди
+	}
+
+	if (searchBar) {
+		setTimeout(() => {
+			searchBar.classList.add('visible');
+		}, 1400); // Пошук з'являється через 1.4 секунди
+	}
+});

@@ -29,6 +29,9 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 	// .hero__container
 
 	&__container {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 18);
+		}
 	}
 
 	// .hero__title
