@@ -115,8 +115,27 @@ textarea {
           appearance: none;
 }
 
-.hero--article {
-  padding-bottom: 9.375rem;
+@media (min-width: 79.375em) {
+  .hero--article {
+    padding-bottom: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-bottom: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem )) {
+    .hero--article {
+      padding-bottom: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem )) {
+    .hero--article {
+      padding-bottom: calc(3.125rem + 2.5 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .hero--article {
+    padding-bottom: 3.125rem;
+  }
 }
 .hero__swiper {
   position: relative;
@@ -248,9 +267,49 @@ textarea {
   max-width: 50.1875rem;
 }
 
-.news {
-  padding-top: 9.375rem;
-  padding-bottom: 5.625rem;
+@media (min-width: 79.375em) {
+  .news {
+    padding-top: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-top: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem )) {
+    .news {
+      padding-top: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem );
+    }
+  }
+  @supports not (padding-top: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem )) {
+    .news {
+      padding-top: calc(3.125rem + 2.5 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .news {
+    padding-top: 3.125rem;
+  }
+}
+@media (min-width: 79.375em) {
+  .news {
+    padding-bottom: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (padding-bottom: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem )) {
+    .news {
+      padding-bottom: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 3.125rem , 2.2828947368rem  +  4.2105263158vw , 5.625rem )) {
+    .news {
+      padding-bottom: calc(3.125rem + 2.5 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .news {
+    padding-bottom: 3.125rem;
+  }
 }
 .news__container {
   display: grid;

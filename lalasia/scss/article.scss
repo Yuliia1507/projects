@@ -27,7 +27,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 .hero {
 	&--article {
-		padding-bottom: toRem(150);
+	@include adaptiveValue("padding-bottom", 90, 50);
 	}
 	// .hero__info
 
@@ -58,8 +58,8 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 }
 
 .news {
-	padding-top: toRem(150);
-	padding-bottom: toRem(90);
+	@include adaptiveValue("padding-top", 90, 50);
+	@include adaptiveValue("padding-bottom", 90, 50);
 	// .news__container
 
 	&__container {

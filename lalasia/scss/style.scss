@@ -421,7 +421,7 @@ body {
 			color: #afadb5;
 			font-weight: 500;
 			line-height: 180%;
-			@include adaptiveValue("font-size", 18, 14);
+			@include adaptiveValue("font-size", 18, 13);
 		}
 		&:focus {
 			outline: toRem(1) solid $greenColor;
@@ -597,8 +597,9 @@ body {
 .product {
 	@include adaptiveValue("padding-bottom", 90, 50);
 	&__container {
-		overflow: visible;
-		width: 100%;
+			&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 30);
+		}
 	}
 	// .product__label
 
@@ -624,9 +625,7 @@ body {
 		max-width: toRem(656);
 		margin: 0 auto;
 		text-align: center;
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 50, 30);
-		}
+	
 	}
 
 	// .product__swiper
