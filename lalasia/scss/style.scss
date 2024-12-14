@@ -327,10 +327,8 @@ body {
 				@include adaptiveValue("height", 51, 24);
 				background-image: url("../img/stars-element.svg");
 				background-size: contain;
-				@media (max-width: toEm(360)) {
-					top: auto;
-					bottom: toRem(10);
-				}
+				animation: scale 2s;
+				animation-delay: 2.9s;
 			}
 		}
 		&:not(:last-child) {
@@ -356,7 +354,7 @@ body {
 		opacity: 0;
 		transition: opacity 0.8s ease-in-out;
 		&.visible {
-			opacity: 1; /* Видимість */
+			opacity: 1;
 		}
 	}
 	// .hero__search-btn
@@ -377,9 +375,20 @@ body {
 				transform 0.5s ease-in-out;
 			&.visible {
 				opacity: 1;
-				transform: scale(1);
+				transform: scale 0.3s infinite;
 			}
 		}
+	}
+}
+@keyframes scale {
+		0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
 	}
 }
 #arrow {
