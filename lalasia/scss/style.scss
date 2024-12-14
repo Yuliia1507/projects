@@ -353,9 +353,8 @@ body {
 		}
 	}
 	&__search-bar {
-		opacity: 0; 
-		transition:
-			opacity 0.8s ease-in-out;
+		opacity: 0;
+		transition: opacity 0.8s ease-in-out;
 		&.visible {
 			opacity: 1; /* Видимість */
 		}
@@ -1388,6 +1387,16 @@ body {
 		@include adaptiveValue("font-size", 24, 16);
 		font-weight: 700;
 		line-height: 130%;
+		h3 {
+			transition: color 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				h3 {
+					color: #6d6d6e;
+				}
+			}
+		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 21, 10);
 		}

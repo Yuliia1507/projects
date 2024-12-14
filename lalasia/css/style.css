@@ -7279,6 +7279,15 @@ body.menu-open {
     font-size: 1rem;
   }
 }
+.info-article__title h3 {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media (any-hover: hover) {
+  .info-article__title:hover h3 {
+    color: #6d6d6e;
+  }
+}
 @media (min-width: 79.375em) {
   .info-article__title:not(:last-child) {
     margin-bottom: 1.3125rem;
