@@ -29,7 +29,7 @@ html {
 body {
 	min-height: 100vh; /* Розтягуємо на всю висоту вікна */
 	background: linear-gradient(174deg, #240d36 0%, #0f0320 100%);
-	background-attachment: fixed; /* Фіксує фон, щоб він не змінювався при скролі */
+	background-attachment: fixed;
 	color: #fff;
 	font-family: "SF UI Display";
 	&.menu-open {
@@ -47,6 +47,17 @@ body {
 		flex-grow: 1;
 		position: relative;
 		z-index: 2;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("../img/background.png") center/cover no-repeat;
+			opacity: 1;
+			z-index: 1;
+		}
 	}
 }
 
@@ -295,26 +306,6 @@ body {
 	}
 	#menu02.active span:nth-of-type(3) {
 		transform: translateY(-10px) rotate(315deg);
-	}
-}
-
-.page__background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	pointer-events: none;
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: url("../img/background.png") center/cover no-repeat;
-		opacity: 1;
 	}
 }
 
@@ -754,7 +745,7 @@ body {
 		z-index: -1;
 		padding: toRem(1) toRem(1) 0 toRem(1);
 		background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
-	-webkit-mask:
+		-webkit-mask:
 			linear-gradient(to bottom, #fff 100%, #fff 100%) content-box,
 			linear-gradient(to bottom, #fff 100%, #fff 100%) padding-box;
 
@@ -763,7 +754,7 @@ body {
 			linear-gradient(to bottom, #fff 100%, #fff 100%) padding-box;
 
 		-webkit-mask-composite: xor;
-	
+
 		mask-composite: exclude;
 		pointer-events: none;
 		border-radius: toRem(20) toRem(20) 0 0;
@@ -969,29 +960,29 @@ body {
 		}
 	}
 	&::before {
-	content: "";
-	position: absolute;
-	top: toRem(-1);
-	right: toRem(-1);
-	bottom: toRem(0);
-	left: toRem(-1);
-	z-index: -1;
-	padding: toRem(1) toRem(1) 0 toRem(1);
-	background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
+		content: "";
+		position: absolute;
+		top: toRem(-1);
+		right: toRem(-1);
+		bottom: toRem(0);
+		left: toRem(-1);
+		z-index: -1;
+		padding: toRem(1) toRem(1) 0 toRem(1);
+		background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
 
-	-webkit-mask:
-		linear-gradient(white, white) content-box,
-		linear-gradient(white, white) padding-box;
+		-webkit-mask:
+			linear-gradient(white, white) content-box,
+			linear-gradient(white, white) padding-box;
 
-	mask:
-		linear-gradient(white, white) content-box,
-		linear-gradient(white, white) padding-box;
+		mask:
+			linear-gradient(white, white) content-box,
+			linear-gradient(white, white) padding-box;
 
-	-webkit-mask-composite: xor;
-	mask-composite: exclude;
-	pointer-events: none;
-	border-radius: toRem(20) toRem(20) 0 0;
-}
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		pointer-events: none;
+		border-radius: toRem(20) toRem(20) 0 0;
+	}
 
 	// .item-marketplace__image
 

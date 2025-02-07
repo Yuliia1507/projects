@@ -152,7 +152,7 @@ html {
 body {
   min-height: 100vh; /* Розтягуємо на всю висоту вікна */
   background: linear-gradient(174deg, #240d36 0%, #0f0320 100%);
-  background-attachment: fixed; /* Фіксує фон, щоб він не змінювався при скролі */
+  background-attachment: fixed;
   color: #fff;
   font-family: "SF UI Display";
 }
@@ -181,6 +181,17 @@ body.menu-open {
           flex-grow: 1;
   position: relative;
   z-index: 2;
+}
+.wrapper main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/background.png") center/cover no-repeat;
+  opacity: 1;
+  z-index: 1;
 }
 
 [class*=__container] {
@@ -705,26 +716,6 @@ body.menu-open {
             transform: translateY(-10px) rotate(315deg);
   }
 }
-.page__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-.page__background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../img/background.png") center/cover no-repeat;
-  opacity: 1;
-}
-
 .hero {
   position: relative;
   background: url("../img/hero-bg.png") left bottom/cover no-repeat, linear-gradient(113deg, #190b2e 27.67%, rgba(25, 11, 46, 0.65) 67.49%);
