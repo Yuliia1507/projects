@@ -969,29 +969,29 @@ body {
 		}
 	}
 	&::before {
-		content: "";
-		position: absolute;
-		top: toRem(-1);
-		right: toRem(-1);
-		bottom: toRem(0);
-		left: toRem(-1);
-		z-index: -1;
-		padding: toRem(1) toRem(1) 0 toRem(1);
-		background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
+	content: "";
+	position: absolute;
+	top: toRem(-1);
+	right: toRem(-1);
+	bottom: toRem(0);
+	left: toRem(-1);
+	z-index: -1;
+	padding: toRem(1) toRem(1) 0 toRem(1);
+	background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
 
-		-webkit-mask:
-			linear-gradient(to bottom, #fff 100%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 100%, #fff 100%) padding-box;
+	-webkit-mask:
+		linear-gradient(white, white) content-box,
+		linear-gradient(white, white) padding-box;
 
-		mask:
-			linear-gradient(to bottom, #fff 100%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 100%, #fff 100%) padding-box;
+	mask:
+		linear-gradient(white, white) content-box,
+		linear-gradient(white, white) padding-box;
 
-		-webkit-mask-composite: xor;
-		mask-composite: exclude;
-		pointer-events: none;
-		border-radius: toRem(20) toRem(20) 0 0;
-	}
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+	border-radius: toRem(20) toRem(20) 0 0;
+}
 
 	// .item-marketplace__image
 

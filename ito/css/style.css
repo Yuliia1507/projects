@@ -2226,10 +2226,10 @@ body.menu-open {
   padding: 0.0625rem 0.0625rem 0 0.0625rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(67, 233, 123, 0.6)), to(rgb(23, 12, 46)));
   background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgb(23, 12, 46));
-  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #fff), to(#fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(100%, #fff), to(#fff)) padding-box;
-  -webkit-mask: linear-gradient(to bottom, #fff 100%, #fff 100%) content-box, linear-gradient(to bottom, #fff 100%, #fff 100%) padding-box;
-  mask: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #fff), to(#fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(100%, #fff), to(#fff)) padding-box;
-  mask: linear-gradient(to bottom, #fff 100%, #fff 100%) content-box, linear-gradient(to bottom, #fff 100%, #fff 100%) padding-box;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) content-box, -webkit-gradient(linear, left top, left bottom, from(white), to(white)) padding-box;
+  -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white) padding-box;
+  mask: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) content-box, -webkit-gradient(linear, left top, left bottom, from(white), to(white)) padding-box;
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white) padding-box;
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
