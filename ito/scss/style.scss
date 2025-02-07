@@ -46,7 +46,7 @@ body {
 	main {
 		flex-grow: 1;
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		&::before {
 			content: "";
 			position: absolute;
@@ -56,7 +56,7 @@ body {
 			height: 100%;
 			background: url("../img/background.png") center/cover no-repeat;
 			opacity: 1;
-			z-index: 1;
+			z-index: 1;pointer-events: none;
 		}
 	}
 }
@@ -318,6 +318,7 @@ body {
 		linear-gradient(113deg, #190b2e 27.67%, rgba(25, 11, 46, 0.65) 67.49%);
 	background-size: cover;
 	background-position: center;
+	
 	// .hero__container
 
 	&__container {
