@@ -1461,7 +1461,6 @@ body {
 		span {
 			opacity: 0.6;
 			@include adaptiveValue("font-size", 16, 14);
-
 			font-weight: 500;
 			line-height: 130%; /* 20.8px */
 			text-transform: capitalize;
