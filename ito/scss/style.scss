@@ -577,11 +577,12 @@ body {
 		padding: toRem(1) toRem(1) 0 toRem(1);
 		background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
 		-webkit-mask:
-			linear-gradient(to bottom, #fff 0%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 0%, #fff 100%);
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0) padding-box;
+
 		mask:
-			linear-gradient(to bottom, #fff 0%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 0%, #fff 100%);
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0) padding-box;
 
 		-webkit-mask-composite: xor;
 		mask-composite: exclude;
@@ -752,11 +753,12 @@ body {
 		padding: toRem(1) toRem(1) 0 toRem(1);
 		background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
 		-webkit-mask:
-			linear-gradient(to bottom, #fff 0%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 0%, #fff 100%);
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0) padding-box;
+
 		mask:
-			linear-gradient(to bottom, #fff 0%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 0%, #fff 100%);
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0) padding-box;
 
 		-webkit-mask-composite: xor;
 		mask-composite: exclude;
@@ -974,11 +976,12 @@ body {
 		padding: toRem(1) toRem(1) 0 toRem(1);
 		background: linear-gradient(to bottom, rgba(67, 233, 123, 0.6), rgba(23, 12, 46, 1));
 		-webkit-mask:
-			linear-gradient(to bottom, #fff 0%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 0%, #fff 100%);
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0) padding-box;
+
 		mask:
-			linear-gradient(to bottom, #fff 0%, #fff 100%) content-box,
-			linear-gradient(to bottom, #fff 0%, #fff 100%);
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0) padding-box;
 
 		-webkit-mask-composite: xor;
 		mask-composite: exclude;
