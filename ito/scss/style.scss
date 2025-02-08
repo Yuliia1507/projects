@@ -131,6 +131,7 @@ body {
 		position: relative;
 		overflow: hidden;
 		z-index: 1;
+		color: #000;
 		&::before {
 			content: "";
 			position: absolute;

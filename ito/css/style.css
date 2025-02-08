@@ -433,6 +433,7 @@ body.menu-open {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  color: #000;
 }
 @media (min-width: 85em) {
   .link--background, .button--background {
