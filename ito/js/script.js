@@ -1,28 +1,27 @@
 "use strict"
 
-document.addEventListener("click", documentActions);
-
 function documentActions(e) {
 	const targetElement = e.target;
 
-	// Перевірка на клік по іконці меню
+	// Клік по бургер-іконці
 	if (targetElement.closest('.icon-menu')) {
 		document.body.classList.toggle('menu-open');
+		document.querySelector('.icon-menu').classList.toggle('active'); // Додаємо клас
+		return;
 	}
 
-	// Перевірка на клік по посиланню з класом .menu__link
+	// Клік по пункту меню
 	if (targetElement.closest('.menu__link')) {
-		// Видалення класу "active" з усіх посилань з класом .menu__link
-		const menuLinks = document.querySelectorAll('.menu__link');
-		menuLinks.forEach(link => link.classList.remove('active'));
-
-		// Додавання класу "active" до натиснутого посилання
+		document.querySelectorAll('.menu__link').forEach(link => link.classList.remove('active'));
 		targetElement.classList.add('active');
-
-		// Закриття меню після кліку
 		document.body.classList.remove('menu-open');
+		document.querySelector('.icon-menu').classList.remove('active'); // Видаляємо клас
 	}
 }
+
+// Додаємо обробник подій
+document.addEventListener('click', documentActions);
+
 
 // let arrow = document.getElementById("line");
 
@@ -361,3 +360,6 @@ const observer = new IntersectionObserver((entries, observer) => {
 // Спостерігаємо за всіма кнопками
 const buttons = document.querySelectorAll('.tabs__button');
 buttons.forEach(button => observer.observe(button));
+//=====================================
+
+
