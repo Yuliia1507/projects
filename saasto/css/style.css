@@ -172,19 +172,19 @@ body.menu-open {
     padding-top: 2.5rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (padding-top: clamp( 0.625rem , -0.0568181818rem  +  3.4090909091vw , 2.5rem )) {
+@media (min-width: 47.99875em) and (max-width: 75em) {
+  @supports (padding-top: clamp( 0.625rem , -2.708092218rem  +  6.9441229573vw , 2.5rem )) {
     .header {
-      padding-top: clamp( 0.625rem , -0.0568181818rem  +  3.4090909091vw , 2.5rem );
+      padding-top: clamp( 0.625rem , -2.708092218rem  +  6.9441229573vw , 2.5rem );
     }
   }
-  @supports not (padding-top: clamp( 0.625rem , -0.0568181818rem  +  3.4090909091vw , 2.5rem )) {
+  @supports not (padding-top: clamp( 0.625rem , -2.708092218rem  +  6.9441229573vw , 2.5rem )) {
     .header {
-      padding-top: calc(0.625rem + 1.875 * (100vw - 20rem) / 55);
+      padding-top: calc(0.625rem + 1.875 * (100vw - 47.99875rem) / 27.00125);
     }
   }
 }
-@media (max-width: 20em) {
+@media (max-width: 47.99875em) {
   .header {
     padding-top: 0.625rem;
   }
@@ -194,19 +194,19 @@ body.menu-open {
     padding-bottom: 2.5rem;
   }
 }
-@media (min-width: 20em) and (max-width: 75em) {
-  @supports (padding-bottom: clamp( 0.625rem , -0.0568181818rem  +  3.4090909091vw , 2.5rem )) {
+@media (min-width: 47.99875em) and (max-width: 75em) {
+  @supports (padding-bottom: clamp( 0.625rem , -2.708092218rem  +  6.9441229573vw , 2.5rem )) {
     .header {
-      padding-bottom: clamp( 0.625rem , -0.0568181818rem  +  3.4090909091vw , 2.5rem );
+      padding-bottom: clamp( 0.625rem , -2.708092218rem  +  6.9441229573vw , 2.5rem );
     }
   }
-  @supports not (padding-bottom: clamp( 0.625rem , -0.0568181818rem  +  3.4090909091vw , 2.5rem )) {
+  @supports not (padding-bottom: clamp( 0.625rem , -2.708092218rem  +  6.9441229573vw , 2.5rem )) {
     .header {
-      padding-bottom: calc(0.625rem + 1.875 * (100vw - 20rem) / 55);
+      padding-bottom: calc(0.625rem + 1.875 * (100vw - 47.99875rem) / 27.00125);
     }
   }
 }
-@media (max-width: 20em) {
+@media (max-width: 47.99875em) {
   .header {
     padding-bottom: 0.625rem;
   }
@@ -264,7 +264,8 @@ body.menu-open {
     width: 8.4375rem;
   }
 }
-.header__buttons-wrap {
+.header__links-wrap {
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,24 +274,24 @@ body.menu-open {
           align-items: center;
 }
 @media (min-width: 75em) {
-  .header__buttons-wrap {
+  .header__links-wrap {
     gap: 2.25rem;
   }
 }
 @media (min-width: 48.75em) and (max-width: 75em) {
   @supports (gap: clamp( 0.9375rem , -1.5rem  +  5vw , 2.25rem )) {
-    .header__buttons-wrap {
+    .header__links-wrap {
       gap: clamp( 0.9375rem , -1.5rem  +  5vw , 2.25rem );
     }
   }
   @supports not (gap: clamp( 0.9375rem , -1.5rem  +  5vw , 2.25rem )) {
-    .header__buttons-wrap {
+    .header__links-wrap {
       gap: calc(0.9375rem + 1.3125 * (100vw - 48.75rem) / 26.25);
     }
   }
 }
 @media (max-width: 48.75em) {
-  .header__buttons-wrap {
+  .header__links-wrap {
     gap: 0.9375rem;
   }
 }
@@ -302,26 +303,59 @@ body.menu-open {
 
 @media (max-width: 48.75em) {
   .menu__body {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    padding: 9.375rem 0.9375rem 0.9375rem 0.9375rem;
-    top: 0rem;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    overflow: auto;
+    padding: 7.5rem 0.9375rem 0.9375rem 0.9375rem;
     background: #f4d1b2;
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    z-index: 5;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+    z-index: 2;
+    overflow-x: auto;
   }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    z-index: 3;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+    background: #d4b59b;
+  }
+}
+@media (max-width: 48.75em) and (min-width: 47.99875em) {
+  .menu__body::before {
+    height: 4.6875rem;
+  }
+}
+@media (max-width: 48.75em) and (min-width: 20em) and (max-width: 47.99875em) {
+  @supports (height: clamp( 3.75rem , 3.0803272468rem  +  3.3483637662vw , 4.6875rem )) {
+    .menu__body::before {
+      height: clamp( 3.75rem , 3.0803272468rem  +  3.3483637662vw , 4.6875rem );
+    }
+  }
+  @supports not (height: clamp( 3.75rem , 3.0803272468rem  +  3.3483637662vw , 4.6875rem )) {
+    .menu__body::before {
+      height: calc(3.75rem + 0.9375 * (100vw - 20rem) / 27.99875);
+    }
+  }
+}
+@media (max-width: 48.75em) and (max-width: 20em) {
+  .menu__body::before {
+    height: 3.75rem;
+  }
+}
+@media (max-width: 48.75em) {
   .menu-open .menu__body {
-    right: 0;
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    left: 0;
+  }
+  .menu-open .menu__body::before {
+    left: 0;
   }
 }
 .menu__list {
@@ -413,7 +447,7 @@ body.menu-open {
   }
 }
 
-.button {
+.link {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-size: 1.125rem;
@@ -423,158 +457,158 @@ body.menu-open {
   border: 0.0625rem solid transparent;
 }
 @media (min-width: 75em) {
-  .button {
+  .link {
     font-size: 1.125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (font-size: clamp( 1rem , 0.9545454545rem  +  0.2272727273vw , 1.125rem )) {
-    .button {
+    .link {
       font-size: clamp( 1rem , 0.9545454545rem  +  0.2272727273vw , 1.125rem );
     }
   }
   @supports not (font-size: clamp( 1rem , 0.9545454545rem  +  0.2272727273vw , 1.125rem )) {
-    .button {
+    .link {
       font-size: calc(1rem + 0.125 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .button {
+  .link {
     font-size: 1rem;
   }
 }
 @media (min-width: 75em) {
-  .button {
+  .link {
     padding-top: 0.9375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (padding-top: clamp( 0.625rem , 0.5113636364rem  +  0.5681818182vw , 0.9375rem )) {
-    .button {
+    .link {
       padding-top: clamp( 0.625rem , 0.5113636364rem  +  0.5681818182vw , 0.9375rem );
     }
   }
   @supports not (padding-top: clamp( 0.625rem , 0.5113636364rem  +  0.5681818182vw , 0.9375rem )) {
-    .button {
+    .link {
       padding-top: calc(0.625rem + 0.3125 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .button {
+  .link {
     padding-top: 0.625rem;
   }
 }
 @media (min-width: 75em) {
-  .button {
+  .link {
     padding-bottom: 0.9375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (padding-bottom: clamp( 0.625rem , 0.5113636364rem  +  0.5681818182vw , 0.9375rem )) {
-    .button {
+    .link {
       padding-bottom: clamp( 0.625rem , 0.5113636364rem  +  0.5681818182vw , 0.9375rem );
     }
   }
   @supports not (padding-bottom: clamp( 0.625rem , 0.5113636364rem  +  0.5681818182vw , 0.9375rem )) {
-    .button {
+    .link {
       padding-bottom: calc(0.625rem + 0.3125 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .button {
+  .link {
     padding-bottom: 0.625rem;
   }
 }
 @media (min-width: 75em) {
-  .button {
+  .link {
     padding-left: 1.9375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (padding-left: clamp( 0.9375rem , 0.5738636364rem  +  1.8181818182vw , 1.9375rem )) {
-    .button {
+    .link {
       padding-left: clamp( 0.9375rem , 0.5738636364rem  +  1.8181818182vw , 1.9375rem );
     }
   }
   @supports not (padding-left: clamp( 0.9375rem , 0.5738636364rem  +  1.8181818182vw , 1.9375rem )) {
-    .button {
+    .link {
       padding-left: calc(0.9375rem + 1 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .button {
+  .link {
     padding-left: 0.9375rem;
   }
 }
 @media (min-width: 75em) {
-  .button {
+  .link {
     padding-right: 1.9375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (padding-right: clamp( 0.9375rem , 0.5738636364rem  +  1.8181818182vw , 1.9375rem )) {
-    .button {
+    .link {
       padding-right: clamp( 0.9375rem , 0.5738636364rem  +  1.8181818182vw , 1.9375rem );
     }
   }
   @supports not (padding-right: clamp( 0.9375rem , 0.5738636364rem  +  1.8181818182vw , 1.9375rem )) {
-    .button {
+    .link {
       padding-right: calc(0.9375rem + 1 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .button {
+  .link {
     padding-right: 0.9375rem;
   }
 }
-.button--background {
+.link--background {
   background-color: #ff553e;
   color: #fff;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 @media (any-hover: hover) {
-  .button--background:hover {
+  .link--background:hover {
     background-color: #ff1e00;
   }
 }
-.button--white {
+.link--white {
   color: #ff553e;
   background-color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
-  .button--white:hover {
+  .link--white:hover {
     border: 0.0625rem solid #fff;
     color: #fff;
     background-color: transparent;
   }
 }
-.button--transparent {
+.link--transparent {
   color: #ff553e;
   -webkit-transition: border 0.3s;
   transition: border 0.3s;
   border: 0.0625rem solid #ff553e;
 }
 @media (any-hover: hover) {
-  .button--transparent:hover {
+  .link--transparent:hover {
     border: 0.0625rem solid #ff553e;
   }
 }
-.button--header {
+.link--header {
   color: #ff553e;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   padding: 0;
 }
 @media (any-hover: hover) {
-  .button--header:hover {
+  .link--header:hover {
     color: #000;
   }
 }
@@ -1202,7 +1236,7 @@ body.menu-open {
             transform: scale(1);
   }
 }
-.hero__button {
+.hero__link {
   opacity: 0;
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
@@ -3942,13 +3976,13 @@ body.menu-open {
     margin-bottom: 1.75rem;
   }
 }
-.partners__button {
+.partners__link {
   border: 0.0625rem solid #ff553e;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
-  .partners__button:hover {
+  .partners__link:hover {
     background-color: #ff553e;
     color: #fff;
   }
@@ -4689,7 +4723,7 @@ body.menu-open {
             flex-direction: column;
   }
 }
-.offer__button {
+.offer__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4709,17 +4743,17 @@ body.menu-open {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-.offer__button:nth-child(2) {
+.offer__link:nth-child(2) {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
-  .offer__button:nth-child(2):hover {
+  .offer__link:nth-child(2):hover {
     -webkit-box-shadow: 0 0.3125rem 0.625rem rgba(179, 69, 1, 0.427);
             box-shadow: 0 0.3125rem 0.625rem rgba(179, 69, 1, 0.427);
   }
 }
-.offer__button.visible {
+.offer__link.visible {
   opacity: 1;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);

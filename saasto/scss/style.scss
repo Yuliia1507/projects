@@ -55,8 +55,8 @@ body {
 }
 
 .header {
-	@include adaptiveValue("padding-top", 40, 10);
-	@include adaptiveValue("padding-bottom", 40, 10);
+	@include adaptiveValue("padding-top", 40, 10, $widthTo: 767.98);
+	@include adaptiveValue("padding-bottom", 40, 10, $widthTo: 767.98);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -92,14 +92,16 @@ body {
 			@include adaptiveValue("width", 178, 135, $widthTo: 780);
 		}
 	}
-	&__buttons-wrap {
+	&__links-wrap {
+		z-index: 3;
+
 		display: flex;
 		align-items: center;
 		@include adaptiveValue("gap", 36, 15, $widthTo: 780);
 	}
 	// .header__button
 
-	&__button {
+	&__link {
 	}
 
 	&__menu {
@@ -111,19 +113,33 @@ body {
 
 	&__body {
 		@media (max-width: toEm(780)) {
-			position: absolute;
-			width: 100vw;
-			height: 100vh;
-			padding: toRem(150) toRem(15) toRem(15) toRem(15);
-			top: toRem(0);
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			overflow: auto;
+			padding: toRem(120) toRem(15) toRem(15) toRem(15);
 			background: #f4d1b2;
-			transform: translateX(100%);
-			transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-			z-index: 5;
-
+			transition: left 0.3s;
+			z-index: 2;
+			overflow-x: auto;
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height", 75, 60, $widthFrom: 767.98);
+				top: 0;
+				left: -100%;
+				z-index: 3;
+				transition: left 0.3s;
+				background: #d4b59b;
+			}
 			.menu-open & {
-				right: 0;
-				transform: translateX(0);
+				left: 0;
+				&::before {
+					left: 0;
+				}
 			}
 		}
 	}
@@ -188,7 +204,7 @@ body {
 	}
 }
 
-.button {
+.link {
 	flex-shrink: 0;
 	font-size: toRem(18);
 	font-weight: 500;
@@ -559,7 +575,7 @@ body {
 
 	// .hero__button
 
-	&__button {
+	&__link {
 		opacity: 0;
 		transform: scale(0.8);
 		animation: zoomIn 0.5s ease-out forwards;
@@ -1669,7 +1685,7 @@ body {
 
 	// .partners__button
 
-	&__button {
+	&__link {
 		border: toRem(1) solid $orangeColor;
 		transition: all 0.3s;
 		@media (any-hover: hover) {
@@ -2045,15 +2061,14 @@ body {
 
 	// .offer__button
 
-	&__button {
+	&__link {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: fit-content;
 		opacity: 0;
 		transform: scale(0);
-		transition:
-			all 0.5s ease-out;
+		transition: all 0.5s ease-out;
 		&:nth-child(2) {
 			transition: all 0.3s;
 			@media (any-hover: hover) {

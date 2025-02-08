@@ -265,7 +265,7 @@ const observeElements = (selectors, options = { threshold: 0.3, unobserve: true 
 };
 
 // Виклик функції з потрібними селекторами
-observeElements('.text, .analytics__item, .analytics__image, .tracker__item, .tracker__image, .partners__image, .offer__left-img, .offer__right-img, .offer__image, .offer__button, .item-price, .animated-svg, .arrow-line, .arrow-head, .price__left-img');
+observeElements('.text, .analytics__item, .analytics__image, .tracker__item, .tracker__image, .partners__image, .offer__left-img, .offer__right-img, .offer__image, .offer__link, .item-price, .animated-svg, .arrow-line, .arrow-head, .price__left-img');
 
 
 
