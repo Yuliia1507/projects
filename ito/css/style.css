@@ -481,6 +481,8 @@ body.menu-open {
   line-height: 160%; /* 32px */
   position: relative;
   overflow: hidden;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 @media (min-width: 85em) {
   .link--transparent, .button--transparent {
@@ -519,6 +521,9 @@ body.menu-open {
   transition: all 0.5s;
 }
 @media (any-hover: hover) {
+  .link--transparent:hover, .button--transparent:hover {
+    color: #00d084;
+  }
   .link--transparent:hover::before, .button--transparent:hover::before {
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);

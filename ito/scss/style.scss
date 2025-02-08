@@ -157,6 +157,7 @@ body {
 		line-height: 160%; /* 32px */
 		position: relative;
 		overflow: hidden;
+		transition: color 0.3s;
 		&::before {
 			content: "";
 			position: absolute;
@@ -169,8 +170,11 @@ body {
 			transition: all 0.5s;
 		}
 		@media (any-hover: hover) {
-			&:hover::before {
-				transform: translateX(100%);
+			&:hover {
+				color: #00d084;
+				&::before {
+					transform: translateX(100%);
+				}
 			}
 		}
 	}
@@ -183,7 +187,7 @@ body {
 	&--background {
 		@extend .link--background;
 	}
-	&--border-radius{
+	&--border-radius {
 		font-weight: 500;
 		@include adaptiveValue("font-size", 20, 16);
 		line-height: 160%;
@@ -201,13 +205,14 @@ body {
 			background: linear-gradient(84deg, #43e97b 0%, #43e97b 0.01%, #38f9d7 103.96%);
 			transition: left 0.5s ease;
 			z-index: -1;
-	}
+		}
 		@media (any-hover: hover) {
 			&:hover::before {
 				left: 0;
 			}
 		}
-}}
+	}
+}
 .menu {
 	// .menu__body
 
@@ -474,8 +479,9 @@ body {
 		object-fit: cover;
 		overflow: hidden;
 		animation: waveEntrance 1s ease-out forwards;
-			@media (max-width: toEm(767.98)) {
-align-self: center;		}
+		@media (max-width: toEm(767.98)) {
+			align-self: center;
+		}
 	}
 }
 @keyframes waveEntrance {
@@ -533,23 +539,22 @@ align-self: center;		}
 			opacity: 0;
 			animation: backInUp 1s ease-out forwards;
 		}
-	
 	}
 }
-	@keyframes backInUp {
-			0% {
-				transform: translateY(60px);
-				opacity: 0;
-			}
-			60% {
-				transform: translateY(-20px);
-				opacity: 1;
-			}
-			100% {
-				transform: translateY(0);
-				opacity: 1;
-			}
-		}
+@keyframes backInUp {
+	0% {
+		transform: translateY(60px);
+		opacity: 0;
+	}
+	60% {
+		transform: translateY(-20px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
 .wrap-title {
 	@include adaptiveValue("padding", 35, 15);
 	border-radius: toRem(20);
@@ -720,7 +725,6 @@ align-self: center;		}
 			opacity: 0;
 			animation: backInUp 1s ease-out forwards;
 		}
-
 	}
 	&__wrapper {
 		@include adaptiveValue("gap", 50, 20);
@@ -923,7 +927,6 @@ align-self: center;		}
 			opacity: 0;
 			animation: backInUp 1s ease-out forwards;
 		}
-	
 	}
 }
 
@@ -1199,7 +1202,6 @@ align-self: center;		}
 			opacity: 0;
 			animation: backInUp 1s ease-out forwards;
 		}
-	
 	}
 }
 
@@ -1375,7 +1377,6 @@ align-self: center;		}
 			opacity: 0;
 			animation: backInUp 1s ease-out forwards;
 		}
-		
 	}
 }
 
