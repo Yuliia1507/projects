@@ -419,7 +419,7 @@ body {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 		gap: toRem(30);
-		@media (max-width: toEm(480)) {
+		@media (max-width: toEm(767.98)) {
 			grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 		}
 	}
@@ -463,14 +463,15 @@ body {
 	}
 }
 .item-service {
-	@include adaptiveValue("padding-top", 30, 20, $widthTo: 1200);
-	@include adaptiveValue("padding-bottom", 30, 20, $widthTo: 1200);
-	@include adaptiveValue("padding-left", 50, 25, $widthTo: 1200);
-	@include adaptiveValue("padding-right", 50, 25, $widthTo: 1200);
+	@include adaptiveValue("padding-top", 30, 10);
+	@include adaptiveValue("padding-bottom", 30, 10);
+	@include adaptiveValue("padding-left", 50, 15);
+	@include adaptiveValue("padding-right", 50, 15);
 	border-radius: toRem(40);
 	background: #0b1f20;
 	backdrop-filter: blur(75px);
 	display: flex;
+	align-items: flex-start;
 	gap: toRem(20);
 	position: relative;
 	z-index: 2;
@@ -503,7 +504,7 @@ body {
 		height: 100%;
 		object-fit: contain;
 		@media (max-width: toEm(767.98)) {
-			max-width: toRem(50);
+			max-width: toRem(40);
 			height: auto;
 		}
 	}
