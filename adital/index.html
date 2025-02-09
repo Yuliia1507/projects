@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Adital">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+	<title>Adital</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo logo">
+					<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60" fill="none">
+						<path
+							d="M78.6885 59.5325L90.8614 28.1679H95.251L107.493 59.5325H102.988L99.7565 51.147H86.3327L83.1708 59.5325H78.6885ZM87.4562 47.7881H98.5288C96.7065 42.6379 94.8688 37.5186 93.0156 32.4302C91.1471 37.5958 89.2939 42.7151 87.4562 47.7881Z"
+							fill="white" />
+						<path
+							d="M120.466 59.9957C119.098 60.0362 117.739 59.7772 116.483 59.237C115.226 58.6968 114.103 57.8885 113.192 56.8685C111.225 54.5532 110.214 51.5752 110.366 48.5409C110.313 46.4733 110.708 44.4188 111.524 42.5182C112.285 40.825 113.525 39.3917 115.091 38.3949C116.75 37.3512 118.68 36.8195 120.639 36.8661C122.197 36.8338 123.732 37.2348 125.075 38.0243C126.207 38.6503 127.123 39.6029 127.704 40.7577V27.5309H131.689V53.7993C131.689 55.1196 131.689 57.0307 131.839 59.5324H127.809L127.716 55.7798C127.198 57.0205 126.297 58.0634 125.145 58.7564C123.739 59.6173 122.113 60.0482 120.466 59.9957ZM121.045 56.7759C122.006 56.8237 122.964 56.638 123.837 56.2346C124.711 55.8311 125.473 55.2221 126.06 54.4594C127.322 52.6525 127.946 50.476 127.832 48.2746C127.925 46.1566 127.296 44.0699 126.048 42.3561C125.47 41.605 124.72 41.0029 123.862 40.6C123.004 40.1971 122.062 40.0049 121.114 40.0396C120.172 39.9988 119.235 40.1885 118.383 40.5922C117.531 40.9958 116.791 41.6013 116.226 42.3561C114.985 44.1283 114.369 46.2639 114.478 48.4251C114.371 50.5648 114.969 52.6804 116.18 54.4479C116.735 55.1981 117.465 55.8006 118.308 56.2025C119.15 56.6044 120.078 56.7933 121.01 56.7527L121.045 56.7759Z"
+							fill="white" />
+						<path
+							d="M139.078 59.5325V37.4337H143.028V59.5325H139.078ZM139.078 31.851V28.1679H143.004V31.851H139.078Z"
+							fill="white" />
+						<path
+							d="M161.733 59.5324H159.903C156.776 59.5324 154.633 58.9726 153.475 57.853C152.316 56.6948 151.749 54.7722 151.749 51.8766V40.0744H147.498V37.4336H151.83V31.7468L155.71 30.5886V37.4221H161.698V40.0744H155.71V52.1198C155.693 52.7647 155.748 53.4095 155.872 54.0425C155.963 54.471 156.132 54.8793 156.37 55.247C156.64 55.6162 157.029 55.8819 157.471 55.9999C158.026 56.1631 158.596 56.2718 159.173 56.3242C160.024 56.4033 160.878 56.4381 161.733 56.4284V59.5324Z"
+							fill="white" />
+						<path
+							d="M176.558 59.9957C175.01 60.0218 173.475 59.7054 172.064 59.0691C170.782 58.5007 169.649 57.6447 168.752 56.5674C167.881 55.4769 167.218 54.2365 166.794 52.9074C166.315 51.4819 166.076 49.9868 166.088 48.483C166.07 46.4825 166.502 44.5036 167.35 42.6919C168.162 40.9811 169.433 39.5295 171.022 38.4992C172.687 37.4358 174.629 36.8878 176.604 36.924C178.108 36.9109 179.587 37.3115 180.878 38.0822C182.097 38.7779 183.106 39.7904 183.797 41.0125V37.5379H187.642V59.5324H183.704V55.7566C183.092 57.0528 182.109 58.1374 180.878 58.8723C179.57 59.6402 178.074 60.0291 176.558 59.9957ZM177.114 56.7759C178.077 56.8286 179.039 56.6452 179.915 56.2414C180.791 55.8377 181.555 55.226 182.141 54.4594C183.38 52.6476 183.991 50.4787 183.878 48.2861C183.977 46.1621 183.352 44.0674 182.106 42.3445C181.514 41.5822 180.747 40.9738 179.87 40.5706C178.993 40.1674 178.032 39.9813 177.068 40.028C176.074 39.9705 175.08 40.1506 174.17 40.5534C173.26 40.9563 172.458 41.5702 171.832 42.3445C170.563 44.075 169.925 46.1885 170.026 48.3325C169.92 50.5129 170.557 52.6647 171.832 54.4363C172.465 55.2149 173.274 55.8313 174.193 56.2342C175.111 56.6371 176.113 56.8149 177.114 56.7527V56.7759Z"
+							fill="white" />
+						<path d="M195.101 59.5324V27.5309H199.062V59.5324H195.101Z" fill="white" />
+						<path
+							d="M67.9981 1.38986C67.9981 1.61894 67.9302 1.84287 67.8029 2.03333C67.6757 2.2238 67.4948 2.37225 67.2832 2.45992C67.0715 2.54758 66.8386 2.57052 66.614 2.52583C66.3893 2.48114 66.1829 2.37083 66.0209 2.20885C65.859 2.04687 65.7486 1.84049 65.704 1.61582C65.6593 1.39115 65.6822 1.15827 65.7699 0.946631C65.8575 0.734995 66.006 0.554105 66.1964 0.426839C66.3869 0.299572 66.6108 0.231644 66.8399 0.231644C67.1471 0.231644 67.4417 0.35367 67.6589 0.570878C67.8761 0.788086 67.9981 1.08268 67.9981 1.38986Z"
+							fill="#8CE5E2" />
+						<path
+							d="M67.9981 1.38986H67.7664C67.7664 1.63561 67.6688 1.87128 67.4951 2.04505C67.3213 2.21882 67.0856 2.31644 66.8399 2.31644C66.5941 2.31644 66.3585 2.21882 66.1847 2.04505C66.0109 1.87128 65.9133 1.63561 65.9133 1.38986C65.9133 1.14412 66.0109 0.908442 66.1847 0.734675C66.3585 0.560909 66.5941 0.463288 66.8399 0.463288C67.0856 0.463288 67.3213 0.560909 67.4951 0.734675C67.6688 0.908442 67.7664 1.14412 67.7664 1.38986H68.2297C68.2297 1.02125 68.0833 0.667731 67.8227 0.407081C67.562 0.146432 67.2085 0 66.8399 0C66.4713 0 66.1177 0.146432 65.8571 0.407081C65.5964 0.667731 65.45 1.02125 65.45 1.38986C65.4516 1.76914 65.5951 2.13408 65.8524 2.41277C66.1096 2.69146 66.4619 2.8637 66.8399 2.89555C67.0241 2.90202 67.2078 2.87049 67.3793 2.80294C67.5509 2.73538 67.7067 2.63324 67.8371 2.50286C67.9674 2.37249 68.0696 2.21668 68.1371 2.04512C68.2047 1.87357 68.2362 1.68995 68.2297 1.50568H67.9981V1.38986Z"
+							fill="#8CE5E2" />
+						<path
+							d="M32.7883 26.2916C30.9776 24.5004 28.8229 23.0946 26.4541 22.159C24.0852 21.2234 21.5514 20.7774 19.0055 20.8479C16.4765 20.7743 13.9592 21.2193 11.6087 22.1555C9.25819 23.0917 7.1243 24.4993 5.3385 26.2916C1.81237 30.0488 -0.100394 35.0387 0.0106975 40.1902C-0.074741 42.7627 0.352296 45.3266 1.26696 47.7326C2.18163 50.1385 3.56565 52.3386 5.3385 54.2046C7.14229 56.0052 9.29584 57.4172 11.6663 58.3534C14.0368 59.2897 16.574 59.7303 19.1213 59.6483H19.3529V55.1312H19.1213C17.228 55.1672 15.3473 54.8159 13.5946 54.0989C11.8419 53.3819 10.2542 52.3143 8.92898 50.9616C6.22416 48.0376 4.7694 44.1721 4.87522 40.1902C4.7913 36.2121 6.24307 32.3545 8.92898 29.4188C10.2466 28.056 11.8329 26.9817 13.5874 26.264C15.3419 25.5462 17.2263 25.2007 19.1213 25.2492C21.03 25.2273 22.924 25.5847 24.6934 26.3004C26.4629 27.0162 28.0727 28.0761 29.4294 29.4188C32.1343 32.3428 33.589 36.2083 33.4832 40.1902L33.7149 51.1933V58.1426H38.3477V40.1902C38.2671 35.0312 36.2878 30.083 32.7883 26.2916Z"
+							fill="#8CE5E2" />
+						<path
+							d="M64.4076 5.90691V28.2605C62.8912 25.9116 60.7933 23.9947 58.3174 22.6958C55.8415 21.397 53.0719 20.7605 50.2774 20.8479H50.0457V25.365H50.2774C52.186 25.3431 54.08 25.7005 55.8495 26.4162C57.619 27.132 59.2288 28.1919 60.5855 29.5346C63.2695 32.4251 64.7233 36.2466 64.6393 40.1902C64.7451 44.172 63.2903 48.0375 60.5855 50.9616C59.2583 52.3196 57.6728 53.3984 55.9224 54.1344C54.172 54.8703 52.292 55.2486 50.3932 55.247H50.1615V59.7641H50.3932C52.9029 59.8219 55.3982 59.3692 57.7276 58.4334C60.057 57.4976 62.1721 56.0984 63.9443 54.3205C65.6867 52.5041 67.054 50.3622 67.9682 48.0171C68.8824 45.6721 69.3254 43.1698 69.2721 40.6535V5.90691H64.4076Z"
+							fill="white" />
+					</svg>
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link" href="#">Swallow-by</a>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="#">Projects</a>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="#contact">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<a href="#" class="header__link link link--blue" data-da=".menu__list,5,400">Let's
+					talk</a>
+				<button aria-label="Open/close menu button" class="icon-menu" id="menu02">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<h1 class="hero__title">digital agency for the <span>success</span> of your business.</h1>
+					<div class="hero__text"></div>
+					<a href="#" class="hero__link"><span>Get started</span><svg
+							xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+							<circle cx="27.5" cy="27.5" r="27.5" fill="white" />
+							<path d="M18 28H36.2857" stroke="black" stroke-width="2.5" stroke-linecap="round"
+								stroke-linejoin="round" />
+							<path d="M28.2856 20L36.2856 28L28.2856 36" stroke="black" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg></a>
+					<button class="hero__scroll" aria-label="Scroll down">
+						<svg xmlns="http://www.w3.org/2000/svg" width="111" height="111" viewBox="0 0 111 111" fill="none">
+							<circle class="outer-circle" cx="55.5" cy="55.5" r="55.5" fill="#03201F" />
+							<circle class="inner-circle" cx="55.5" cy="55.5" r="41.5" fill="#041C1A" />
+							<path
+								d="M55.72 38C50.3521 38 46 42.3956 46 47.8208V64.1792C46 69.6008 50.3521 74 55.72 74C61.0879 74 65.44 69.6044 65.44 64.1792V47.8172C65.4436 42.3956 61.0879 38 55.72 38ZM64.1426 64.1756C64.1426 68.8664 60.3679 72.6824 55.72 72.6824C51.0721 72.6824 47.301 68.8664 47.301 64.1756V47.8172C47.301 43.1264 51.0756 39.3104 55.7236 39.3104C60.3715 39.3104 64.1461 43.13 64.1461 47.8172L64.1426 64.1756ZM58.2578 67.5236C58.2578 68.9384 57.1208 70.0868 55.72 70.0868C54.3192 70.0868 53.1822 68.9384 53.1822 67.5236C53.1822 66.1088 54.3192 64.9604 55.72 64.9604C57.1208 64.9604 58.2578 66.1052 58.2578 67.5236ZM57.5556 62.6168C57.5556 63.6428 56.7323 64.4708 55.72 64.4708C54.7042 64.4708 53.8844 63.6392 53.8844 62.6168C53.8844 61.5944 54.7077 60.7628 55.72 60.7628C56.7358 60.7592 57.5556 61.5872 57.5556 62.6168ZM57.0424 58.9484C57.0424 59.6864 56.4507 60.284 55.72 60.284C54.9857 60.284 54.3976 59.6864 54.3976 58.9484C54.3976 58.2068 54.9893 57.6128 55.72 57.6128C56.4507 57.6164 57.0424 58.2176 57.0424 58.9484Z"
+								fill="#95AEAE" />
+						</svg>
+					</button>
+				</div>
+			</section>
+			<section class="services">
+				<div class="services__container">
+					<h2 class="services__title title">Services we can help with</h2>
+					<div class="services__wrapper">
+						<article class="services__item item-service">
+							<svg class="item-service__icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+								viewBox="0 0 70 70" fill="none">
+								<rect width="70" height="70" rx="15" fill="#00B4D8" />
+								<path
+									d="M51.827 31.7179C48.9414 26.1938 43.2811 22.834 37.2475 22.501C37.0155 22.4859 37.0003 22.4102 37.2122 22.3194L42.711 19.9635C42.9229 19.8727 43.2004 19.9635 43.3668 20.1199C43.8764 20.5941 44.6835 20.7858 45.3848 20.4932C46.3332 20.0947 46.7771 19 46.3786 18.102C45.9296 17.1536 44.8349 16.755 43.8865 17.1536C43.1751 17.4462 42.7463 18.1222 42.7716 18.8335C42.7817 19.0655 42.6656 19.3178 42.4487 19.4086L35.5575 22.274C35.3406 22.3648 34.9824 22.4506 34.7503 22.4657C34.3417 22.496 33.9331 22.5364 33.5396 22.6019C33.3126 22.6423 33.0502 22.5111 32.9493 22.2993L32.1573 20.5739C32.0615 20.362 31.8092 20.2662 31.5923 20.357L25.4982 22.9198C25.2863 23.0106 25.1904 23.2527 25.2863 23.4646L26.0228 25.0436C26.1237 25.2555 26.038 25.5229 25.8463 25.654C25.3014 26.0223 24.7869 26.436 24.3127 26.8749C24.1411 27.0313 23.8334 27.2381 23.6215 27.3289L16.8312 30.1439C16.6143 30.2347 16.3368 30.149 16.1603 29.9976C15.6205 29.5284 14.8083 29.367 14.102 29.6596C13.1536 30.0582 12.755 31.1024 13.1536 32.0508C13.5521 32.9488 14.6973 33.3978 15.6457 32.9993C16.3469 32.7117 16.7404 32.0105 16.7404 31.3244C16.7404 31.0923 16.8615 30.835 17.0784 30.7493L22.5268 28.4842C22.7437 28.3934 22.7891 28.459 22.6327 28.6355C18.7583 33.0598 17.4971 39.4263 19.7168 45.1623C19.8026 45.3792 19.7017 45.6264 19.4848 45.7172L18.0167 46.3377C17.8049 46.4285 17.704 46.6757 17.7998 46.8876L20.4433 52.7446C20.5391 52.9565 20.7914 53.0574 21.0033 52.9666L27.0974 50.4038C27.3093 50.313 27.4102 50.0709 27.3143 49.859L24.6708 44.002C24.575 43.7901 24.3227 43.6892 24.1109 43.78L22.1737 44.5821C21.9567 44.6729 21.7146 44.567 21.6339 44.3501C19.3435 38.2105 21.5077 31.4556 26.6787 27.5156C26.8653 27.3743 27.0974 27.4349 27.1983 27.6467L27.9853 29.3267C28.0862 29.5385 28.3384 29.6344 28.5503 29.5436L34.599 26.9808C34.8109 26.89 34.9118 26.6428 34.821 26.4309L34.1551 24.8671C34.0642 24.6552 34.1752 24.4534 34.4073 24.4282C40.6628 23.737 47.0243 26.8143 50.031 32.4746C50.142 32.6814 50.0512 32.9236 49.8343 33.0144L47.8214 33.8771C47.6095 33.9679 47.5137 34.2151 47.6095 34.4269L50.253 40.284C50.3489 40.4958 50.6011 40.5967 50.813 40.5059L56.9071 37.9432C57.119 37.8524 57.2199 37.6102 57.124 37.3983L54.4805 31.5413C54.3847 31.3294 54.1325 31.2285 53.9206 31.3193L52.4071 31.9449C52.1902 32.0206 51.9329 31.9247 51.827 31.7179Z"
+									fill="white" />
+							</svg>
+							<div class="item-service__wrapper">
+								<h3 class="item-service__title">UI/UX Design</h3>
+								<p class="item-service__text">Contrary to popular belief, Lorem Ipsum is not simply random text.
+									It has roots in a piece of classical Latin</p>
+								<a href="#" class="item-service__link"><span>Read more</span><svg
+										xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+										<path d="M2 10H20.2857" stroke="white" stroke-width="2.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M12.2857 2L20.2857 10L12.2857 18" stroke="white" stroke-width="2.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</div>
+						</article>
+						<article class="services__item item-service">
+							<svg class="item-service__icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+								viewBox="0 0 70 70" fill="none">
+								<rect width="70" height="70" rx="15" fill="#FF7642" />
+								<path
+									d="M50.9058 17H19.0953C17.9402 17 17 17.9402 17 19.0953V50.9047C17 52.0598 17.9402 53 19.0953 53H50.9047C52.0598 53 52.9992 52.0598 52.9992 50.9047L52.9996 19.0953C52.9996 17.9402 52.0602 17 50.9051 17H50.9058ZM19.0953 18.4398H50.9047C51.2656 18.4398 51.5594 18.7337 51.5594 19.0953L51.5598 24.0201H18.4399V19.0953C18.4399 18.734 18.7341 18.4398 19.0953 18.4398H19.0953ZM50.9058 51.5597H19.0953C18.734 51.5597 18.4398 51.2659 18.4398 50.9043V25.4602H51.5597V50.9053C51.5597 51.2666 51.2655 51.5604 50.9051 51.5604L50.9058 51.5597Z"
+									fill="white" />
+								<path
+									d="M39.8742 34.7008C39.593 34.4196 39.1375 34.4196 38.8559 34.7008C38.5747 34.9819 38.5747 35.4374 38.8559 35.719L41.6472 38.5096L38.8559 41.3001C38.5747 41.5813 38.5747 42.0372 38.8559 42.3184C38.9967 42.4591 39.1809 42.5293 39.365 42.5293C39.5492 42.5293 39.7334 42.4591 39.8742 42.3184L43.1745 39.0187C43.3094 38.8838 43.3855 38.7008 43.3855 38.5096C43.3855 38.3183 43.3094 38.1353 43.1745 38.0004L39.8742 34.7008Z"
+									fill="white" />
+								<path
+									d="M31.1434 34.7008C30.8623 34.4196 30.4064 34.4196 30.1252 34.7008L26.8255 38.0004C26.5443 38.2816 26.5443 38.7375 26.8255 39.0187L30.1252 42.3184C30.266 42.4591 30.4501 42.5293 30.6343 42.5293C30.8185 42.5293 31.0026 42.4591 31.1434 42.3184C31.4246 42.0372 31.4246 41.5813 31.1434 41.3001L28.3529 38.5096L31.1434 35.719C31.425 35.4378 31.425 34.9819 31.1434 34.7008Z"
+									fill="white" />
+								<path
+									d="M36.3538 31.2622C35.9567 31.192 35.586 31.4479 35.5134 31.838L33.07 44.9169C32.9974 45.3077 33.2549 45.684 33.6457 45.7573C33.6907 45.7652 33.7349 45.7691 33.7786 45.7691C34.119 45.7691 34.4215 45.5274 34.4861 45.1811L36.9296 32.1022C37.0022 31.7114 36.7446 31.3351 36.3538 31.2622Z"
+									fill="white" />
+								<path
+									d="M21.605 22.4304C22.0029 22.4304 22.3251 22.1082 22.3251 21.7103V20.7496C22.3251 20.3517 22.0029 20.0295 21.605 20.0295C21.2071 20.0295 20.8849 20.3517 20.8849 20.7496V21.7099C20.8853 22.1082 21.2071 22.4304 21.605 22.4304Z"
+									fill="white" />
+								<path
+									d="M24.4551 22.4304C24.853 22.4304 25.1752 22.1082 25.1752 21.7103V20.7496C25.1752 20.3517 24.853 20.0295 24.4551 20.0295C24.0572 20.0295 23.735 20.3517 23.735 20.7496V21.7099C23.7354 22.1082 24.0572 22.4304 24.4551 22.4304Z"
+									fill="white" />
+								<path
+									d="M27.3051 22.4304C27.703 22.4304 28.0252 22.1082 28.0252 21.7103L28.0248 20.7496C28.0248 20.3517 27.7026 20.0295 27.3047 20.0295C26.9068 20.0295 26.5846 20.3517 26.5846 20.7496V21.7099C26.585 22.1082 26.9068 22.4304 27.3051 22.4304Z"
+									fill="white" />
+								<path
+									d="M35.2998 21.95H48.3949C48.7928 21.95 49.115 21.6278 49.115 21.2299C49.115 20.832 48.7928 20.5098 48.3949 20.5098H35.2998C34.9019 20.5098 34.5797 20.832 34.5797 21.2299C34.5801 21.6278 34.9019 21.95 35.2998 21.95Z"
+									fill="white" />
+							</svg>
+							<div class="item-service__wrapper">
+								<h3 class="item-service__title">Development</h3>
+								<p class="item-service__text">Contrary to popular belief, Lorem Ipsum is not simply random text.
+									It has roots in a piece of classical Latin</p>
+								<a href="#" class="item-service__link"><span>Read more</span><svg
+										xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+										<path d="M2 10H20.2857" stroke="white" stroke-width="2.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M12.2857 2L20.2857 10L12.2857 18" stroke="white" stroke-width="2.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</div>
+						</article>
+						<article class="services__item item-service">
+							<svg class="item-service__icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+								viewBox="0 0 70 70" fill="none">
+								<rect width="70" height="70" rx="15" fill="#DAA22C" />
+								<path
+									d="M50.9391 17H18.9615C17.329 17 16.0006 18.3284 16.0006 19.9609V33.8792C16.0006 34.5331 16.531 35.0634 17.1849 35.0634C17.8387 35.0634 18.3691 34.5331 18.3691 33.8792V19.9609C18.3691 19.6342 18.6347 19.3685 18.9615 19.3685H50.9391C51.2658 19.3685 51.5314 19.6341 51.5314 19.9609V44.0498C51.5314 44.3766 51.2662 44.6422 50.9391 44.6422H18.9615C18.6347 44.6422 18.3691 44.377 18.3691 44.0498V40.9853H46.7937C47.4475 40.9853 47.9779 40.4549 47.9779 39.8011C47.9779 39.1472 47.4475 38.6168 46.7937 38.6168H17.19C17.188 38.6168 17.1863 38.6164 17.1843 38.6164C16.5304 38.6164 16 39.1468 16 39.8007V44.0504C16 45.6829 17.3284 47.0113 18.9609 47.0113H29.9564L27.9976 51.3258C27.7275 51.9215 27.991 52.6236 28.5867 52.8943C28.7453 52.9657 28.9118 53 29.0753 53C29.5256 53 29.956 52.7422 30.1547 52.3052L32.5587 47.0109H37.3413L38.9853 50.631H34.9984C34.3445 50.631 33.8141 51.1614 33.8141 51.8153C33.8141 52.4692 34.3445 52.9995 34.9984 52.9995H40.8239C41.2263 52.9995 41.6013 52.7951 41.8194 52.4564C42.0375 52.1181 42.0689 51.6918 41.9025 51.3254L39.9437 47.0109L50.9382 47.0113C52.5707 47.0113 53.899 45.6829 53.899 44.0504V19.9614C53.899 18.3289 52.571 17.0005 50.9382 17.0005L50.9391 17Z"
+									fill="white" />
+								<path
+									d="M41.3648 21.8474C40.9538 21.6503 40.4689 21.7049 40.1128 21.9882C38.0925 23.5984 35.4926 24.4852 32.7927 24.4852H30.6865C28.3873 24.4852 26.5173 26.2317 26.5173 28.3792C26.5169 30.5268 28.3869 32.2732 30.6861 32.2732H31.6423L32.2483 35.3039C32.3607 35.8669 32.8551 36.2564 33.4082 36.2564C33.4851 36.2564 33.5631 36.249 33.6416 36.2329C34.2831 36.1048 34.6991 35.4807 34.5706 34.8396L34.07 32.3368C36.2943 32.5507 38.4125 33.3546 40.1326 34.664C40.3429 34.8243 40.5952 34.9061 40.8505 34.9061C41.0294 34.9061 41.2095 34.8656 41.376 34.783C41.7791 34.5831 42.0348 34.1721 42.0348 33.7218V29.5028H42.1988C42.8531 29.5028 43.3826 28.9724 43.3826 28.3185C43.3826 27.6647 42.8531 27.1343 42.1988 27.1343H42.0348V22.9152C42.0352 22.4596 41.7746 22.0449 41.3648 21.8474L41.3648 21.8474ZM39.6663 31.5678C37.6138 30.486 35.2705 29.9047 32.8804 29.9047H32.6214H32.6193H30.6866C29.6936 29.9047 28.8861 29.2202 28.8861 28.3796C28.8861 27.5386 29.6936 26.8546 30.6866 26.8546H32.7929C35.2283 26.8546 37.6019 26.2473 39.6668 25.1176V31.5677L39.6663 31.5678Z"
+									fill="white" />
+							</svg>
+							<div class="item-service__wrapper">
+								<h3 class="item-service__title">Online Marketing</h3>
+								<p class="item-service__text">Contrary to popular belief, Lorem Ipsum is not simply random text.
+									It has roots in a piece of classical Latin</p>
+								<a href="#" class="item-service__link"><span>Read more</span><svg
+										xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+										<path d="M2 10H20.2857" stroke="white" stroke-width="2.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M12.2857 2L20.2857 10L12.2857 18" stroke="white" stroke-width="2.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</div>
+						</article>
+						<article class="services__item item-service">
+							<svg class="item-service__icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+								viewBox="0 0 70 70" fill="none">
+								<rect width="70" height="70" rx="15" fill="#F6A364" />
+								<path
+									d="M48.7931 23.8966L38.3103 17.8276C36.5172 16.7241 34.1724 16.7241 32.3793 17.8276L22.0345 23.8966C20.2414 25 19 26.931 19 29V41C19 43.069 20.1034 45.1379 22.0345 46.1034L32.5172 52.1724C34.3103 53.2759 36.6552 53.2759 38.4483 52.1724L48.931 46.1034C50.7241 45 51.9655 43.069 51.9655 41V29C51.8276 26.931 50.7241 25 48.7931 23.8966ZM42.5862 37.5517C42.5862 38.6552 42.0345 39.6207 41.069 40.1724L36.7931 42.6552C35.8276 43.2069 34.7241 43.2069 33.7586 42.6552L29.4828 40.1724C28.5172 39.6207 27.9655 38.6552 27.9655 37.5517V32.5862C27.9655 31.4828 28.5172 30.5172 29.4828 29.9655L33.7586 27.4828C34.7241 26.931 35.8276 26.931 36.7931 27.4828L41.069 29.9655C42.0345 30.5172 42.5862 31.4828 42.5862 32.5862V37.5517Z"
+									fill="white" />
+							</svg>
+							<div class="item-service__wrapper">
+								<h3 class="item-service__title">Logo a Branding</h3>
+								<p class="item-service__text">Contrary to popular belief, Lorem Ipsum is not simply random text.
+									It has roots in a piece of classical Latin</p>
+								<a href="#" class="item-service__link"><span>Read more</span><svg
+										xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+										<path d="M2 10H20.2857" stroke="white" stroke-width="2.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M12.2857 2L20.2857 10L12.2857 18" stroke="white" stroke-width="2.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</div>
+						</article>
+						<article class="services__item item-service">
+							<svg class="item-service__icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+								viewBox="0 0 70 70" fill="none">
+								<rect width="70" height="70" rx="15" fill="#2196F3" />
+								<path
+									d="M19.7936 32.0776L19.7872 32.0768C19.7872 32.0768 22.0364 34.4279 22.0364 37.5688C22.0364 40.1967 21.818 46.5859 21.7466 48.6041H24.8525L25.3072 44.2767C25.3259 44.0986 25.4761 43.9633 25.6553 43.9633C25.8442 43.9633 25.999 44.1132 26.0051 44.3019L26.1453 48.604H29.0829C29.0786 46.2115 28.9335 41.328 28.823 38.2278C28.8278 37.8155 28.9008 37.4047 29.0753 37.0312C29.6346 35.8346 29.5408 34.5756 29.393 33.7704C29.2814 33.1619 29.3903 32.535 29.7115 32.0065L30.1924 31.2148L30.189 31.2179C31.8198 29.1497 32.1297 26.299 32.1656 24.7415C32.1799 24.1212 31.6758 23.6129 31.0554 23.6129C30.4596 23.6129 29.9687 24.0814 29.9464 24.6768C29.8673 26.7935 29.1635 31.3307 24.583 31.3307C20.0024 31.3307 19.2984 26.7935 19.2195 24.6768C19.1973 24.0814 18.7063 23.6129 18.1105 23.6129C17.4901 23.6129 16.986 24.1212 17.0003 24.7415C17.0415 26.5299 17.4452 30.0213 19.7936 32.0771L19.7936 32.0776Z"
+									fill="white" />
+								<path
+									d="M21.8244 25.7683C21.542 26.2378 21.3766 26.7856 21.3766 27.3733C21.3766 29.0977 22.7745 30.4955 24.4988 30.4955C26.2231 30.4955 27.6209 29.0977 27.6209 27.3733C27.6209 25.649 26.2231 24.2512 24.4988 24.2512C24.172 24.2512 23.857 24.3019 23.5608 24.3951C23.5541 23.6249 22.9288 23.0023 22.1572 23.0023C21.3812 23.0023 20.7522 23.6313 20.7522 24.4073C20.7522 25.068 21.21 25.6183 21.8244 25.7683V25.7683ZM24.4988 29.8712C23.4086 29.8712 22.4818 29.168 22.1417 28.1921C24.2926 28.1285 25.0441 26.8727 25.3 25.8802C25.6481 26.0627 26.1269 26.2336 26.7445 26.2875C26.9043 26.6164 26.9965 26.9838 26.9965 27.3735C26.9965 28.7507 25.876 29.8712 24.4988 29.8712L24.4988 29.8712Z"
+									fill="white" />
+								<path
+									d="M35.7643 36.4655C35.7667 36.4655 35.7688 36.4651 35.7711 36.4651C36.3422 37.2009 37.2328 37.6762 38.2363 37.6762C39.9606 37.6762 41.3584 36.2784 41.3584 34.554C41.3584 32.8297 39.9606 31.4319 38.2363 31.4319C37.4643 31.4319 36.7591 31.7135 36.214 32.1777L36.21 32.1787L36.1776 32.2109L35.9173 32.4687L33.9841 34.3839C33.7916 34.5828 33.7527 34.8832 33.8881 35.1246C34.1823 35.6484 34.796 36.4655 35.7643 36.4655L35.7643 36.4655ZM38.2363 37.0518C37.5556 37.0518 36.9382 36.7773 36.4871 36.334C37.3749 35.985 37.7722 35.0104 38.2065 34.3161C38.7092 33.5128 39.663 33.1405 40.181 32.9905C40.5263 33.4188 40.734 33.9624 40.734 34.554C40.734 35.9312 39.6136 37.0517 38.2363 37.0517V37.0518Z"
+									fill="white" />
+								<path
+									d="M44.7599 33.058C44.1191 32.8056 43.3947 33.1174 43.1375 33.7563L42.2719 35.9076C41.6143 37.5422 40.0293 38.613 38.2676 38.613H36.964C35.8483 38.613 34.8172 39.2084 34.2597 40.1749L30.711 46.3263C30.4068 46.8536 30.593 47.5277 31.1245 47.8242C31.6056 48.0926 32.2113 47.9601 32.5365 47.5154L35.6834 43.2123L34.8516 48.604H35.1142C38.0449 48.604 40.7224 47.505 42.7613 45.7001C42.8038 43.3501 42.4061 41.9598 42.4061 41.9598L45.4558 34.7104C45.7287 34.0619 45.4144 33.316 44.7599 33.0581L44.7599 33.058Z"
+									fill="white" />
+								<path
+									d="M52.7989 27.0974L50.7161 22.8719C50.627 19.3185 47.9115 17.1574 47.7941 17.0659C47.6813 16.978 47.5233 16.978 47.4105 17.0659C47.2962 17.1548 44.7213 19.2053 44.5017 22.5912L42.2807 27.0974C42.0761 27.5122 42.3781 27.9977 42.8407 27.9977H44.4801V28.6222C44.4801 28.7945 44.6197 28.9344 44.7924 28.9344H46.2892L45.9834 29.7629C45.9083 29.9668 46.059 30.1832 46.2764 30.1832H47.2901V37.052C47.2901 40.8945 45.5085 44.319 42.7282 46.5507C40.6426 48.2247 37.9959 49.2284 35.1135 49.2284H17.9418C17.597 49.2284 17.3174 49.508 17.3174 49.8529V52.3756C17.3174 52.7223 17.599 53 17.9411 53C17.9529 53 17.9647 52.9997 17.9765 52.999L35.0513 52.0475C42.3583 51.6417 48.0432 45.5421 47.9343 38.2244L47.9146 36.9071V30.1832H48.9283C49.1457 30.1832 49.2965 29.9668 49.2212 29.7629L48.9155 28.9344H50.4123C50.585 28.9344 50.7246 28.7945 50.7246 28.6222V27.9977H52.2389C52.7016 27.9977 53.0035 27.5122 52.799 27.0972L52.7989 27.0974ZM47.9146 28.3101V25.8124C47.9146 25.64 47.7751 25.5001 47.6024 25.5001C47.4298 25.5001 47.2902 25.64 47.2902 25.8124V28.3101H45.1047V23.0472C45.1047 22.5559 45.1647 22.0929 45.2626 21.6572C45.65 19.934 46.6688 18.6679 47.2902 18.0285V20.1923C47.2902 20.3647 47.4298 20.5045 47.6024 20.5045C47.7751 20.5045 47.9147 20.3647 47.9147 20.1923V18.0268C48.4653 18.5917 49.3294 19.6472 49.7888 21.0816C49.979 21.6751 50.1002 22.3326 50.1002 23.0472V28.3101L47.9146 28.3101Z"
+									fill="white" />
+								<path
+									d="M47.6029 21.4412C46.7407 21.4412 46.0419 22.1401 46.0419 23.0022C46.0419 23.8644 46.7407 24.5633 47.6029 24.5633C48.4652 24.5633 49.164 23.8644 49.164 23.0022C49.164 22.1401 48.4652 21.4412 47.6029 21.4412ZM47.6029 23.9389C47.0865 23.9389 46.6663 23.5187 46.6663 23.0022C46.6663 22.4858 47.0865 22.0656 47.6029 22.0656C48.1194 22.0656 48.5396 22.4858 48.5396 23.0022C48.5396 23.5187 48.1194 23.9389 47.6029 23.9389Z"
+									fill="white" />
+							</svg>
+							<div class="item-service__wrapper">
+								<h3 class="item-service__title">Startup</h3>
+								<p class="item-service__text">Contrary to popular belief, Lorem Ipsum is not simply random text.
+									It has roots in a piece of classical Latin</p>
+								<a href="#" class="item-service__link"><span>Read more</span><svg
+										xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+										<path d="M2 10H20.2857" stroke="white" stroke-width="2.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M12.2857 2L20.2857 10L12.2857 18" stroke="white" stroke-width="2.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</div>
+						</article>
+						<article class="services__item item-service">
+							<svg class="item-service__icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+								viewBox="0 0 70 70" fill="none">
+								<rect width="70" height="70" rx="15" fill="#34BAAA" />
+								<path
+									d="M46.4543 36.8V35C46.4535 32.8303 45.5914 30.7498 44.057 29.2154C42.5229 27.6813 40.4423 26.819 38.2728 26.8181H36.6362V21.9091C36.6324 20.6084 36.1141 19.362 35.1942 18.442C34.2746 17.5224 33.0281 17.0038 31.7272 17H21.9091C20.6084 17.0038 19.362 17.5224 18.442 18.442C17.5224 19.3619 17.0038 20.6084 17 21.9091V31.7272C17.0038 33.0281 17.5224 34.2745 18.442 35.1942C19.3619 36.1141 20.6084 36.6324 21.9091 36.6362H26.8181V38.2728C26.8189 40.4424 27.6813 42.5229 29.2154 44.057C30.7498 45.5914 32.8304 46.4535 35 46.4543H36.8C37.1962 48.3947 38.2826 50.1257 39.858 51.3259C41.4332 52.5263 43.3902 53.1144 45.3662 52.9815C47.3422 52.8487 49.2028 52.0036 50.6032 50.6032C52.0036 49.2028 52.8487 47.3422 52.9815 45.3662C53.1144 43.3902 52.5262 41.4332 51.3259 39.858C50.1257 38.2826 48.3947 37.1961 46.4543 36.8ZM26.9822 33.3637H21.9093C21.476 33.3623 21.0604 33.1895 20.7538 32.8829C20.447 32.5764 20.2744 32.1608 20.273 31.7272V21.9091C20.2744 21.4757 20.447 21.0602 20.7538 20.7536C21.0604 20.4468 21.4759 20.2742 21.9093 20.2728H31.7274C32.1611 20.2742 32.5766 20.4468 32.8832 20.7536C33.1897 21.0601 33.3626 21.4757 33.3639 21.9091V26.982C31.7923 27.3044 30.35 28.081 29.2157 29.2154C28.0813 30.3499 27.3046 31.7921 26.9822 33.3637L26.9822 33.3637ZM44.8182 49.727C43.5162 49.727 42.2675 49.2098 41.3471 48.289C40.4264 47.3686 39.9092 46.12 39.9092 44.8179C39.9092 43.5159 40.4264 42.2673 41.3471 41.3468C42.2675 40.4261 43.5162 39.9089 44.8182 39.9089C46.1202 39.9089 47.3689 40.4261 48.2893 41.3468C49.2101 42.2673 49.7273 43.5159 49.7273 44.8179C49.7234 46.1186 49.2051 47.365 48.2853 48.285C47.3654 49.2049 46.1189 49.7232 44.8182 49.727Z"
+									fill="white" />
+							</svg>
+							<div class="item-service__wrapper">
+								<h3 class="item-service__title">Motion Graphic</h3>
+								<p class="item-service__text">Contrary to popular belief, Lorem Ipsum is not simply random text.
+									It has roots in a piece of classical Latin</p>
+								<a href="#" class="item-service__link"><span>Read more</span><svg
+										xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+										<path d="M2 10H20.2857" stroke="white" stroke-width="2.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M12.2857 2L20.2857 10L12.2857 18" stroke="white" stroke-width="2.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="study">
+				<div class="study__container">
+					<div class="study__content">
+						<div class="study__label label">featured case study</div>
+						<h2 class="study__title title">Logo, Identity & Web Design for Telegram</h2>
+						<div class="study__text text">
+							<p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi.
+								Vestibulum eget risus
+								vent. Aliquam tristique libero at dui sodales, et placerat orci lobortis.
+							</p>
+							<p>Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+						</div>
+						<div class="study__wrap">
+							<button class="study__link link link--turquoise">Read Case Study</button>
+							<div class="study__counter counter">
+								<div class="counter__item">
+									<div class="counter__number">0%</div>
+									<span>ROI increase</span>
+								</div>
+								<div class="counter__line"></div>
+								<div class="counter__item">
+									<div class="counter__number">0k</div>
+									<span>Monthly website Visits</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img class="study__image" src="img/study-image.png" alt="Image">
+				</div>
+			</section>
+			<section class="quote">
+				<img class="quote__arrows" src="img/quote-arrows.png" alt="arrows">
+				<div class="quote__container">
+					<div class="quote__left-side">
+						<h2 class="quote__title title">
+							<span>my robime</span> design, development a marketing.
+						</h2>
+						<div class="quote__text text">
+							<p>Nulla et velit gravida, facilisis quam a, molestie ante. Mauris placerat suscipit dui, eget
+								maximus tellus blandit a.
+								Praesent non tellus sed ligula commodo blandit in et mauris. Quisque efficitur ipsum ut dolor
+								molestie pellentesque.
+							</p>
+							<p>Nulla pharetra hendrerit mi quis dapibus. Quisque luctus, tortor a venenatis fermentum, est
+								lacus feugiat nisi, id
+								pharetra odio enim eget libero.</p>
+						</div>
+					</div>
+					<div class="quote__right-side right-side">
+						<h2 class="right-side__title">Get a free keystroke quote now</h2>
+						<form action="#" class="right-side__form form">
+							<div class="form__item item-form">
+								<label for="name" class="item-form__label">Phone</label>
+								<input type="text" name="name" id="name" class="item-form__input" placeholder="Jhon Smith">
+							</div>
+							<div class="form__item item-form">
+								<label for="email" class="item-form__label">Email</label>
+								<input type="email" name="email" id="email" class="item-form__input"
+									placeholder="Enter your email">
+							</div>
+							<div class="form__item item-form">
+								<label for="phone" class="item-form__label">Phone</label>
+								<input class="item-form__input" type="tel" name="phone" id="phone" placeholder="+123" required>
+
+							</div>
+							<button class="item-form__link link link--turquoise" type="submit">Get Free Quote</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="project">
+				<div class="project__container">
+					<div class="project__top">
+						<div class="project__heading">
+							<div class="project__label label">Our Project</div>
+							<h2 class="project__title title">Some of Our Finest work</h2>
+						</div>
+						<div class="project__tabs tabs">
+							<button class="tabs__button active" data-tab="all">All Works</button>
+							<button class="tabs__button" data-tab="branding">Branding</button>
+							<button class="tabs__button" data-tab="mobile">Mobile app</button>
+						</div>
+					</div>
+					<div class="project__wrapper">
+						<div class="project__item item-project">
+							<a class="item-project__image-link" href="#">
+								<img src="img/project-1.jpg" alt="project" class="item-project__img">
+							</a>
+							<div class="item-project__content">
+								<h3 class="item-project__title"><a class="item-project__link-title" href="#">Creative agency</a>
+								</h3>
+								<span>Full Branding, Website, App</span>
+							</div>
+						</div>
+						<div class="project__item item-project" data-category="mobile">
+							<a class="item-project__image-link" href="#">
+								<img src="img/project-2.jpg" alt="project" class="item-project__img">
+							</a>
+							<div class="item-project__content">
+								<h3 class="item-project__title"><a class="item-project__link-title" href="#">Digital
+										Marketing</a></h3>
+								<span>Full Branding, Website, App</span>
+							</div>
+						</div>
+						<div class="project__item item-project" data-category="branding">
+							<a class="item-project__image-link" href="#">
+								<img src="img/project-3.jpg" alt="project" class="item-project__img">
+							</a>
+							<div class="item-project__content">
+								<h3 class="item-project__title"><a href="#" class="item-project__link-title">Digital agency</a>
+								</h3>
+								<span>Full Branding, Website, App</span>
+							</div>
+						</div>
+						<div class="project__item item-project" data-category="mobile">
+							<a class="item-project__image-link" href="#">
+								<img src="img/project-4.jpg" alt="project" class="item-project__img">
+							</a>
+							<div class="item-project__content">
+								<h3 class="item-project__title"><a href="#" class="item-project__link-title">Plan Management</a>
+								</h3>
+								<span>Full Branding, Website, App</span>
+							</div>
+						</div>
+						<div class="project__item item-project" data-category="branding">
+							<a class="item-project__image-link" href="#">
+								<img src="img/project-5.jpg" alt="project" class="item-project__img">
+							</a>
+							<div class="item-project__content">
+								<h3 class="item-project__title"><a href="#" class="item-project__link-title">Social
+										Engagement</a></h3>
+								<span>Full Branding, Website, App</span>
+							</div>
+						</div>
+						<div class="project__item item-project" data-category="branding">
+							<a class="item-project__image-link" href="#">
+								<img src="img/project-6.jpg" alt="project" class="item-project__img">
+							</a>
+							<div class="item-project__content">
+								<h3 class="item-project__title"><a class="item-project__link-title" href="#">Web Application</a>
+								</h3>
+								<span>Full Branding, Website, App</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="testimonials">
+				<div class="testimonials__container">
+					<div class="testimonials__top-wrap">
+						<div class="testimonials__heading">
+							<div class="testimonials__label label">Testimonial</div>
+							<div class="testimonials__title title">From getting Started</div>
+							<div class="testimonials__text text">
+								<p>Nulla facilisi. Nullam in magna id dolor blandit rutrum eget vulputate augue sed eu leo eget
+									risus
+									imperdiet.
+								</p>
+							</div>
+						</div>
+						<div class="testimonials__swiper-btns">
+							<button aria-label="Next slide button" class="button-prev" title="Previous slide" ><svg
+									xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+									<path
+										d="M12 2.03793L9.96229 0.00022316L0 9.96251L9.96229 19.9248L12 17.8871L4.07542 9.96251L12 2.03793Z"
+										fill="white" />
+								</svg></button>
+							<button aria-label="Previous slide button" class="button-next" title="Next slide"><svg
+									xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+									<path
+										d="M12 2.03793L9.96229 0.00022316L0 9.96251L9.96229 19.9248L12 17.8871L4.07542 9.96251L12 2.03793Z"
+										fill="white" />
+								</svg></button>
+
+						</div>
+					</div>
+					<div class="testimonials__swiper swiper">
+						<div class="testimonials__wrapper swiper-wrapper">
+							<div class="testimonials__slide slide-testimonials swiper-slide">
+								<div class="slide-testimonials__top">
+									<img src="img/twitter.png" alt="twitter">
+									<div data-rating="4.8" class="slide-testimonials__rating rating">
+										<div class="rating__items">
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="1">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="2">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="3">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="4">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="5">
+											</label>
+										</div>
+										<div class="rating__number">5.0</div>
+									</div>
+								</div>
+								<div class="slide-testimonials__text">" Donec metus lorem, vulputate at sapien sit amet, auctor
+									iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus
+									velit. "</div>
+								<div class="slide-testimonials__user user">
+									<img src="img/user-1.png" alt="user" class="user__img">
+									<div class="user__info">
+										<div class="user__name">Kevin Yang</div>
+										<span>Product Management Instapage</span>
+									</div>
+								</div>
+							</div>
+							<div class="testimonials__slide slide-testimonials swiper-slide">
+								<div class="slide-testimonials__top">
+									<img src="img/facebook.png" alt="facebook">
+									<div data-rating="4.9" class="slide-testimonials__rating rating">
+										<div class="rating__items">
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="1">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="2">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="3">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="4">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="5">
+											</label>
+										</div>
+										<div class="rating__number">5.0</div>
+									</div>
+								</div>
+								<div class="slide-testimonials__text">" Donec metus lorem, vulputate at sapien sit amet, auctor
+									iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus
+									velit.
+									iaculis lorem. In vel "</div>
+								<div class="slide-testimonials__user user">
+									<img src="img/user-2.png" alt="user" class="user__img">
+									<div class="user__info">
+										<div class="user__name">Kevin Yang</div>
+										<span>Product Management Instapage</span>
+									</div>
+								</div>
+							</div>
+							<div class="testimonials__slide slide-testimonials swiper-slide">
+								<div class="slide-testimonials__top">
+									<img src="img/google.png" alt="facebook">
+									<div data-rating="5" class="slide-testimonials__rating rating">
+										<div class="rating__items">
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="1">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="2">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="3">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="4">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="5">
+											</label>
+										</div>
+										<div class="rating__number">5.0</div>
+									</div>
+								</div>
+								<div class="slide-testimonials__text">" Donec metus lorem, vulputate at sapien sit amet, auctor
+									iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus
+									velit. "</div>
+								<div class="slide-testimonials__user user">
+									<img src="img/user-3.png" alt="user" class="user__img">
+									<div class="user__info">
+										<div class="user__name">Kevin Yang</div>
+										<span>Product Management Instapage</span>
+									</div>
+								</div>
+							</div>
+							<div class="testimonials__slide slide-testimonials swiper-slide">
+								<div class="slide-testimonials__top">
+									<img src="img/twitter.png" alt="twitter">
+									<div data-rating="4.4" class="slide-testimonials__rating rating">
+										<div class="rating__items">
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="1">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="2">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="3">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="4">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="5">
+											</label>
+										</div>
+										<div class="rating__number">5.0</div>
+									</div>
+								</div>
+								<div class="slide-testimonials__text">" Donec metus lorem, vulputate at sapien sit amet, auctor
+									iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus
+									velit. "</div>
+								<div class="slide-testimonials__user user">
+									<img src="img/user-1.png" alt="user" class="user__img">
+									<div class="user__info">
+										<div class="user__name">Kevin Yang</div>
+										<span>Product Management Instapage</span>
+									</div>
+								</div>
+							</div>
+							<div class="testimonials__slide slide-testimonials swiper-slide">
+								<div class="slide-testimonials__top">
+									<img src="img/facebook.png" alt="facebook">
+									<div data-rating="4.9" class="slide-testimonials__rating rating">
+										<div class="rating__items">
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="1">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="2">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="3">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="4">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="5">
+											</label>
+										</div>
+										<div class="rating__number">5.0</div>
+									</div>
+								</div>
+								<div class="slide-testimonials__text">" Donec metus lorem, vulputate at sapien sit amet, auctor
+									iaculis lorem. In vel
+									hendrerit nisi. Vestibulum eget risus
+									velit.
+									iaculis lorem. In vel "</div>
+								<div class="slide-testimonials__user user">
+									<img src="img/user-2.png" alt="user" class="user__img">
+									<div class="user__info">
+										<div class="user__name">Kevin Yang</div>
+										<span>Product Management Instapage</span>
+									</div>
+								</div>
+							</div>
+							<div class="testimonials__slide slide-testimonials swiper-slide">
+								<div class="slide-testimonials__top">
+									<img src="img/google.png" alt="facebook">
+									<div data-rating="5" class="slide-testimonials__rating rating">
+										<div class="rating__items">
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="1">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="2">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="3">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="4">
+											</label>
+											<label class="rating__item">
+												<input class="rating__input" type="radio" name="rating" value="5">
+											</label>
+										</div>
+										<div class="rating__number">5.0</div>
+									</div>
+								</div>
+								<div class="slide-testimonials__text">" Donec metus lorem, vulputate at sapien sit amet, auctor
+									iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus
+									velit. "</div>
+								<div class="slide-testimonials__user user">
+									<img src="img/user-3.png" alt="user" class="user__img">
+									<div class="user__info">
+										<div class="user__name">Kevin Yang</div>
+										<span>Product Management Instapage</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="cta">
+				<div class="cta__container">
+					<div class="cta__label label">Let’s Work together</div>
+					<h2 class="cta__title title">
+						Do you need a successful project?
+					</h2>
+					<a href="#" class="cta__link link link--blue">
+						get started
+					</a>
+
+				</div>
+			</section>
+			<div class="social">
+				<div class="social__container">
+					<a href="#" class="social__link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+							height="36" viewBox="0 0 18 36" fill="none">
+							<path
+								d="M4.46666 36V19.1078H0V13.0257H4.46666V7.8309C4.46666 3.74875 7.10514 0 13.1848 0C15.6463 0 17.4665 0.23598 17.4665 0.23598L17.3231 5.91556C17.3231 5.91556 15.4668 5.89748 13.4411 5.89748C11.2487 5.89748 10.8974 6.90782 10.8974 8.58474V13.0257H17.4973L17.2102 19.1078H10.8974V36H4.46666Z"
+								fill="white" />
+						</svg></a>
+					<a href="#" class="social__link" aria-label="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="38"
+							height="36" viewBox="0 0 38 36" fill="none">
+							<path
+								d="M8.54952 36V11.7109H0.476315V36H8.54952ZM4.51396 8.3926C7.32923 8.3926 9.0816 6.52748 9.0816 4.1967C9.02915 1.81335 7.32934 0 4.56739 0C1.80587 0 0 1.81339 0 4.1967C0 6.52759 1.75194 8.3926 4.46126 8.3926H4.51371H4.51396ZM13.018 36H21.0912V22.4358C21.0912 21.7098 21.1437 20.9846 21.3569 20.4657C21.9405 19.0153 23.2689 17.5131 25.499 17.5131C28.4204 17.5131 29.5891 19.7405 29.5891 23.0057V35.9998H37.6618V22.0727C37.6618 14.612 33.6789 11.1406 28.3672 11.1406C24.012 11.1406 22.0998 13.575 21.0375 15.2331H21.0914V11.7104H13.0182C13.1241 13.9895 13.0182 35.9995 13.0182 35.9995L13.018 36Z"
+								fill="white" />
+						</svg></a>
+					<a href="#" class="social__link" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg"
+							width="36" height="36" viewBox="0 0 36 36" fill="none">
+							<path
+								d="M27.6091 10.5519C28.802 10.5519 29.7691 9.58487 29.7691 8.39193C29.7691 7.199 28.802 6.23193 27.6091 6.23193C26.4162 6.23193 25.4491 7.199 25.4491 8.39193C25.4491 9.58487 26.4162 10.5519 27.6091 10.5519Z"
+								fill="white" />
+							<path
+								d="M17.9997 8.75635C16.1716 8.75635 14.3846 9.29844 12.8646 10.3141C11.3446 11.3297 10.1599 12.7733 9.4603 14.4622C8.76072 16.1511 8.57768 18.0096 8.93432 19.8026C9.29096 21.5955 10.1713 23.2425 11.4639 24.5351C12.7566 25.8278 14.4035 26.7081 16.1965 27.0647C17.9895 27.4214 19.8479 27.2383 21.5369 26.5388C23.2258 25.8392 24.6694 24.6545 25.685 23.1345C26.7006 21.6145 27.2427 19.8274 27.2427 17.9993C27.2427 15.548 26.2689 13.197 24.5355 11.4636C22.8021 9.73016 20.4511 8.75635 17.9997 8.75635ZM17.9997 23.9993C16.813 23.9993 15.653 23.6475 14.6663 22.9882C13.6796 22.3289 12.9106 21.3918 12.4564 20.2954C12.0023 19.1991 11.8835 17.9927 12.115 16.8288C12.3465 15.6649 12.918 14.5958 13.7571 13.7567C14.5962 12.9176 15.6653 12.3461 16.8292 12.1146C17.9931 11.8831 19.1995 12.0019 20.2958 12.4561C21.3922 12.9102 22.3292 13.6792 22.9885 14.6659C23.6478 15.6526 23.9997 16.8127 23.9997 17.9993C23.9997 19.5906 23.3676 21.1168 22.2424 22.242C21.1171 23.3672 19.591 23.9993 17.9997 23.9993Z"
+								fill="white" />
+							<path
+								d="M18 3.243C22.806 3.243 23.376 3.261 25.2735 3.348C26.4148 3.36155 27.5452 3.5711 28.6155 3.9675C29.392 4.26704 30.0972 4.72582 30.6857 5.31432C31.2742 5.90282 31.733 6.60801 32.0325 7.3845C32.4289 8.45479 32.6385 9.58524 32.652 10.7265C32.739 12.624 32.757 13.194 32.757 18.0015C32.757 22.809 32.739 23.376 32.652 25.2735C32.6385 26.4148 32.4289 27.5452 32.0325 28.6155C31.733 29.392 31.2742 30.0972 30.6857 30.6857C30.0972 31.2742 29.392 31.733 28.6155 32.0325C27.5452 32.4289 26.4148 32.6385 25.2735 32.652C23.376 32.739 22.806 32.757 18 32.757C13.194 32.757 12.624 32.739 10.7265 32.652C9.58524 32.6385 8.45479 32.4289 7.3845 32.0325C6.60801 31.733 5.90282 31.2742 5.31432 30.6857C4.72582 30.0972 4.26704 29.392 3.9675 28.6155C3.5711 27.5452 3.36155 26.4148 3.348 25.2735C3.261 23.376 3.243 22.806 3.243 18C3.243 13.194 3.261 12.624 3.348 10.7265C3.36155 9.58524 3.5711 8.45479 3.9675 7.3845C4.26704 6.60801 4.72582 5.90282 5.31432 5.31432C5.90282 4.72582 6.60801 4.26704 7.3845 3.9675C8.45479 3.5711 9.58524 3.36155 10.7265 3.348C12.624 3.261 13.194 3.243 18 3.243ZM18 0C13.1115 0 12.498 0.021 10.578 0.108C9.08516 0.138144 7.60824 0.421154 6.21 0.945C5.01409 1.40745 3.92799 2.11467 3.02133 3.02133C2.11467 3.92799 1.40745 5.01409 0.945 6.21C0.420988 7.60871 0.137975 9.08616 0.108 10.5795C0.021 12.4995 0 13.11 0 18C0 22.89 0.021 23.502 0.108 25.422C0.138144 26.9148 0.421154 28.3918 0.945 29.79C1.40745 30.9859 2.11467 32.072 3.02133 32.9787C3.92799 33.8853 5.01409 34.5926 6.21 35.055C7.60871 35.579 9.08616 35.862 10.5795 35.892C12.4995 35.979 13.1115 36 18 36C22.8885 36 23.502 35.979 25.422 35.892C26.9153 35.862 28.3928 35.579 29.7915 35.055C30.9874 34.5926 32.0735 33.8853 32.9802 32.9787C33.8868 32.072 34.5941 30.9859 35.0565 29.79C35.58 28.3912 35.8625 26.9138 35.892 25.4205C35.979 23.5005 36 22.89 36 18C36 13.11 35.979 12.498 35.892 10.578C35.8619 9.08516 35.5788 7.60824 35.055 6.21C34.5926 5.01409 33.8853 3.92799 32.9787 3.02133C32.072 2.11467 30.9859 1.40745 29.79 0.945C28.3912 0.4215 26.9138 0.138995 25.4205 0.1095C23.5005 0.0194999 22.89 0 18 0Z"
+								fill="white" />
+						</svg></a>
+
+					<a href="#" class="social__link" aria-label="Behance"><svg xmlns="http://www.w3.org/2000/svg" width="58"
+							height="36" viewBox="0 0 58 36" fill="none">
+							<path
+								d="M37.4417 2.38135H51.7513V5.85296H37.4417V2.38135ZM23.1034 16.1172C26.2666 14.6037 27.9235 12.3013 27.9235 8.74357C27.9235 1.70711 22.6874 0 16.6408 0H0V35.3186H17.107C23.5194 35.3186 29.5374 32.2343 29.5374 25.0616C29.5374 20.6288 27.4429 17.3509 23.1034 16.1172ZM7.76091 6.0251H15.0412C17.8458 6.0251 20.3634 6.80693 20.3634 10.0634C20.3634 13.0616 18.4053 14.2666 15.6294 14.2666H7.76091V6.0251ZM16.0454 29.3222H7.75374V19.5959H16.2104C19.6246 19.5959 21.7836 21.0233 21.7836 24.6384C21.7836 28.1961 19.2086 29.3222 16.0454 29.3222ZM57.3461 22.9026C57.3461 15.3353 52.9205 9.03048 44.9157 9.03048C37.1333 9.03048 31.8398 14.8906 31.8398 22.5726C31.8398 30.5344 36.8536 36 44.9157 36C51.0197 36 54.9719 33.2528 56.8727 27.3927H50.6826C50.0084 29.5804 47.2684 30.728 45.1381 30.728C41.0209 30.728 38.8691 28.318 38.8691 24.2224H57.2959C57.3174 23.7992 57.3461 23.3545 57.3461 22.9026ZM38.8691 19.7896C39.0915 16.4256 41.3365 14.324 44.6934 14.324C48.2224 14.324 49.9869 16.3969 50.2953 19.7896H38.8691Z"
+								fill="white" />
+						</svg></a>
+
+					<a href="#" class="social__link" aria-label="Dribble"><svg xmlns="http://www.w3.org/2000/svg" width="36"
+							height="36" viewBox="0 0 36 36" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M18 0C8.0625 0 0 8.0625 0 18C0 27.9375 8.0625 36 18 36C27.918 36 36 27.9375 36 18C36 8.0625 27.918 0 18 0ZM29.889 8.2965C32.1052 10.9955 33.3316 14.3713 33.3645 17.8635C32.8575 17.766 27.7815 16.731 22.6665 17.376C22.548 17.121 22.4505 16.848 22.3335 16.575C22.0154 15.8241 21.6773 15.0818 21.3195 14.349C26.9805 12.045 29.5575 8.727 29.889 8.2965ZM18 2.6565C21.9045 2.6565 25.4775 4.119 28.191 6.5205C27.918 6.9105 25.5945 10.0155 20.1285 12.0645C17.6085 7.4385 14.8185 3.6495 14.388 3.0645C15.572 2.78803 16.7842 2.6506 18 2.655V2.6565ZM11.46 4.0995C11.8695 4.647 14.6025 8.454 17.16 12.9825C9.975 14.8965 3.63 14.8575 2.9475 14.8575C3.9435 10.0935 7.1655 6.1305 11.46 4.0995ZM2.616 18.0195V17.5515C3.2805 17.571 10.737 17.6685 18.411 15.3645C18.8595 16.224 19.269 17.1015 19.659 17.9805C19.464 18.039 19.2495 18.0975 19.0545 18.156C11.1285 20.7135 6.9105 27.702 6.5595 28.2885C4.02062 25.4708 2.6157 21.8123 2.616 18.0195ZM18 33.384C14.4465 33.384 11.1675 32.1735 8.571 30.144C8.844 29.577 11.967 23.5635 20.6355 20.538C20.6745 20.5185 20.6955 20.5185 20.733 20.499C22.9005 26.1015 23.778 30.807 24.0135 32.154C22.158 32.955 20.1285 33.384 18 33.384ZM26.571 30.7485C26.415 29.811 25.5945 25.3215 23.583 19.7955C28.4055 19.035 32.622 20.2845 33.15 20.46C32.4855 24.735 30.0255 28.425 26.571 30.7485Z"
+								fill="white" />
+						</svg></a>
+
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__copyright">© 2024. All rights reserved Athol.</div>
+				<div class="footer__privicy privicy">
+					<a href="#" class="privicy__link">Privacy Policy</a>
+					<a href="#" class="privicy__link">Terms of Use</a>
+
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="js/script.js"></script>
+	</div>
+</body>
+
+</html>
