@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins:regular,500&display=swap");
 @font-face {
   font-family: "icons";
@@ -110,7 +111,6 @@ body.menu-open {
       touch-action: none;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
-  scrollbar-gutter: stable;
 }
 
 .wrapper {
@@ -1147,9 +1147,10 @@ body.menu-open {
   border-radius: inherit;
   background: -webkit-gradient(linear, left top, left bottom, from(#8c00ff), to(#060129));
   background: linear-gradient(180deg, #8c00ff 0%, #060129 100%);
-  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  /* Маска для тонкого бордера */
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) content-box, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  -webkit-mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff);
+  -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   z-index: -1;
 }
@@ -1370,7 +1371,7 @@ body.menu-open {
   .experience__left-wrap {
     border-right: none;
     border-bottom: 1px solid #231f3d;
-    padding-right: none;
+    padding-right: 0px;
     padding-bottom: 20px;
   }
 }
@@ -1843,9 +1844,10 @@ body.menu-open {
   border-radius: inherit;
   background: -webkit-gradient(linear, left top, left bottom, from(#8c00ff), to(#060129));
   background: linear-gradient(180deg, #8c00ff 0%, #060129 100%);
-  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  /* Маска для тонкого бордера */
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) content-box, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  -webkit-mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff);
+  -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   z-index: -1;
 }
