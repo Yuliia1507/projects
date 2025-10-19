@@ -27,32 +27,27 @@ document.addEventListener("click", (e) => {
 
 //============================Sticky Elements=============================
 document.addEventListener('DOMContentLoaded', () => {
-	const stickyGroups = [
-		document.querySelectorAll('.item-services'),
-		document.querySelectorAll('.item-pricing')
-	];
+	const stickyItems = document.querySelectorAll('.item-services, .item-pricing');
 
 	const setSticky = () => {
-		const width = window.innerWidth || document.documentElement.clientWidth;
+		const isWide = window.innerWidth > 860;
 
-		stickyGroups.forEach(items => {
-			if (!items || items.length === 0) return;
-
-			items.forEach((item, index) => {
-				item.style.zIndex = 10 + index;
-
-				if (width > 860) {
-					item.classList.add('sticky');
-				} else {
-					item.classList.remove('sticky');
-				}
-			});
+		stickyItems.forEach((item, index) => {
+			item.style.zIndex = 10 + index;
+			item.classList.toggle('sticky', isWide);
 		});
 	};
 
 	setSticky();
-	window.addEventListener('resize', setSticky);
+
+	// debounce для плавності при ресайзі
+	let resizeTimer;
+	window.addEventListener('resize', () => {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(setSticky, 200);
+	});
 });
+
 
 //========rating=======
 // 	const items = document.querySelectorAll('.item-services');
