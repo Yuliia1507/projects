@@ -449,6 +449,7 @@ body.menu-open {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  overflow: hidden;
   position: relative;
   border-radius: 25px;
   border: 1px solid #231f3d;
