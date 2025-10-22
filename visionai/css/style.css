@@ -708,12 +708,10 @@ body.menu-open {
   -webkit-transform: translateX(-80px);
       -ms-transform: translateX(-80px);
           transform: translateX(-80px);
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-transition-delay: 0.7s;
-          transition-delay: 0.7s;
+  -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.5s ease 0.7s, -webkit-transform 0.5s ease 0.7s;
+  transition: background-color 0.3s, color 0.3s, opacity 0.5s ease 0.7s, -webkit-transform 0.5s ease 0.7s;
+  transition: background-color 0.3s, color 0.3s, opacity 0.5s ease 0.7s, transform 0.5s ease 0.7s;
+  transition: background-color 0.3s, color 0.3s, opacity 0.5s ease 0.7s, transform 0.5s ease 0.7s, -webkit-transform 0.5s ease 0.7s;
 }
 @media (max-width: 768px) {
   .hero__button {
