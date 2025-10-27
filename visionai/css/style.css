@@ -1853,15 +1853,11 @@ body.menu-open {
 .item-projects__image {
   border-radius: 20px;
   width: 100%;
-  height: 500px;
+  display: block;
+  aspect-ratio: 800/607;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 20px;
-}
-@media (max-width: 60em) {
-  .item-projects__image {
-    height: 300px;
-  }
 }
 .item-projects__content {
   display: -webkit-box;
@@ -2813,10 +2809,11 @@ body.menu-open {
 }
 .item-insights__image {
   width: 100%;
-  height: 300px;
+  aspect-ratio: 16/9;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 .item-insights__title {
   color: #ffffff;

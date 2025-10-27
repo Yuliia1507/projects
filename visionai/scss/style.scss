@@ -1125,12 +1125,10 @@ body.menu-open {
 	&__image {
 		border-radius: 20px;
 		width: 100%;
-		height: 500px;
+		display: block;
+		aspect-ratio: 800 / 607;
 		object-fit: cover;
 		margin-bottom: 20px;
-		@media (max-width: toEm(960)) {
-			height: 300px;
-		}
 	}
 
 	// .item-projects__content
@@ -1796,9 +1794,10 @@ body.menu-open {
 
 	&__image {
 		width: 100%;
-		height: 300px;
+		aspect-ratio: 16 / 9;
 		border-radius: 20px;
 		object-fit: cover;
+		display: block;
 	}
 
 	// .item-insights__title
