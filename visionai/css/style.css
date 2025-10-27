@@ -2809,7 +2809,7 @@ body.menu-open {
 }
 .item-insights__image {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 373/300;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
