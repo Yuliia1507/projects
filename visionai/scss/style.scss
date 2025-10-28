@@ -65,7 +65,7 @@ body.menu-open {
 
 	width: 100%;
 	transition: all 0.3s ease;
-	padding-block: 20px;
+	padding-block: toRem(20);
 	border-bottom: 1px solid $border-color;
 
 	&__container {
@@ -75,21 +75,7 @@ body.menu-open {
 		align-items: center;
 		justify-content: space-between;
 		@include adaptiveValue("gap", 24, 15);
-		max-width: 1538px;
-		// 	opacity: 0;
-		// transform: translateY(-40px);
-		// transition:
-		// 	opacity 0.6s ease,
-		// 	transform 0.6s ease;
-		// @media (max-width: 768px) {
-		// 	opacity: 1;
-		// 	transform: translateY(0);
-		// 	transition: none;
-		// }
-		// &.visible {
-		// 	opacity: 1;
-		// 	transform: translateY(0);
-		// }
+		max-width: toRem(1538);
 	}
 
 	// .header__logo
@@ -116,11 +102,11 @@ body.menu-open {
 	display: flex;
 	width: fit-content;
 	align-items: center;
-	gap: 10px;
+	gap: toRem(10);
 	background-color: $accent-color;
-	padding: 5px 5px 5px 30px;
+	padding: toRem(5) toRem(5) toRem(5) toRem(30);
 	color: $white-color;
-	border-radius: 100px;
+	border-radius: toRem(100);
 	font-size: toRem(16);
 	transition:
 		background-color 0.3s,
@@ -146,7 +132,7 @@ body.menu-open {
 			transform-origin: top right;
 			display: flex;
 			align-items: center;
-			gap: 20px;
+			gap: toRem(20);
 			flex-direction: column;
 			opacity: 0;
 			visibility: hidden;
@@ -274,7 +260,7 @@ body.menu-open {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		border-radius: 25px;
+		border-radius: toRem(25);
 		z-index: -1;
 
 		img {
@@ -290,18 +276,18 @@ body.menu-open {
 		@include adaptiveValue("padding-inline", 100, 20);
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: toRem(20);
 		overflow: hidden;
 		position: relative;
-		border-radius: 25px;
-		border: 1px solid $border-color;
+		border-radius: toRem(25);
+		border: toRem(1) solid $border-color;
 		&::before {
 			content: "";
 			position: absolute;
 			inset: 0;
 			background: #151036;
 			opacity: 0.5;
-			border-radius: 25px;
+			border-radius: toRem(25);
 			z-index: 1;
 			pointer-events: none;
 		}
@@ -312,24 +298,24 @@ body.menu-open {
 		width: fit-content;
 		@include adaptiveValue("padding-block", 8, 4);
 		@include adaptiveValue("padding-inline", 15, 8);
-		border: 1px solid $white-color;
-		border-radius: 10px;
+		border: toRem(1) solid $white-color;
+		border-radius: toRem(10);
 		text-transform: uppercase;
 		@include adaptiveValue("font-size", 14, 12);
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: toRem(10);
 		svg {
 			width: toRem(16);
 			height: toRem(16);
 			fill: $white-color;
 		}
 		opacity: 0;
-		transform: translateX(-80px);
+		transform: translateX(toRem(-80));
 		transition:
 			opacity 0.5s ease,
 			transform 0.5s ease;
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: translateX(0);
 			transition: none;
@@ -351,13 +337,13 @@ body.menu-open {
 		line-height: 1.1em;
 		@include adaptiveValue("font-size", 100, 30);
 		opacity: 0;
-		transform: translatex(-80px);
+		transform: translatex(toRem(-80));
 		transition:
 			opacity 0.5s ease,
 			transform 0.5s ease;
 		transition-delay: 0.4s;
 
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: translateX(0);
 			transition: none;
@@ -371,14 +357,14 @@ body.menu-open {
 		z-index: 3;
 		text-wrap: nowrap;
 		opacity: 0;
-		transform: translateX(-80px);
+		transform: translateX(toRem(-80));
 		transition:
 			background-color 0.3s,
 			color 0.3s,
 			opacity 0.5s ease 0.7s,
 			transform 0.5s ease 0.7s;
 
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: translateX(0);
 			transition: none;
@@ -393,7 +379,7 @@ body.menu-open {
 //=============Partners========================
 
 .partners {
-	padding-block: 80px;
+	padding-block: toRem(80);
 
 	// .partners__container
 
@@ -410,11 +396,11 @@ body.menu-open {
 		&::after {
 			content: "";
 			position: absolute;
-			top: calc(100% + 5px);
+			top: calc(100% + toRem(5));
 			left: 50%;
 			transform: translateX(-50%);
-			width: 60px;
-			height: 1px;
+			width: toRem(60);
+			height: toRem(1);
 			background-color: $accent-color;
 		}
 		&:not(:last-child) {
@@ -432,14 +418,14 @@ body.menu-open {
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		gap: 20px;
+		gap: toRem(20);
 		.partners__image {
 			opacity: 0;
-			transform: translateX(-30px);
+			transform: translateX(toRem(-30));
 			transition:
 				opacity 0.6s ease,
 				transform 0.6s ease;
-			@media (max-width: 768px) {
+			@media (max-width: toEm(768)) {
 				opacity: 1;
 				transform: translateY(0);
 				transition: none;
@@ -477,17 +463,16 @@ body.menu-open {
 	// .partners__image
 
 	&__image {
-		flex: 1 1 calc(100% / 6 - 20px);
-		border-radius: 8px;
-		border-radius: 10px;
-		padding-block: 10px;
-		padding-inline: 15px;
+		flex: 1 1 calc(100% / 6 - toRem(20));
+		border-radius: toRem(8);
+		padding-block: toRem(10);
+		padding-inline: toRem(15);
 		background-color: $background-lighter;
-		@media (max-width: 785px) {
-			flex: 1 1 calc(33.333% - 20px);
+		@media (max-width: toEm(765)) {
+			flex: 1 1 calc(33.333% - toRem(20));
 		}
-		@media (max-width: 520px) {
-			flex: 1 1 calc(50% - 20px);
+		@media (max-width: toEm(520)) {
+			flex: 1 1 calc(50% - toRem(20));
 		}
 
 		&:first-child {
@@ -520,7 +505,7 @@ body.menu-open {
 		@include adaptiveValue("padding-block", 80, 20);
 		@include adaptiveValue("padding-inline", 120, 0);
 		background-color: $background-lighter;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		display: grid;
 		place-items: center;
 		@media (max-width: toEm(500)) {
@@ -532,17 +517,17 @@ body.menu-open {
 
 	&__label {
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			margin-bottom: toRem(20);
 		}
 	}
 
 	// .process__title
 
 	&__title {
-		max-width: 600px;
+		max-width: toRem(600);
 		text-align: center;
 		&:not(:last-child) {
-			margin-bottom: 40px;
+			margin-bottom: toRem(40);
 		}
 	}
 
@@ -551,14 +536,14 @@ body.menu-open {
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 30px;
+		gap: toRem(30);
 		justify-content: space-between;
 		@media (max-width: toEm(1250)) {
-			gap: 20px;
+			gap: toRem(20);
 		}
 		& > .process__item {
 			opacity: 0;
-			transform: translateY(40px);
+			transform: translateY(toRem(40));
 			transition:
 				opacity 0.6s ease,
 				transform 0.6s ease;
@@ -581,10 +566,10 @@ body.menu-open {
 
 	// .process__item
 	&__item {
-		flex: 1 1 calc(33.333% - 30px);
+		flex: 1 1 calc(33.333% - toRem(30));
 
 		@media (max-width: toEm(1250)) {
-			flex: 1 1 calc(50% - 20px);
+			flex: 1 1 calc(50% - toRem(20));
 			&:nth-child(3):last-child {
 				flex: 0 1 50%;
 				margin-inline: auto;
@@ -602,10 +587,10 @@ body.menu-open {
 	color: $white-color;
 	display: flex;
 	align-items: center;
-	gap: 5px;
-	padding: 5px 8px;
-	border: 1px solid $border-color;
-	border-radius: 10px;
+	gap: toRem(5);
+	padding: toRem(5) toRem(8);
+	border: toRem(1) solid $border-color;
+	border-radius: toRem(10);
 	width: fit-content;
 	text-transform: uppercase;
 	font-size: toRem(14);
@@ -618,11 +603,11 @@ body.menu-open {
 	line-height: 1.1em;
 	color: $white-color;
 	opacity: 0;
-	transform: translateY(40px);
+	transform: translateY(toRem(40));
 	transition:
 		opacity 0.6s ease,
 		transform 0.6s ease;
-	@media (max-width: 768px) {
+	@media (max-width: toEm(768)) {
 		opacity: 1;
 		transform: translateY(0);
 		transition: none;
@@ -636,20 +621,20 @@ body.menu-open {
 	@include adaptiveValue("padding", 35, 15);
 	color: $white-color;
 	background-color: $background-color;
-	border-radius: 20px;
+	border-radius: toRem(20);
 	position: relative;
 	z-index: 1;
 	@include adaptiveValue("min-height", 400, 300);
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	gap: 20px;
+	gap: toRem(20);
 
 	&::before {
 		content: "";
 		position: absolute;
 		inset: 0;
-		padding: 1px; // товщина “бордера”
+		padding: toRem(1);
 		border-radius: inherit;
 		background: linear-gradient(180deg, #8c00ff 0%, #060129 100%);
 
@@ -671,7 +656,7 @@ body.menu-open {
 		background-color: $background-lighter;
 		display: grid;
 		place-items: center;
-		border-radius: 10px;
+		border-radius: toRem(10);
 
 		img {
 			width: 60%;
@@ -707,8 +692,8 @@ body.menu-open {
 	border-radius: 50%;
 	transform: rotate(-45deg);
 	&:focus {
-		outline: 2px solid rgba(255, 255, 255, 0.18);
-		outline-offset: 4px;
+		outline: toRem(2) solid rgba(255, 255, 255, 0.18);
+		outline-offset: toRem(4);
 	}
 }
 
@@ -726,7 +711,7 @@ body.menu-open {
 	&__container {
 		max-width: toRem(1330);
 		display: flex;
-		gap: 30px;
+		gap: toRem(30);
 		@media (max-width: toEm(930)) {
 			flex-direction: column;
 		}
@@ -736,7 +721,7 @@ body.menu-open {
 
 	&__content {
 		display: grid;
-		gap: 20px;
+		gap: toRem(20);
 	}
 
 	// .about__label
@@ -766,10 +751,10 @@ body.menu-open {
 
 	&__image {
 		width: 100%;
-		max-width: 421px;
+		max-width: toRem(421);
 		height: auto;
 		display: block;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		object-fit: cover;
 		@media (max-width: toEm(930)) {
 			max-width: 100%;
@@ -779,7 +764,7 @@ body.menu-open {
 		transition:
 			opacity 0.6s ease,
 			transform 0.6s ease;
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: scale(1);
 			transition: none;
@@ -792,10 +777,10 @@ body.menu-open {
 }
 
 .experience {
-	padding-block: 20px;
-	border-block: 1px solid $border-color;
+	padding-block: toRem(20);
+	border-block: toRem(1) solid $border-color;
 	display: flex;
-	gap: 20px;
+	gap: toRem(20);
 	@media (max-width: toEm(400)) {
 		flex-direction: column;
 	}
@@ -804,14 +789,14 @@ body.menu-open {
 	&__left-wrap {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
-		border-right: 1px solid $border-color;
-		padding-right: 20px;
+		gap: toRem(20);
+		border-right: toRem(1) solid $border-color;
+		padding-right: toRem(20);
 		@media (max-width: toEm(400)) {
 			border-right: none;
-			border-bottom: 1px solid $border-color;
-			padding-right: 0px;
-			padding-bottom: 20px;
+			border-bottom: toRem(1) solid $border-color;
+			padding-right: toRem(0);
+			padding-bottom: toRem(20);
 		}
 	}
 
@@ -835,7 +820,7 @@ body.menu-open {
 	&__right-wrap {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: toRem(20);
 	}
 
 	// .experience__list
@@ -852,8 +837,8 @@ body.menu-open {
 		align-items: center;
 		&::before {
 			content: "";
-			width: 30px;
-			height: 30px;
+			width: toRem(30);
+			height: toRem(30);
 			background-image: url("../img/list-item.svg");
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -884,9 +869,9 @@ body.menu-open {
 		@include adaptiveValue("padding-block", 80, 20);
 		@include adaptiveValue("padding-inline", 120, 0);
 		background-color: $background-lighter;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		display: grid;
-		gap: 30px;
+		gap: toRem(30);
 		place-items: center;
 		@media (max-width: toEm(500)) {
 			background-color: transparent;
@@ -902,7 +887,7 @@ body.menu-open {
 
 	&__wrapper {
 		display: grid;
-		gap: 20px;
+		gap: toRem(20);
 	}
 	// .services__item
 
@@ -916,12 +901,12 @@ body.menu-open {
 	@include adaptiveValue("gap", 40, 20);
 	align-items: center;
 	background-color: $background-color;
-	border-radius: 20px;
-	border: 1px solid $border-color;
+	border-radius: toRem(20);
+	border: toRem(1) solid $border-color;
 	&.sticky {
 		position: sticky;
 		position: -webkit-sticky;
-		top: 30px;
+		top: toRem(30);
 	}
 
 	@media (max-width: toEm(860)) {
@@ -932,11 +917,11 @@ body.menu-open {
 
 	&__image {
 		flex: 1 1 auto;
-		max-width: 406px;
+		max-width: toRem(406);
 		width: 100%;
-		height: 300px;
+		height: toRem(300);
 		object-fit: cover;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		@media (max-width: toEm(860)) {
 			max-width: 100%;
 		}
@@ -948,7 +933,7 @@ body.menu-open {
 		flex: 1 1 auto;
 		width: 100%;
 		display: grid;
-		gap: 20px;
+		gap: toRem(20);
 	}
 
 	// .item-services__title
@@ -968,7 +953,7 @@ body.menu-open {
 
 	&__list {
 		&:not(:last-child) {
-			margin-bottom: 5px;
+			margin-bottom: toRem(5);
 		}
 	}
 
@@ -977,12 +962,12 @@ body.menu-open {
 	&__item {
 		color: $text-color;
 		display: flex;
-		gap: 10px;
+		gap: toRem(10);
 		align-items: center;
 		&::before {
 			content: "";
-			width: 25px;
-			height: 25px;
+			width: toRem(25);
+			height: toRem(25);
 			background-image: url("../img/arrow-up.svg");
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1035,17 +1020,17 @@ body.menu-open {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: 20px;
+		gap: toRem(20);
 		justify-content: space-between;
-		margin-bottom: 40px;
+		margin-bottom: toRem(40);
 	}
 
 	// .projects__headings
 
 	&__headings {
-		max-width: 500px;
+		max-width: toRem(500);
 		display: grid;
-		gap: 20px;
+		gap: toRem(20);
 	}
 
 	// .projects__label
@@ -1062,7 +1047,7 @@ body.menu-open {
 
 	&__wrapper {
 		display: grid;
-		gap: 30px;
+		gap: toRem(30);
 		grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 		@media (max-width: toEm(965)) {
 			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1076,11 +1061,11 @@ body.menu-open {
 
 	&__item {
 		opacity: 0;
-		transform: translateY(40px);
+		transform: translateY(toRem(40));
 		transition:
 			opacity 0.6s ease,
 			transform 0.6s ease;
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: translateY(0);
 			transition: none;
@@ -1101,12 +1086,12 @@ body.menu-open {
 	position: relative;
 	background-color: $background-lighter;
 	z-index: 1;
-	border-radius: 20px;
+	border-radius: toRem(20);
 	&::before {
 		content: "";
 		position: absolute;
 		inset: 0;
-		padding: 1px; // товщина “бордера”
+		padding: toRem(1);
 		border-radius: inherit;
 		background: linear-gradient(180deg, #8c00ff 0%, #060129 100%);
 
@@ -1123,12 +1108,12 @@ body.menu-open {
 	// .item-projects__image
 
 	&__image {
-		border-radius: 20px;
+		border-radius: toRem(20);
 		width: 100%;
 		display: block;
 		aspect-ratio: 800 / 607;
 		object-fit: cover;
-		margin-bottom: 20px;
+		margin-bottom: toRem(20);
 	}
 
 	// .item-projects__content
@@ -1136,14 +1121,14 @@ body.menu-open {
 	&__content {
 		display: flex;
 		justify-content: space-between;
-		gap: 15px;
+		gap: toRem(15);
 		align-items: flex-end;
 	}
 
 	// .item-projects__title
 
 	&__title {
-		max-width: 279px;
+		max-width: toRem(279);
 		color: $white-color;
 		font-weight: 500;
 		line-height: 1.5;
@@ -1190,7 +1175,7 @@ body.menu-open {
 		@include adaptiveValue("padding-block", 80, 20);
 		@include adaptiveValue("padding-inline", 120, 0);
 		background-color: $background-lighter;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		display: flex;
 		flex-direction: column;
 		@media (max-width: toEm(500)) {
@@ -1203,7 +1188,7 @@ body.menu-open {
 	&__label {
 		align-self: center;
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			margin-bottom: toRem(20);
 		}
 	}
 
@@ -1211,10 +1196,10 @@ body.menu-open {
 
 	&__title {
 		align-self: center;
-		max-width: 700px;
+		max-width: toRem(700);
 		text-align: center;
 		&:not(:last-child) {
-			margin-bottom: 30px;
+			margin-bottom: toRem(30);
 		}
 	}
 
@@ -1223,9 +1208,9 @@ body.menu-open {
 	&__swiper-btns {
 		align-self: flex-end;
 		display: flex;
-		gap: 10px;
+		gap: toRem(10);
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			margin-bottom: toRem(20);
 		}
 	}
 
@@ -1239,7 +1224,7 @@ body.menu-open {
 
 	&__wrapper {
 		display: flex;
-		gap: 20px;
+		gap: toRem(20);
 		width: 100%;
 		height: 100%;
 	}
@@ -1250,9 +1235,9 @@ body.menu-open {
 		display: grid;
 		place-items: center;
 		background-color: #575a5f;
-		width: 30px;
-		height: 30px;
-		border-radius: 3px;
+		width: toRem(30);
+		height: toRem(30);
+		border-radius: toRem(3);
 		transition: background-color 0.3s;
 
 		@media (any-hover: hover) {
@@ -1275,10 +1260,10 @@ body.menu-open {
 	// .slide-testimonials__text
 
 	&__text {
-		border-radius: 20px;
+		border-radius: toRem(20);
 		@include adaptiveValue("padding", 30, 10);
-		min-height: 240px;
-		border: 1px solid $accent-color;
+		min-height: toRem(240);
+		border: toRem(1) solid $accent-color;
 		background-color: $background-color;
 		color: $text-color;
 		flex-grow: 1;
@@ -1291,18 +1276,18 @@ body.menu-open {
 }
 
 .user {
-	transform: translate(30px, -40px);
+	transform: translate(toRem(30), toRem(-40));
 	display: grid;
-	gap: 10px;
+	gap: toRem(10);
 	position: relative;
 	// .user__img
 
 	&__img {
-		width: 70px;
-		height: 70px;
+		width: toRem(70);
+		height: toRem(70);
 		border-radius: 50%;
 		object-fit: cover;
-		border: 1px solid $accent-color;
+		border: toRem(1) solid $accent-color;
 	}
 
 	// .user__rating
@@ -1317,14 +1302,14 @@ body.menu-open {
 	}
 	span {
 		color: $text-color;
-		font-size: 14px;
+		font-size: toRem(14);
 	}
 	&__quotes-img {
 		position: absolute;
-		width: 60px;
-		height: 60px;
-		bottom: 20px;
-		right: 30px;
+		width: toRem(60);
+		height: toRem(60);
+		bottom: toRem(20);
+		right: toRem(30);
 		opacity: 0.3;
 	}
 }
@@ -1401,14 +1386,14 @@ body.menu-open {
 }
 
 .pricing {
-	padding-block: 80px;
+	padding-block: toRem(80);
 
 	// .pricing__container
 
 	&__container {
 		max-width: toRem(1330);
 		display: flex;
-		gap: 30px;
+		gap: toRem(30);
 		@media (max-width: toEm(965)) {
 			flex-direction: column;
 		}
@@ -1416,14 +1401,14 @@ body.menu-open {
 
 	&__left-wrap {
 		flex: 1 1 auto;
-		max-width: 500px;
+		max-width: toRem(500);
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: toRem(20);
 		position: sticky;
 		position: -webkit-sticky;
-		top: 30px;
+		top: toRem(30);
 		align-self: start;
 		@media (max-width: toEm(965)) {
 			position: static;
@@ -1435,7 +1420,7 @@ body.menu-open {
 		flex: 1 0 auto;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: toRem(20);
 	}
 	// .pricing__label
 
@@ -1459,25 +1444,25 @@ body.menu-open {
 	}
 }
 .item-pricing {
-	padding: 20px;
+	padding: toRem(20);
 	background-color: $background-lighter;
-	border-radius: 20px;
+	border-radius: toRem(20);
 	display: flex;
-	gap: 20px;
+	gap: toRem(20);
 	color: $text-color;
 	max-width: 100%;
 	position: relative;
 	align-items: center;
 	@media (max-width: toEm(660)) {
 		flex-direction: column;
-		padding-block: 40px;
+		padding-block: toRem(40);
 		align-items: flex-start;
-		padding-inline: 10px;
+		padding-inline: toRem(10);
 	}
 	&.sticky {
 		position: sticky;
 		position: -webkit-sticky;
-		top: 30px;
+		top: toRem(30);
 	}
 	// .item-pricing__title
 
@@ -1487,13 +1472,13 @@ body.menu-open {
 		@include adaptiveValue("font-size", 24, 18);
 	}
 	&__info {
-		padding: 20px;
+		padding: toRem(20);
 		background-color: $background-color;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
-		max-width: 300px;
+		gap: toRem(10);
+		max-width: toRem(300);
 		@media (max-width: toEm(660)) {
 			max-width: 100%;
 		}
@@ -1517,14 +1502,14 @@ body.menu-open {
 		color: $text-color;
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: toRem(10);
 		&:not(:last-child) {
-			margin-bottom: 8px;
+			margin-bottom: toRem(8);
 		}
 		&::before {
 			content: "";
-			width: 20px;
-			height: 20px;
+			width: toRem(20);
+			height: toRem(20);
 			background-image: url("../img/checkmark.svg");
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1544,20 +1529,20 @@ body.menu-open {
 		flex-shrink: 0;
 	}
 	&__text {
-		font-size: 14px;
+		font-size: toRem(14);
 	}
 	&__discount {
 		position: absolute;
-		top: -10px;
-		right: -10px;
+		top: toRem(-10);
+		right: toRem(-10);
 		background-color: $background-lighter;
 		color: $accent-color;
-		padding: 3px 8px;
-		border-radius: 15px;
+		padding: toRem(3) toRem(8);
+		border-radius: toRem(15);
 		width: fit-content;
 		font-size: toRem(14);
 		text-transform: uppercase;
-		border: 8px solid $background-color;
+		border: toRem(8) solid $background-color;
 		font-weight: 500;
 	}
 }
@@ -1574,7 +1559,7 @@ body.menu-open {
 		@include adaptiveValue("padding-inline", 120, 10);
 		background-color: $background-lighter;
 		padding: toRem(40);
-		border-radius: 20px;
+		border-radius: toRem(20);
 		display: flex;
 		align-items: center;
 		gap: toRem(50);
@@ -1590,7 +1575,7 @@ body.menu-open {
 		max-width: 800px;
 		display: grid;
 		grid-auto-rows: min-content;
-		gap: 20px;
+		gap: toRem(20);
 		@media (max-width: toEm(950)) {
 			max-width: 100%;
 		}
@@ -1607,7 +1592,7 @@ body.menu-open {
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: toRem(20);
 		align-items: flex-end;
 		@media (max-width: toEm(950)) {
 			align-items: flex-start;
@@ -1622,7 +1607,7 @@ body.menu-open {
 	// .faq__title
 
 	&__title {
-		max-width: 600px;
+		max-width: toRem(600);
 		text-align: right;
 		@media (max-width: toEm(950)) {
 			text-align: left;
@@ -1638,13 +1623,13 @@ body.menu-open {
 		width: 100%;
 		height: auto;
 		object-fit: cover;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		opacity: 0;
 		transform: scale(0.5);
 		transition:
 			opacity 0.6s ease,
 			transform 0.6s ease;
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: scale(1);
 			transition: none;
@@ -1659,9 +1644,9 @@ body.menu-open {
 	// .item-faq__header
 
 	&__header {
-		padding: 20px;
+		padding: toRem(20);
 		background-color: $background-color;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		display: flex;
 		cursor: pointer;
 		justify-content: space-between;
@@ -1695,7 +1680,7 @@ body.menu-open {
 			height 0.3s ease,
 			opacity 0.3s ease;
 		p {
-			padding: 20px;
+			padding: toRem(20);
 		}
 	}
 }
@@ -1726,7 +1711,7 @@ body.menu-open {
 		max-width: toRem(1330);
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: toRem(20);
 		align-items: center;
 	}
 
@@ -1745,7 +1730,7 @@ body.menu-open {
 
 	&__wrapper {
 		display: flex;
-		gap: 30px;
+		gap: toRem(30);
 		flex-wrap: wrap;
 	}
 
@@ -1753,11 +1738,11 @@ body.menu-open {
 
 	&__item {
 		opacity: 0;
-		transform: translateY(40px);
+		transform: translateY(toRem(40));
 		transition:
 			opacity 0.6s ease,
 			transform 0.6s ease;
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: translateY(0);
 			transition: none;
@@ -1770,15 +1755,15 @@ body.menu-open {
 }
 
 .item-insights {
-	flex: 1 1 calc(33.333% - 20px);
+	flex: 1 1 calc(33.333% - toRem(20));
 	background-color: $background-lighter;
-	border-radius: 20px;
+	border-radius: toRem(20);
 	@include adaptiveValue("padding", 20, 10);
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: toRem(20);
 	@media (max-width: toEm(950)) {
-		flex: 1 1 calc(50% - 30px);
+		flex: 1 1 calc(50% - toRem(30));
 		&:nth-child(3):last-child {
 			flex: 0 1 50%;
 			margin-inline: auto;
@@ -1795,7 +1780,7 @@ body.menu-open {
 	&__image {
 		width: 100%;
 		aspect-ratio: 373 / 300;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		object-fit: cover;
 		display: block;
 	}
@@ -1820,8 +1805,8 @@ body.menu-open {
 	&__button {
 		width: fit-content;
 		flex-shrink: 0;
-		padding: 12px 24px;
-		font-size: 14px;
+		padding: toRem(12) toRem(24);
+		font-size: toRem(14);
 		svg {
 			width: toRem(16);
 			height: toRem(16);
@@ -1835,7 +1820,7 @@ body.menu-open {
 	// .cta__container
 
 	&__container {
-		max-width: 1330px;
+		max-width: toRem(1330);
 	}
 
 	// .cta__content
@@ -1845,16 +1830,16 @@ body.menu-open {
 		@include adaptiveValue("padding-inline", 80, 20);
 		background-color: transparent;
 		background-image: linear-gradient(90deg, #4b00ff 0%, #a500ff 50%, #ff00ff 100%);
-		border-radius: 20px;
+		border-radius: toRem(20);
 		display: flex;
-		gap: 20px;
+		gap: toRem(20);
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		border: 20px solid $background-color;
-		border-radius: 40px;
+		border: toRem(20) solid $background-color;
+		border-radius: toRem(40);
 		@media (max-width: toEm(600)) {
-			border: 10px solid $background-color;
+			border: toRem(10) solid $background-color;
 			align-items: flex-start;
 		}
 		opacity: 0;
@@ -1862,7 +1847,7 @@ body.menu-open {
 		transition:
 			opacity 0.6s ease,
 			transform 0.6s ease;
-		@media (max-width: 768px) {
+		@media (max-width: toEm(768)) {
 			opacity: 1;
 			transform: scale(1);
 			transition: none;
@@ -1875,7 +1860,7 @@ body.menu-open {
 	// .cta__title
 
 	&__title {
-		max-width: 600px;
+		max-width: toRem(600);
 	}
 
 	// .cta__button
@@ -1909,10 +1894,10 @@ body.menu-open {
 		background-color: $background-lighter;
 		@include adaptiveValue("padding-block", 100, 70);
 		@include adaptiveValue("padding-inline", 120, 10);
-		border-radius: 20px;
+		border-radius: toRem(20);
 		@media (max-width: toEm(950)) {
 			flex-direction: column;
-			padding-block-end: 50px;
+			padding-block-end: toRem(50);
 		}
 	}
 
@@ -1922,16 +1907,16 @@ body.menu-open {
 		transform: translateY(-40%);
 		z-index: 5;
 		position: relative;
-		border-radius: 20px;
+		border-radius: toRem(20);
 		color: $text-color;
-		max-width: 1350px;
+		max-width: toRem(1350);
 		width: 100%;
 		margin: 0 auto;
 		background-color: $background-color;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		gap: 20px;
+		gap: toRem(20);
 		align-items: center;
 		@include adaptiveValue("padding", 30, 10);
 		@media (max-width: toEm(700)) {
@@ -1944,19 +1929,19 @@ body.menu-open {
 		display: flex;
 		justify-content: space-between;
 		flex: 1 1 auto;
-		gap: 20px;
+		gap: toRem(20);
 		width: 100%;
 		@media (max-width: toEm(645)) {
 			flex-direction: column;
-			gap: 30px;
+			gap: toRem(30);
 		}
 	}
 	&__left-wrap {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: toRem(20);
 		color: $text-color;
-		max-width: 300px;
+		max-width: toRem(300);
 		width: 100%;
 		flex: 1 1 auto;
 		@media (max-width: toEm(645)) {
@@ -1980,7 +1965,7 @@ body.menu-open {
 	&__privacy-wrap {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 20px;
+		gap: toRem(20);
 		align-items: center;
 		justify-content: center;
 	}
@@ -1995,7 +1980,7 @@ body.menu-open {
 }
 .socials {
 	display: flex;
-	gap: 10px;
+	gap: toRem(10);
 	@media (max-width: toEm(645)) {
 		align-self: center;
 	}
@@ -2095,7 +2080,7 @@ body.menu-open {
 	}
 }
 
-@media (max-width: 645px) {
+@media (max-width: toEm(645)) {
 	.item-navigation__list {
 		height: 0;
 		overflow: hidden;
@@ -2135,21 +2120,21 @@ body.menu-open {
 /* Scroll to top button */
 .scroll-top {
 	position: fixed;
-	right: 20px;
-	bottom: 24px;
-	width: 48px;
-	height: 48px;
+	right: toRem(20);
+	bottom: toRem(24);
+	width: toRem(48);
+	height: toRem(48);
 	border-radius: 50%;
 	background-color: $background-lighter;
-	border: 1px solid $accent-color;
+	border: toRem(1) solid $accent-color;
 	color: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 6px 18px rgba(161, 2, 214, 0.25);
+	box-shadow: 0 toRem(16) toRem(18) rgba(161, 2, 214, 0.25);
 	opacity: 0;
 	visibility: hidden;
-	transform: translateY(10px);
+	transform: translateY(toRem(10));
 	transition: all 0.3s ease;
 	z-index: 50;
 	@media (any-hover: hover) {
@@ -2166,7 +2151,7 @@ body.menu-open {
 }
 
 .scroll-top svg {
-	width: 18px;
-	height: 18px;
+	width: toRem(18);
+	height: toRem(18);
 	fill: white;
 }
