@@ -1,5 +1,36 @@
 "use strict"
 
+// Функція для додавання класів loading/loaded
+function handlePageLoad() {
+	const html = document.documentElement;
+	html.classList.add('loading');
+
+	window.addEventListener('load', () => {
+		setTimeout(() => {
+			html.classList.remove('loading');
+			html.classList.add('loaded');
+
+			// Викликаємо анімацію hero після loaded
+			startHeroAnimation();
+		}, 100);
+	});
+}
+
+// Функція для анімації hero-секції
+function startHeroAnimation() {
+	const heroItems = document.querySelectorAll('.hero__label, .hero__title, .hero__button');
+
+	heroItems.forEach((item, index) => {
+		setTimeout(() => {
+			item.classList.add('visible');
+		}, index * 300);
+	});
+}
+
+// Запуск
+handlePageLoad();
+
+
 document.addEventListener("click", (e) => {
 	const menuButton = e.target.closest('.icon-menu');
 	const menuLink = e.target.closest('.menu__link');
@@ -47,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		resizeTimer = setTimeout(setSticky, 200);
 	});
 });
+
 
 
 //========rating=======
@@ -336,7 +368,7 @@ const observeElements = (selectors, options = { threshold: 0.3, unobserve: true 
 	elements.forEach(el => observer.observe(el));
 };
 
-observeElements('.partners__img-wrap, .process__wrapper,.title,  .about__image, .faq__img,.cta__content, .hero__label,.hero__title, .hero__button, .projects__item, .insights__item');
+observeElements('.partners__img-wrap, .process__wrapper,.title,  .about__image, .faq__img,.cta__content, .projects__item, .insights__item');
 
 //====scroll to top==========
 

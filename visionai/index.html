@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="loading">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Creative AI - Innovative Solutions for a Smarter Future">
 	<link rel="stylesheet" href="css/style.css">
+
 	<link rel="icon" href="img/robot.ico" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 	<link rel="preload" as="image" href="img/cyberpunk-illustration-with-neon-colors-futuristic-technology.webp"
 		media="(min-width: 769px)">
 	<link rel="preload" as="image" href="img/cyberpunk-illustration-min.webp" media="(max-width: 768px)">
-
+	<style>
+		html.loading body {
+			opacity: 0;
+			visibility: hidden;
+		}
+	</style>
 	<title>Vision AI</title>
 </head>
 
 <body>
+
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
 				<div class="header__logo">
 
-					<img loading="lazy" src="img/logo.png" alt="Logo">
+					<img src="img/logo.png" alt="Logo">
 
 				</div>
 				<div class="header__menu menu">
