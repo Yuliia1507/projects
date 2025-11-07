@@ -245,7 +245,7 @@ body.menu-open {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.625rem;
-  background-color: #8c00ff;
+  background-color: #b366ff;
   padding: 0.3125rem 0.3125rem 0.3125rem 1.875rem;
   color: #ffffff;
   border-radius: 6.25rem;
@@ -355,7 +355,7 @@ body.menu-open {
 }
 @media (any-hover: hover) {
   .menu__item:hover .menu__link {
-    color: #8c00ff;
+    color: #b366ff;
   }
 }
 .menu__link {
@@ -367,7 +367,7 @@ body.menu-open {
   transition: color 0.3s;
 }
 .menu__link.active {
-  color: #8c00ff;
+  color: #b366ff;
   font-weight: 500;
 }
 @media (max-width: 60em) {
@@ -403,7 +403,7 @@ body.menu-open {
     left: 0;
     width: 100%;
     height: 0.1875rem;
-    background-color: #8c00ff;
+    background-color: #b366ff;
     display: inline-block;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -769,13 +769,13 @@ body.menu-open {
           transform: translateX(-50%);
   width: 3.75rem;
   height: 0.0625rem;
-  background-color: #8c00ff;
+  background-color: #b366ff;
 }
 .partners__text:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 .partners__text span {
-  color: #8c00ff;
+  color: #b366ff;
 }
 .partners__img-wrap {
   display: -webkit-box;
@@ -1246,7 +1246,7 @@ body.menu-open {
 
 .icon-btn:hover,
 .icon-btn:active {
-  color: #8c00ff;
+  color: #b366ff;
 }
 
 @media (min-width: 101.875em) {
@@ -1394,7 +1394,7 @@ body.menu-open {
 .experience__number {
   font-weight: 600;
   line-height: 0.8em;
-  color: #8c00ff;
+  color: #b366ff;
 }
 @media (min-width: 101.875em) {
   .experience__number {
@@ -1719,12 +1719,12 @@ body.menu-open {
   }
 }
 .item-services__link:focus {
-  background-color: #8c00ff;
+  background-color: #b366ff;
   color: #ffffff;
   outline: none;
 }
 .item-services__link:hover {
-  background-color: #8c00ff;
+  background-color: #b366ff;
   color: #ffffff;
   outline: none;
 }
@@ -1969,11 +1969,11 @@ body.menu-open {
   }
 }
 .item-projects__link:focus {
-  color: #8c00ff;
+  color: #b366ff;
   outline: none;
 }
 .item-projects__link:hover {
-  color: #8c00ff;
+  color: #b366ff;
   outline: none;
 }
 .item-projects__link svg {
@@ -2091,7 +2091,7 @@ body.menu-open {
 }
 @media (any-hover: hover) {
   .testimonials__button-prev:hover, .testimonials__button-next:hover {
-    background-color: #8c00ff;
+    background-color: #b366ff;
   }
 }
 .testimonials__button-next {
@@ -2113,7 +2113,7 @@ body.menu-open {
 .slide-testimonials__text {
   border-radius: 1.25rem;
   min-height: 15rem;
-  border: 0.0625rem solid #8c00ff;
+  border: 0.0625rem solid #b366ff;
   background-color: #060129;
   color: #9692b2;
   -webkit-box-flex: 1;
@@ -2156,7 +2156,7 @@ body.menu-open {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 0.0625rem solid #8c00ff;
+  border: 0.0625rem solid #b366ff;
 }
 .user__name {
   color: #9692b2;
@@ -2461,7 +2461,7 @@ body.menu-open {
   top: -0.625rem;
   right: -0.625rem;
   background-color: #151036;
-  color: #8c00ff;
+  color: #b366ff;
   padding: 0.1875rem 0.5rem;
   border-radius: 0.9375rem;
   width: -webkit-fit-content;
@@ -2679,7 +2679,7 @@ body.menu-open {
 }
 
 .faq__item.open .item-faq__header {
-  background-color: #8c00ff;
+  background-color: #b366ff;
 }
 
 .faq__item.open .item-faq__title {
@@ -2991,7 +2991,7 @@ body.menu-open {
 }
 @media (any-hover: hover) {
   .cta__button:hover {
-    background-color: #8c00ff;
+    background-color: #b366ff;
     color: #ffffff;
   }
 }
@@ -3225,12 +3225,12 @@ body.menu-open {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .socials__link:focus {
-  background-color: #8c00ff;
+  background-color: #b366ff;
   color: #ffffff;
   outline: none;
 }
 .socials__link:hover {
-  background-color: #8c00ff;
+  background-color: #b366ff;
   color: #ffffff;
   outline: none;
 }
@@ -3281,7 +3281,7 @@ body.menu-open {
   display: block;
   width: 3.125rem;
   height: 0.125rem;
-  background-color: #8c00ff;
+  background-color: #b366ff;
   border-radius: 0.125rem;
 }
 @media (min-width: 101.875em) {
@@ -3414,7 +3414,7 @@ body.menu-open {
   height: 3rem;
   border-radius: 50%;
   background-color: #151036;
-  border: 0.0625rem solid #8c00ff;
+  border: 0.0625rem solid #b366ff;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3438,7 +3438,7 @@ body.menu-open {
 }
 @media (any-hover: hover) {
   .scroll-top:hover {
-    background-color: #8c00ff;
+    background-color: #b366ff;
   }
 }
 
