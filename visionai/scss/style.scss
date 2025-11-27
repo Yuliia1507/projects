@@ -1688,7 +1688,7 @@ body {
 
 	// .item-faq__title
 
-	&__title {
+	&__text {
 		font-weight: 500;
 		text-transform: uppercase;
 		color: $text-color;
@@ -1723,7 +1723,7 @@ body {
 .faq__item.open .item-faq__button {
 	background-color: $accent-color;
 }
-.faq__item.open .item-faq__title {
+.faq__item.open .item-faq__text{
 	color: $white-color;
 }
 

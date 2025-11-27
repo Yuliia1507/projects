@@ -2649,7 +2649,7 @@ body.menu-open {
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.item-faq__title {
+.item-faq__text {
   font-weight: 500;
   text-transform: uppercase;
   color: #9692b2;
@@ -2686,7 +2686,7 @@ body.menu-open {
   background-color: #b366ff;
 }
 
-.faq__item.open .item-faq__title {
+.faq__item.open .item-faq__text {
   color: #ffffff;
 }
 
