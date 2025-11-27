@@ -53,7 +53,9 @@ body {
 
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 0.6s ease, visibility 0.6s ease;
+	transition:
+		opacity 0.6s ease,
+		visibility 0.6s ease;
 	overflow: hidden;
 
 	&.menu-open {
@@ -61,10 +63,7 @@ body {
 		touch-action: none;
 		overscroll-behavior: none;
 	}
-
 }
-
-
 
 .wrapper {
 	position: relative;
@@ -1667,15 +1666,18 @@ body {
 .item-faq {
 	// .item-faq__header
 
-	&__header {
+	&__button {
+		width: 100%;
 		padding: toRem(20);
 		background-color: $background-color;
 		border-radius: toRem(20);
 		display: flex;
-		cursor: pointer;
 		justify-content: space-between;
 		line-height: 1.1em;
-
+		&:focus {
+			outline: 2px solid #8c00ff;
+			outline-offset: 4px;
+		}
 		img {
 			flex-shrink: 0;
 			width: toRem(20);
@@ -1714,11 +1716,11 @@ body {
 	transform: translateY(0);
 }
 
-.faq__item.open .item-faq__header img {
+.faq__item.open .item-faq__button img {
 	transform: rotate(180deg);
 }
 
-.faq__item.open .item-faq__header {
+.faq__item.open .item-faq__button {
 	background-color: $accent-color;
 }
 .faq__item.open .item-faq__title {

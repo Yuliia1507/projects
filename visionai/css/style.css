@@ -2622,20 +2622,24 @@ body.menu-open {
           transform: scale(1);
 }
 
-.item-faq__header {
+.item-faq__button {
+  width: 100%;
   padding: 1.25rem;
   background-color: #060129;
   border-radius: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 1.1em;
 }
-.item-faq__header img {
+.item-faq__button:focus {
+  outline: 2px solid #8c00ff;
+  outline-offset: 4px;
+}
+.item-faq__button img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 1.25rem;
@@ -2672,13 +2676,13 @@ body.menu-open {
           transform: translateY(0);
 }
 
-.faq__item.open .item-faq__header img {
+.faq__item.open .item-faq__button img {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.faq__item.open .item-faq__header {
+.faq__item.open .item-faq__button {
   background-color: #b366ff;
 }
 

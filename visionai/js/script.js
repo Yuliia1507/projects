@@ -178,12 +178,12 @@ const faqItems = document.querySelectorAll('.faq__item');
 
 if (faqItems.length > 0) {
 	faqItems.forEach(item => {
-		const header = item.querySelector('.item-faq__header');
+		const button = item.querySelector('.item-faq__button');
 		const answer = item.querySelector('.item-faq__answer');
 
-		if (!header || !answer) return;
+		if (!button || !answer) return;
 
-		header.addEventListener('click', () => {
+		button.addEventListener('click', () => {
 			const isOpen = item.classList.contains('open');
 
 			// Close all other open items
